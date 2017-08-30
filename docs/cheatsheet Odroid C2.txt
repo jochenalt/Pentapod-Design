@@ -1,0 +1,168 @@
+
+-----------------------------
+------ setup odroid C2 ------
+-----------------------------
+# Ubuntu images are stored in http://odroid.com/dokuwiki/doku.php?id=en:xu3_release_linux_ubuntu
+# my version was ubuntu64-16.04-minimal-odroid-c2-20160815.img.xz
+# Ubuntu 16.04 is http://odroid.in/ubuntu_16.04lts/
+# download WinDiskImager from http://com.odroid.com/sigong/blog/blog_list.php?bid=144
+# write Ubuntu Image to SD card 
+# plug in ethernet cable
+# switch on, log in via odroid/odroid
+
+# fetch odroid-utility
+>su
+>wget -O /usr/local/bin/odroid-utility.sh https://raw.githubusercontent.com/mdrjr/odroid-utility/master/odroid-utility.sh
+>chmod +x /usr/local/bin/odroid-utility.sh
+>/usr/local/bin/odroid-utility.sh
+# enhance partition, and update firmware/kernel
+# update everything 
+>apt-get update
+>apt-get upgrade
+>apt-get dist-upgrade
+
+----- configure WIFI on ODroid C2 -----
+# act according to http://linux.icydog.net/wpa.php to create /etc/wpa_supplicant.conf
+>sudo apt-get install wpasupplicant
+>sudo wpa_supplicant -Dwext -iwlan0 -c/etc/wpa_supplicant.conf
+# file /etc/wpa_supplicant.conf looks like this:
+network={
+        ssid="lorem ipsum dolor sit amet"
+        psk=8df9408615472876e09ba00a81fccefcec75f8c497ca54cd8f5d9d3fa7a791ae
+}
+
+> sudo vi /etc/network/interfaces
+# add the following lines
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-conf /etc/wpa_supplicant.conf
+# boot 
+>sudo reboot
+# find out IP address with 
+>ifconfig
+# connect via kitty with ssh, ip address, port 22
+
+------- create sudo-enabled user  ----
+>adduser jochenalt
+>addgroup jochenalt sudo 
+
+
+
+---- sudo without password -----
+>su
+>vi /etc/sudoers
+# add to last line
+# odroid ALL=(ALL) NOPASSWD: ALL
+# jochenalt ALL=(ALL) NOPASSWD: ALL
+
+### CPU frequency ###
+>sudo apt-get install cpufrequtils
+>cpufreq-set -r -g ondemand
+>cpufreq-info
+>echo $((`cpufreq-info -f` /1000))'Mhz' $((`cat /sys/devices/virtual/thermal/thermal_zone0/temp` /1000))'°'
+>cpufreq-info -c 0 -f -m;cpufreq-info -c 1 -f -m;cpufreq-info -c 2 -f -m;cpufreq-info -c 3 -f -m; cpufreq-info -c 4 -f -m;cpufreq-info -c 5 -f -m;cpufreq-info -c 6 -f -m;cpufreq-info -c 7 -f -m;
+# add alias commands
+echo "" >> >> ~/.bashrc
+echo "# alias for cpu frequency and temperature" >> >> ~/.bashrc
+echo "alias cpu='cpufreq-info -c 0 -f -m;cpufreq-info -c 1 -f -m;cpufreq-info -c 2 -f -m;cpufreq-info -c 3 -f -m; cpufreq-info -c 4 -f -m;cpufreq-info -c 5 -f -m;cpufreq-info -c 6 -f -m;cpufreq-info -c 7 -f -m;'" >> ~/.bashrc
+echo "alias temperatur='echo $((`cpufreq-info -f` /1000))'Mhz' $((`cat /sys/devices/virtual/thermal/thermal_zone0/temp` /1000))'°''" >> ~/.bashrc
+
+
+------------------ Serial Interfaces -----------------
+# plugin Serial Interfaces, make devices writeable when they are plugged in. Necessary for Cortex and for Lidar sensor
+# create a new file:
+>sudo vi /etc/udev/rules.d/ttyusb.rules  
+# create rules that set maximum permissions once a serial or i2c port is plugged in
+KERNEL=="ttyUSB[0-9]*",MODE="0777"
+KERNEL=="ttyS[0-9]*",MODE="0777"
+KERNEL=="i2c-[0-9]*",MODE="0777"
+KERNEL=="i2c-[0-9]*", GROUP="i2c"
+
+# install minicom
+>sudo apt-get install minicom
+# use serial interface on 40-pin port 6(GND) 8(TX1) 10(RX1)
+minicom -D /dev/ttyS1 -b 460800
+
+# Odroid I2C setup accoding to https://www.abelectronics.co.uk/kb/article/1036/odroid-c2-running-ubuntu-i2c-setup
+sudo apt-get install python-smbus i2c-tools
+modprobe aml_i2c
+# to not load everytime, add to /etc/modules
+echo "aml_i2c" | sudo tee /etc/modules
+
+# install ODroid low latency kernel
+sudo apt-get install linux-lowlatency
+
+# I2C Library with Arduino interface: https://github.com/mhct/wire-linux
+
+# --------------------- install ROS lunar ---------------------
+# (according to http://wiki.ros.org/lunar/Installation/Ubuntu)
+>sudo apt-get update
+>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+>sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+>sudo apt-get install ros-lunar-desktop  
+>sudo rosdep init
+>sudo rosdep fix-permissions
+>rosdep update
+>sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+>echo "source /opt/ros/lunar/setup.bash" >> ~/.bashrc
+
+# create catkin workspace
+>mkdir catkin_workspace
+>cd catkin_workspace
+>mkdir src
+>cd src
+>catkin_init_workspace
+>echo "source ~/catkin_workspace/devel/setup.bash" >> ~/.bashrc
+
+# installation of ROS/hector slam 
+>sudo apt-get install ros-lunar-cv-bridge
+>sudo apt-get install ros-lunar-vision-opencv
+>cd ~/catkin_workspace/src
+>git clone https://github.com/tu-darmstadt-ros-pkg/hector_slam -b catkin
+>catkin_make
+
+# installation of ROS/RPlidar
+>cd ~/catkin_workspace/src
+>git clone https://github.com/robopeak/rplidar_ros
+>cd rplidar_ros
+>git checkout slam
+>cd ~/catkin_workspace
+
+---- installation of ROS/navigation package
+>sudo apt-get install libbullet-dev 
+>sudo apt-get install libsdl-dev libsdl-image1.2-dev
+>sudo apt-get install ros-lunar-bfl
+>cd ~/catkin_workspace/src
+
+>git clone https://github.com/ros-planning/navigation -b lunar
+>git clone https://github.com/ros-planning/navigation_msgs # required by navigation
+
+--- make everything in release and with two parallel tasks only (main memory limit)
+>catkin_make -DCMAKE_BUILD_TYPE=Release --make-args -j2
+
+
+--- set ROS logging to debug level
+>sudo echo "log4j.logger.ros.pentapod_engine=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
+>sudo echo "log4j.logger.ros.pentapod_library=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
+>sudo echo "log4j.logger.ros.pentapod_server=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
+
+#
+# ----------------------- install pentapod ---------------------
+>cd ~
+>git clone https://github.com/jochenalt/Pentapod
+>git checkout master
+
+# ROS::Hector
+# start standalone hector nodes accepting scans from a bagfile
+roslaunch hector_slam_launch tutorial.launch
+rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
+# saving a map to a pgm file
+rosrun map_server map_saver -f mymap
+# start a node of map server publishing that map
+rosrun map_server map_server mymap.yaml
+
+#-----------------------  GIT --------------
+# set password to be cached for one day
+git config --global credential.helper "cache --timeout=86400"
