@@ -1,0 +1,412 @@
+EESchema Schematic File Version 2
+LIBS:SensorAdapter-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:SensorAdapter-cache
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "Pentapod"
+Date "23. May 2016"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 "Jochen Alt"
+Comment4 "Sensor Adapter Board"
+$EndDescr
+NoConn ~ 30200 -14200
+NoConn ~ 30200 -14200
+$Comp
+L CP C7
+U 1 1 577C4445
+P 4100 7950
+F 0 "C7" H 4125 8050 50  0000 L CNN
+F 1 "47uF" H 4125 7850 50  0000 L CNN
+F 2 "Discret:C1V8" H 4138 7800 50  0001 C CNN
+F 3 "" H 4100 7950 50  0000 C CNN
+	1    4100 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 576C5127
+P 3300 8000
+F 0 "C2" H 3325 8100 50  0000 L CNN
+F 1 "100nF" H 3325 7900 50  0000 L CNN
+F 2 "Discret:R1" H 3338 7850 30  0001 C CNN
+F 3 "" H 3300 8000 60  0000 C CNN
+	1    3300 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 576C5164
+P 3100 8000
+F 0 "C1" H 3125 8100 50  0000 L CNN
+F 1 "47uF" H 3125 7900 50  0000 L CNN
+F 2 "Discret:C1V8" H 3138 7850 30  0001 C CNN
+F 3 "" H 3100 8000 60  0000 C CNN
+	1    3100 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDPWR #PWR01
+U 1 1 576CFF3F
+P 2250 8300
+F 0 "#PWR01" H 2250 8100 50  0001 C CNN
+F 1 "GNDPWR" H 2250 8170 50  0000 C CNN
+F 2 "" H 2250 8250 60  0000 C CNN
+F 3 "" H 2250 8250 60  0000 C CNN
+	1    2250 8300
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 576CF103
+P 2050 7650
+F 0 "#FLG02" H 2050 7745 50  0001 C CNN
+F 1 "PWR_FLAG" H 2050 7830 50  0000 C CNN
+F 2 "" H 2050 7650 60  0000 C CNN
+F 3 "" H 2050 7650 60  0000 C CNN
+	1    2050 7650
+	1    0    0    -1  
+$EndComp
+Text Label 4100 7650 0    39   ~ 0
++5V
+NoConn ~ 30200 -14200
+NoConn ~ 30200 -14200
+$Comp
+L 7805 U1
+U 1 1 576C4E44
+P 3700 7700
+F 0 "U1" H 3850 7504 60  0000 C CNN
+F 1 "7805" H 3700 7900 60  0000 C CNN
+F 2 "Power_Integrations:TO-220" H 3700 7700 60  0001 C CNN
+F 3 "" H 3700 7700 60  0000 C CNN
+	1    3700 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 576D01C9
+P 2250 8300
+F 0 "#FLG03" H 2250 8395 50  0001 C CNN
+F 1 "PWR_FLAG" H 2250 8480 50  0000 C CNN
+F 2 "" H 2250 8300 60  0000 C CNN
+F 3 "" H 2250 8300 60  0000 C CNN
+	1    2250 8300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 59295606
+P 4450 7950
+F 0 "C3" H 4475 8050 50  0000 L CNN
+F 1 "100nF" H 4475 7850 50  0000 L CNN
+F 2 "Discret:R1" H 4488 7800 30  0001 C CNN
+F 3 "" H 4450 7950 60  0000 C CNN
+	1    4450 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P1
+U 1 1 59295693
+P 1250 8150
+F 0 "P1" H 1250 8400 50  0000 C CNN
+F 1 "ServoIN" V 1350 8150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 1250 8150 50  0001 C CNN
+F 3 "" H 1250 8150 50  0000 C CNN
+	1    1250 8150
+	-1   0    0    1   
+$EndComp
+Text Label 1450 8000 0    39   ~ 0
+RX
+Text Label 1450 8100 0    39   ~ 0
+TX
+Text Label 1450 8200 0    39   ~ 0
+VDD
+Text Label 1450 8300 0    39   ~ 0
+GND
+$Comp
+L ATMEGA328-P IC1
+U 1 1 59295829
+P 7150 5650
+F 0 "IC1" H 6400 6900 50  0000 L BNN
+F 1 "ATMEGA328-P" H 7550 4250 50  0000 L BNN
+F 2 "Housings_DIP:DIP-28_W7.62mm" H 7150 5650 50  0000 C CIN
+F 3 "" H 7150 5650 50  0000 C CNN
+	1    7150 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 1K1
+U 1 1 59295D04
+P 11300 5350
+F 0 "1K1" V 11380 5350 50  0000 C CNN
+F 1 "1K" V 11300 5350 50  0000 C CNN
+F 2 "Discret:R4" V 11230 5350 50  0001 C CNN
+F 3 "" H 11300 5350 50  0000 C CNN
+	1    11300 5350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6250 5150
+$Comp
+L LED-RESCUE-SensorAdapter D1
+U 1 1 592960AC
+P 11000 4300
+F 0 "D1" H 11000 4400 50  0000 C CNN
+F 1 "LED" H 11000 4200 50  0000 C CNN
+F 2 "LEDs:LED-3MM" H 11000 4300 50  0001 C CNN
+F 3 "" H 11000 4300 50  0000 C CNN
+	1    11000 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 59296242
+P 11000 5000
+F 0 "R1" V 11080 5000 50  0000 C CNN
+F 1 "1K" V 11000 5000 50  0000 C CNN
+F 2 "Discret:R4" V 10930 5000 50  0001 C CNN
+F 3 "" H 11000 5000 50  0000 C CNN
+	1    11000 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRYSTAL_OSSCI X1
+U 1 1 59294A20
+P 9900 4250
+F 0 "X1" H 10200 4450 60  0000 C CNN
+F 1 "CRYSTAL_OSSCI" H 9900 4150 60  0000 C CNN
+F 2 "Housings_DIP:DIP-14_W7.62mm" H 9900 4250 60  0001 C CNN
+F 3 "" H 9900 4250 60  0000 C CNN
+	1    9900 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 8300 11950 8300
+Wire Wire Line
+	2050 8200 2050 7650
+Wire Wire Line
+	1450 8200 2050 8200
+Connection ~ 3100 8300
+Connection ~ 3300 8300
+Connection ~ 3700 8300
+Connection ~ 2250 8300
+Connection ~ 2050 7650
+Connection ~ 3100 7650
+Wire Wire Line
+	3700 8300 3700 7950
+Wire Wire Line
+	3300 8300 3300 8150
+Wire Wire Line
+	3100 8300 3100 8150
+Wire Wire Line
+	2050 7650 3300 7650
+Wire Wire Line
+	3300 7650 3300 7850
+Wire Wire Line
+	3100 7850 3100 7650
+Connection ~ 4100 7650
+Wire Wire Line
+	4100 8300 4100 8100
+Connection ~ 4100 8300
+Wire Wire Line
+	29500 -13950 23450 -13950
+Wire Wire Line
+	29500 -12950 29500 -13950
+Wire Wire Line
+	4100 7650 4100 7800
+Connection ~ 3450 8300
+Wire Wire Line
+	4450 7650 4100 7650
+Wire Wire Line
+	4450 3400 4450 7800
+Wire Wire Line
+	4450 8100 4450 8300
+Connection ~ 4450 8300
+Wire Wire Line
+	6250 6750 6250 8300
+Connection ~ 4450 7650
+Wire Wire Line
+	4450 3400 11950 3400
+Wire Wire Line
+	11000 3400 11300 3400
+Wire Wire Line
+	8150 6000 11300 6000
+Wire Wire Line
+	6250 4550 6250 3400
+Connection ~ 6250 3400
+Wire Wire Line
+	6250 4850 6050 4850
+Wire Wire Line
+	6050 4850 6050 3400
+Connection ~ 6050 3400
+Wire Wire Line
+	11000 3400 11000 4100
+Connection ~ 11000 3400
+Wire Wire Line
+	8150 6150 8700 6150
+Wire Wire Line
+	8700 6150 8700 7250
+Wire Wire Line
+	8700 7250 1450 7250
+Wire Wire Line
+	1450 7250 1450 8000
+Wire Wire Line
+	1450 8100 1600 8100
+Wire Wire Line
+	1600 8100 1600 7350
+Wire Wire Line
+	1600 7350 8850 7350
+Wire Wire Line
+	8850 7350 8850 6250
+Wire Wire Line
+	8850 6250 8150 6250
+Wire Wire Line
+	11300 6000 11300 5500
+Wire Wire Line
+	11300 3400 11300 5200
+Connection ~ 11300 3400
+Wire Wire Line
+	9900 3650 9900 3400
+Connection ~ 9900 3400
+Wire Wire Line
+	9900 8300 9900 4750
+Connection ~ 6250 8300
+Wire Wire Line
+	10500 4250 10500 5150
+Wire Wire Line
+	10500 5150 8150 5150
+Wire Wire Line
+	8150 4950 8550 4950
+Wire Wire Line
+	8150 5050 8550 5050
+NoConn ~ 8150 6750
+NoConn ~ 8150 6650
+NoConn ~ 8150 6550
+NoConn ~ 8150 6450
+NoConn ~ 8150 6350
+NoConn ~ 8150 5250
+NoConn ~ 8150 5500
+NoConn ~ 8150 5600
+NoConn ~ 8150 4750
+NoConn ~ 8150 4650
+Text Label 8150 4850 0    39   ~ 0
+MOSI
+Text Label 8150 4950 0    39   ~ 0
+MISO
+Text Label 8150 5050 0    39   ~ 0
+SCK
+$Comp
+L CONN_01X04 P2
+U 1 1 5929710D
+P 12200 5750
+F 0 "P2" H 12200 6000 50  0000 C CNN
+F 1 "VL6180X" V 12300 5750 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 12200 5750 50  0001 C CNN
+F 3 "" H 12200 5750 50  0000 C CNN
+	1    12200 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11950 8300 11950 5600
+Connection ~ 9900 8300
+Text Label 8150 5900 0    39   ~ 0
+SCL
+Text Label 8150 5800 0    39   ~ 0
+SDA
+Wire Wire Line
+	8150 5900 12000 5900
+Wire Wire Line
+	8150 5800 12000 5800
+$Comp
+L CONN_01X03 P3
+U 1 1 59297DA8
+P 8750 4950
+F 0 "P3" H 8750 5150 50  0000 C CNN
+F 1 "ISP" V 8850 4950 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 8750 4950 50  0001 C CNN
+F 3 "" H 8750 4950 50  0000 C CNN
+	1    8750 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4850 8550 4850
+Wire Wire Line
+	11000 4500 11000 4850
+Wire Wire Line
+	8150 5400 11000 5400
+Wire Wire Line
+	11000 5400 11000 5150
+NoConn ~ 8150 5700
+Connection ~ 6250 6850
+Wire Wire Line
+	11950 5600 12000 5600
+$Comp
+L CONN_01X01 P4
+U 1 1 5929DF91
+P 11500 6000
+F 0 "P4" H 11500 6100 50  0000 C CNN
+F 1 "RST" V 11600 6000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 11500 6000 50  0001 C CNN
+F 3 "" H 11500 6000 50  0000 C CNN
+	1    11500 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11150 6500 11150 8300
+Connection ~ 11150 8300
+$Comp
+L CONN_01X02 P5
+U 1 1 5931E64C
+P 11350 6450
+F 0 "P5" H 11350 6600 50  0000 C CNN
+F 1 "VDD-GND" V 11450 6450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 11350 6450 50  0001 C CNN
+F 3 "" H 11350 6450 50  0000 C CNN
+	1    11350 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11150 6400 11150 3400
+Connection ~ 11150 3400
+Connection ~ 9050 5700
+Wire Wire Line
+	12000 5700 11450 5700
+Wire Wire Line
+	11450 5700 11450 3400
+Connection ~ 11450 3400
+NoConn ~ 8150 4550
+NoConn ~ 8150 6850
+$EndSCHEMATC

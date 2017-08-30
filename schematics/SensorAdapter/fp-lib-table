@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name CortexBoard)(type KiCad)(uri D:/Projects/Manfred/schematics/CortexBoard)(options "")(descr ""))
+)

@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BNO055
+D Connector 01x03
+$ENDCMP
+#
+$CMP CONN_01X03
+D Connector 01x03
+$ENDCMP
+#
+$CMP D24VD5F
+D Connector 01x04
+$ENDCMP
+#
+#End Doc Library
