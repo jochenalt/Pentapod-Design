@@ -297,7 +297,7 @@ U 1 1 593EB317
 P 2700 4000
 F 0 "C1" H 2725 4100 50  0000 L CNN
 F 1 "470uF" H 2725 3900 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 2738 3850 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 2738 3850 50  0001 C CNN
 F 3 "" H 2700 4000 50  0001 C CNN
 	1    2700 4000
 	-1   0    0    1   
@@ -326,17 +326,6 @@ Text Label 3150 4950 0    39   ~ 0
 RST
 NoConn ~ 5400 2150
 NoConn ~ 5100 2150
-$Comp
-L CONN_01X04 J5
-U 1 1 598E3901
-P 4950 5450
-F 0 "J5" H 4950 5700 50  0000 C CNN
-F 1 "LevelShifter_in" V 5050 5450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 4950 5450 50  0001 C CNN
-F 3 "" H 4950 5450 50  0001 C CNN
-	1    4950 5450
-	1    0    0    1   
-$EndComp
 Text Label 4750 5600 0    39   ~ 0
 GND
 Text Label 4750 5500 0    39   ~ 0
@@ -348,32 +337,21 @@ VIn+5V
 $Comp
 L CONN_01X04 J7
 U 1 1 598E56BD
-P 5700 5450
-F 0 "J7" H 5700 5700 50  0000 C CNN
-F 1 "Cortex I2C CLI" V 5800 5450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 5700 5450 50  0001 C CNN
-F 3 "" H 5700 5450 50  0001 C CNN
-	1    5700 5450
+P 6150 5450
+F 0 "J7" H 6150 5700 50  0000 C CNN
+F 1 "Cortex I2C CLI" V 6250 5450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6150 5450 50  0001 C CNN
+F 3 "" H 6150 5450 50  0001 C CNN
+	1    6150 5450
 	-1   0    0    1   
 $EndComp
-$Comp
-L CONN_01X04 J6
-U 1 1 598E5953
-P 5300 5450
-F 0 "J6" H 5300 5700 50  0000 C CNN
-F 1 "LevelShifter-Out" V 5400 5450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 5300 5450 50  0001 C CNN
-F 3 "" H 5300 5450 50  0001 C CNN
-	1    5300 5450
-	-1   0    0    1   
-$EndComp
-Text Label 5900 5300 0    39   ~ 0
+Text Label 6350 5300 0    39   ~ 0
 3.3V_ODroid
-Text Label 5900 5400 0    39   ~ 0
+Text Label 6350 5400 0    39   ~ 0
 SCL-ODroid
-Text Label 5900 5500 0    39   ~ 0
+Text Label 6350 5500 0    39   ~ 0
 SDA-ODroid
-Text Label 5900 5600 0    39   ~ 0
+Text Label 6350 5600 0    39   ~ 0
 GND
 NoConn ~ 6450 3250
 NoConn ~ 4600 2150
@@ -465,19 +443,7 @@ Wire Wire Line
 	11050 6150 11050 3100
 Connection ~ 11050 6150
 Wire Wire Line
-	900  650  2900 650 
-Wire Wire Line
-	2900 650  6800 650 
-Wire Wire Line
-	6800 650  7650 650 
-Wire Wire Line
-	7650 650  8550 650 
-Wire Wire Line
-	8550 650  9450 650 
-Wire Wire Line
-	9450 650  10350 650 
-Wire Wire Line
-	10350 650  10550 650 
+	900  650  10550 650 
 Connection ~ 9250 6150
 Wire Wire Line
 	4900 4600 4900 5200
@@ -488,13 +454,9 @@ Wire Wire Line
 Wire Wire Line
 	6100 2050 9550 2050
 Wire Wire Line
-	9550 2050 9550 5500
+	9550 2050 9550 5800
 Wire Wire Line
-	9550 5500 9550 5800
-Wire Wire Line
-	9650 1950 9650 5450
-Wire Wire Line
-	9650 5450 9650 5800
+	9650 1950 9650 5800
 Wire Wire Line
 	3900 850  3900 2150
 Connection ~ 3900 850 
@@ -505,15 +467,10 @@ Wire Wire Line
 Wire Wire Line
 	6500 6800 6500 7150
 Wire Wire Line
-	2900 650  2900 1250
-Connection ~ 2900 650 
-Wire Wire Line
 	2900 6150 2900 2150
 Connection ~ 2900 6150
 Wire Wire Line
-	2900 1550 2900 1700
-Wire Wire Line
-	2900 1700 2900 1850
+	2900 1550 2900 1850
 Wire Wire Line
 	2900 1700 6000 1700
 Connection ~ 2900 1700
@@ -536,9 +493,7 @@ Wire Wire Line
 	4100 4600 4100 5700
 Connection ~ 3700 6800
 Wire Wire Line
-	3450 6800 3700 6800
-Wire Wire Line
-	3700 6800 6500 6800
+	3450 6800 6500 6800
 Wire Wire Line
 	4900 1300 4900 2150
 Wire Wire Line
@@ -563,27 +518,7 @@ Wire Wire Line
 	9450 650  9450 5800
 Connection ~ 9450 650 
 Wire Wire Line
-	950  6150 2350 6150
-Wire Wire Line
-	2350 6150 2700 6150
-Wire Wire Line
-	2700 6150 2900 6150
-Wire Wire Line
-	2900 6150 3150 6150
-Wire Wire Line
-	3150 6150 3900 6150
-Wire Wire Line
-	3900 6150 4100 6150
-Wire Wire Line
-	4100 6150 4750 6150
-Wire Wire Line
-	4750 6150 5500 6150
-Wire Wire Line
-	5500 6150 6600 6150
-Wire Wire Line
-	6600 6150 9250 6150
-Wire Wire Line
-	9250 6150 11050 6150
+	950  6150 11050 6150
 Wire Wire Line
 	3150 5050 3250 5050
 Wire Wire Line
@@ -619,10 +554,7 @@ Wire Wire Line
 	3800 850  3800 5300
 Connection ~ 3800 850 
 Wire Wire Line
-	5500 5600 5900 5600
-Wire Wire Line
-	5500 5600 5500 6150
-Connection ~ 5500 6150
+	5950 5600 6350 5600
 Wire Wire Line
 	5800 2050 5800 2150
 Wire Wire Line
@@ -630,58 +562,18 @@ Wire Wire Line
 Wire Wire Line
 	6700 3100 6650 3100
 Wire Wire Line
-	850  550  7200 550 
+	850  550  10950 550 
 Wire Wire Line
-	7200 550  8050 550 
-Wire Wire Line
-	8050 550  8950 550 
-Wire Wire Line
-	8950 550  9850 550 
-Wire Wire Line
-	9850 550  10750 550 
-Wire Wire Line
-	10750 550  10950 550 
-Wire Wire Line
-	950  850  2350 850 
-Wire Wire Line
-	2350 850  2700 850 
-Wire Wire Line
-	2700 850  3450 850 
-Wire Wire Line
-	3450 850  3800 850 
-Wire Wire Line
-	3800 850  3900 850 
+	950  850  3900 850 
 Wire Wire Line
 	9250 5700 9250 6150
 Wire Wire Line
 	10250 5700 10250 5800
 Wire Wire Line
-	6600 5700 6700 5700
-Wire Wire Line
-	6700 5700 7100 5700
-Wire Wire Line
-	7100 5700 7550 5700
-Wire Wire Line
-	7550 5700 7950 5700
-Wire Wire Line
-	7950 5700 8450 5700
-Wire Wire Line
-	8450 5700 8850 5700
-Wire Wire Line
-	8850 5700 9250 5700
-Wire Wire Line
-	9250 5700 9350 5700
-Wire Wire Line
-	9350 5700 9750 5700
-Wire Wire Line
-	9750 5700 10250 5700
-Wire Wire Line
-	10250 5700 10650 5700
+	6600 5700 10700 5700
 Wire Wire Line
 	9350 5700 9350 5800
 Connection ~ 9350 5700
-Wire Wire Line
-	10650 5700 10650 5800
 Connection ~ 10250 5700
 Wire Wire Line
 	9750 5800 9750 5700
@@ -693,15 +585,11 @@ Wire Wire Line
 	8850 5800 8850 5700
 Connection ~ 8850 5700
 Wire Wire Line
-	8650 4800 8650 5500
-Wire Wire Line
-	8650 5500 8650 5800
+	8650 4800 8650 5800
 Wire Wire Line
 	6100 4800 8650 4800
 Wire Wire Line
-	8750 4700 8750 5450
-Wire Wire Line
-	8750 5450 8750 5800
+	8750 4700 8750 5800
 Wire Wire Line
 	6200 4700 8750 4700
 Wire Wire Line
@@ -723,11 +611,7 @@ Wire Wire Line
 Wire Wire Line
 	10450 5500 10450 5800
 Wire Wire Line
-	10850 3400 10850 5250
-Wire Wire Line
-	10850 5250 10850 5500
-Wire Wire Line
-	10850 5500 10850 5800
+	10850 3400 10850 5800
 Wire Wire Line
 	10050 5450 10050 5800
 Wire Wire Line
@@ -755,17 +639,13 @@ Connection ~ 8450 5700
 Wire Wire Line
 	7950 5800 7950 5700
 Connection ~ 7950 5700
-Wire Wire Line
-	6700 5700 6700 5800
 Connection ~ 7550 5700
 Wire Wire Line
 	7100 5800 7100 5700
 Connection ~ 7100 5700
 Connection ~ 6700 5700
 Wire Wire Line
-	7000 5200 7000 5450
-Wire Wire Line
-	7000 5450 7000 5800
+	7000 5200 7000 5800
 Wire Wire Line
 	4900 5200 7000 5200
 Wire Wire Line
@@ -781,13 +661,9 @@ Wire Wire Line
 Wire Wire Line
 	7400 5450 7400 5800
 Wire Wire Line
-	7750 5000 7750 5500
+	7750 5000 7750 5800
 Wire Wire Line
-	7750 5500 7750 5800
-Wire Wire Line
-	7850 4900 7850 5450
-Wire Wire Line
-	7850 5450 7850 5800
+	7850 4900 7850 5800
 Wire Wire Line
 	4700 5000 7750 5000
 Wire Wire Line
@@ -799,9 +675,7 @@ Wire Wire Line
 	8050 5800 8050 550 
 Connection ~ 8050 550 
 Wire Wire Line
-	6900 5100 6900 5500
-Wire Wire Line
-	6900 5500 6900 5800
+	6900 5100 6900 5800
 Wire Wire Line
 	7300 5500 6900 5500
 Connection ~ 6900 5500
@@ -824,22 +698,15 @@ Connection ~ 10850 5500
 Wire Wire Line
 	10950 5450 10550 5450
 Wire Wire Line
-	10950 3500 10950 5250
-Wire Wire Line
-	10950 5250 10950 5450
-Wire Wire Line
-	10950 5450 10950 5800
+	10950 3500 10950 5800
 Connection ~ 10950 5450
 Connection ~ 6600 6150
-Connection ~ 6600 5700
 Wire Wire Line
-	6600 5700 6600 6150
+	5950 5300 6350 5300
 Wire Wire Line
-	5500 5300 5900 5300
+	5950 5400 6350 5400
 Wire Wire Line
-	5500 5400 5900 5400
-Wire Wire Line
-	5500 5500 5900 5500
+	5950 5500 6350 5500
 Wire Wire Line
 	3800 5300 4750 5300
 Wire Wire Line
@@ -853,21 +720,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 7550 1900 7150
 Wire Wire Line
-	950  7550 1350 7550
-Wire Wire Line
-	1350 7550 1600 7550
-Wire Wire Line
-	1600 7550 1900 7550
-Wire Wire Line
-	1900 7550 4000 7550
-Wire Wire Line
-	4000 7550 4950 7550
-Wire Wire Line
-	4950 7550 6050 7550
-Wire Wire Line
-	6050 7550 6500 7550
-Wire Wire Line
-	6500 7550 6750 7550
+	950  7550 6750 7550
 Wire Wire Line
 	4000 7550 4000 7200
 Wire Wire Line
@@ -878,9 +731,7 @@ Wire Wire Line
 Wire Wire Line
 	1900 6700 1900 6950
 Wire Wire Line
-	950  6950 1900 6950
-Wire Wire Line
-	1900 6950 2000 6950
+	950  6950 2000 6950
 Connection ~ 1900 7550
 Connection ~ 1900 6950
 NoConn ~ 4200 2150
@@ -929,7 +780,7 @@ Wire Wire Line
 Wire Wire Line
 	1050 1650 1050 5850
 Wire Wire Line
-	1100 5850 1050 5850
+	1050 5850 1100 5850
 Text Label 1100 5850 0    39   ~ 0
 Relay-Out
 Text Label 1100 5750 0    39   ~ 0
@@ -1004,17 +855,13 @@ Wire Wire Line
 Wire Wire Line
 	1750 7250 2000 7250
 Wire Wire Line
-	1750 6450 1750 6500
-Wire Wire Line
-	1750 6500 1750 7250
+	1750 6450 1750 7250
 Wire Wire Line
 	950  6850 1250 6850
 Wire Wire Line
 	1550 6850 1600 6850
 Wire Wire Line
-	1600 6600 1600 6850
-Wire Wire Line
-	1600 6850 1600 7550
+	1600 6600 1600 7550
 Connection ~ 1600 7550
 Wire Wire Line
 	2650 7100 2650 6700
@@ -1052,7 +899,7 @@ Batt+
 Text Label 950  7050 0    39   ~ 0
 Switch1
 Text Label 950  6950 0    39   ~ 0
-Switch2
+Switch2/LEDAnode
 Wire Wire Line
 	4000 5800 4100 5800
 $Comp
@@ -1067,13 +914,7 @@ F 3 "" H 4300 5800 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	1000 6500 1750 6500
-Wire Wire Line
-	1750 6500 3450 6500
-Wire Wire Line
-	3450 6500 3700 6500
-Wire Wire Line
-	3700 6500 6550 6500
+	1000 6500 6550 6500
 Text Label 5350 650  0    39   ~ 0
 +10V
 Text Label 5350 550  0    39   ~ 0
@@ -1082,4 +923,25 @@ Wire Wire Line
 	1100 5950 950  5950
 Wire Wire Line
 	950  5950 950  6150
+$Comp
+L I2C_LevelShifter U1
+U 1 1 59A7DC3F
+P 5750 5350
+F 0 "U1" H 4950 5600 50  0000 C CNN
+F 1 "I2C_LevelShifter" H 5350 4950 50  0000 C CNN
+F 2 "Cortex:I2C_LevelShifter" H 5750 5350 50  0001 C CIN
+F 3 "" H 4950 5700 50  0001 C CNN
+	1    5750 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 5800 10650 5700
+Connection ~ 10650 5700
+Wire Wire Line
+	2900 1250 2900 550 
+Connection ~ 2900 550 
+Wire Wire Line
+	6600 5700 6600 6150
+Wire Wire Line
+	6700 5700 6700 5800
 $EndSCHEMATC

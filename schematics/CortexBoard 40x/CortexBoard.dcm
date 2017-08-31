@@ -12,6 +12,12 @@ $CMP D24VD5F
 D Connector 01x04
 $ENDCMP
 #
+$CMP I2C_LevelShifter
+D PDIP8, 1k Flash, No SRAM, No EEPROM
+K AVR 8bit Microcontroller tinyAVR
+F http://www.atmel.com/Images/doc1006.pdf
+$ENDCMP
+#
 $CMP XL4015
 D Connector 01x04
 $ENDCMP
