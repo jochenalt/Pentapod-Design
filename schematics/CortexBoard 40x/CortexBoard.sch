@@ -88,7 +88,7 @@ U 1 1 50E7F8BE
 P 2350 3650
 F 0 "C16" H 2400 3750 50  0000 L CNN
 F 1 "100nF" H 2400 3550 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_Tantal_D5.0mm_P2.50mm" H 2350 3650 60  0001 C CNN
+F 2 "Capacitors_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 2350 3650 60  0001 C CNN
 F 3 "" H 2350 3650 60  0001 C CNN
 	1    2350 3650
 	1    0    0    -1  
@@ -297,7 +297,7 @@ U 1 1 593EB317
 P 2700 4000
 F 0 "C1" H 2725 4100 50  0000 L CNN
 F 1 "470uF" H 2725 3900 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 2738 3850 50  0001 C CNN
+F 2 "Capacitors_THT:CP_Axial_L11.0mm_D6.0mm_P18.00mm_Horizontal" H 2738 3850 50  0001 C CNN
 F 3 "" H 2700 4000 50  0001 C CNN
 	1    2700 4000
 	-1   0    0    1   
@@ -440,7 +440,7 @@ Wire Wire Line
 Wire Wire Line
 	7300 3100 11050 3100
 Wire Wire Line
-	11050 6150 11050 3100
+	11050 3100 11050 6150
 Connection ~ 11050 6150
 Wire Wire Line
 	900  650  10550 650 
@@ -518,7 +518,7 @@ Wire Wire Line
 	9450 650  9450 5800
 Connection ~ 9450 650 
 Wire Wire Line
-	950  6150 11050 6150
+	11050 6150 950  6150
 Wire Wire Line
 	3150 5050 3250 5050
 Wire Wire Line
@@ -534,7 +534,7 @@ Wire Wire Line
 Wire Wire Line
 	3150 5250 3450 5250
 Wire Wire Line
-	3450 850  3450 5250
+	3450 5250 3450 850 
 Connection ~ 3450 850 
 Connection ~ 2700 850 
 Wire Wire Line
@@ -729,9 +729,7 @@ Connection ~ 4000 7550
 Wire Wire Line
 	2000 7150 2000 7050
 Wire Wire Line
-	1900 6700 1900 6950
-Wire Wire Line
-	950  6950 2000 6950
+	1900 7050 1900 6700
 Connection ~ 1900 7550
 Connection ~ 1900 6950
 NoConn ~ 4200 2150
@@ -816,17 +814,6 @@ Connection ~ 3700 6500
 Connection ~ 3450 6500
 Connection ~ 4950 7550
 $Comp
-L CONN_01X08 J4
-U 1 1 59A2ADF0
-P 750 7200
-F 0 "J4" H 750 7650 50  0000 C CNN
-F 1 "Switches" V 850 7200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 750 7200 50  0001 C CNN
-F 3 "" H 750 7200 50  0001 C CNN
-	1    750  7200
-	-1   0    0    1   
-$EndComp
-$Comp
 L CONN_01X05 P1
 U 1 1 59A2AEF8
 P 1150 7350
@@ -845,11 +832,7 @@ Wire Wire Line
 Wire Wire Line
 	950  7250 1350 7250
 Wire Wire Line
-	1350 7150 950  7150
-Wire Wire Line
-	950  7050 1350 7050
-Wire Wire Line
-	1350 7050 1350 7150
+	500  7150 1350 7150
 Wire Wire Line
 	1900 7150 2000 7150
 Wire Wire Line
@@ -857,7 +840,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 6450 1750 7250
 Wire Wire Line
-	950  6850 1250 6850
+	500  6850 1250 6850
 Wire Wire Line
 	1550 6850 1600 6850
 Wire Wire Line
@@ -896,10 +879,8 @@ Text Label 950  7250 0    39   ~ 0
 Batt3
 Text Label 950  7150 0    39   ~ 0
 Batt+
-Text Label 950  7050 0    39   ~ 0
+Text Label 500  7150 0    39   ~ 0
 Switch1
-Text Label 950  6950 0    39   ~ 0
-Switch2/LEDAnode
 Wire Wire Line
 	4000 5800 4100 5800
 $Comp
@@ -944,4 +925,36 @@ Wire Wire Line
 	6600 5700 6600 6150
 Wire Wire Line
 	6700 5700 6700 5800
+Wire Wire Line
+	6050 6500 3700 6500
+Connection ~ 6050 6500
+$Comp
+L CONN_01X04 J5
+U 1 1 59A9B3A8
+P 300 7000
+F 0 "J5" H 300 7250 50  0000 C CNN
+F 1 "LED/Switch" V 400 7000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 300 7000 50  0001 C CNN
+F 3 "" H 300 7000 50  0001 C CNN
+	1    300  7000
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X05 J4
+U 1 1 59A9B653
+P 750 7350
+F 0 "J4" H 750 7650 50  0000 C CNN
+F 1 "Switches" V 850 7350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 750 7350 50  0001 C CNN
+F 3 "" H 750 7350 50  0001 C CNN
+	1    750  7350
+	-1   0    0    1   
+$EndComp
+Connection ~ 950  7150
+Wire Wire Line
+	500  7050 1900 7050
+Wire Wire Line
+	500  6950 2000 6950
+Text Label 500  7050 0    39   ~ 0
+Switch2/Vin
 $EndSCHEMATC

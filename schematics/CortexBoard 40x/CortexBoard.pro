@@ -1,4 +1,4 @@
-update=08.06.2017 00:27:08
+update=01.09.2017 16:01:19
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../CortexBoard
+LibDir=
 [eeschema/libraries]
 LibName1=CortexBoard-rescue
 LibName2=power
