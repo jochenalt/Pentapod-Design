@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:CortexBoard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -207,7 +206,7 @@ L R R1
 U 1 1 59363689
 P 2900 1400
 F 0 "R1" V 2980 1400 50  0000 C CNN
-F 1 "82K" V 2900 1400 50  0000 C CNN
+F 1 "150K" V 2900 1400 50  0000 C CNN
 F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 1400 50  0001 C CNN
 F 3 "" H 2900 1400 50  0000 C CNN
 	1    2900 1400

@@ -50,30 +50,6 @@ NoConn ~ 30200 -14200
 Text Label 8150 6150 0    39   ~ 0
 GND
 $Comp
-L GNDPWR #PWR01
-U 1 1 576CFF3F
-P 1850 7500
-F 0 "#PWR01" H 1850 7300 50  0001 C CNN
-F 1 "GNDPWR" H 1850 7370 50  0000 C CNN
-F 2 "" H 1850 7450 60  0000 C CNN
-F 3 "" H 1850 7450 60  0000 C CNN
-	1    1850 7500
-	1    0    0    -1  
-$EndComp
-$Comp
-L PWR_FLAG #FLG02
-U 1 1 576CF103
-P 1650 6850
-F 0 "#FLG02" H 1650 6945 50  0001 C CNN
-F 1 "PWR_FLAG" H 1650 7030 50  0000 C CNN
-F 2 "" H 1650 6850 60  0000 C CNN
-F 3 "" H 1650 6850 60  0000 C CNN
-	1    1650 6850
-	1    0    0    -1  
-$EndComp
-Text Label 1600 7500 0    39   ~ 0
-GND
-$Comp
 L SW_PUSH SW2
 U 1 1 50E56802
 P 8200 3100
@@ -99,21 +75,6 @@ NoConn ~ 30200 -14200
 NoConn ~ 30200 -14200
 Text Label 8150 6150 0    39   ~ 0
 GND
-Text Label 1600 7500 0    39   ~ 0
-GND
-$Comp
-L PWR_FLAG #FLG03
-U 1 1 576D01C9
-P 1850 7500
-F 0 "#FLG03" H 1850 7595 50  0001 C CNN
-F 1 "PWR_FLAG" H 1850 7680 50  0000 C CNN
-F 2 "" H 1850 7500 60  0000 C CNN
-F 3 "" H 1850 7500 60  0000 C CNN
-	1    1850 7500
-	1    0    0    -1  
-$EndComp
-Text Label 1600 7400 0    39   ~ 0
-VDD_11V
 NoConn ~ 4400 2150
 NoConn ~ 4500 2150
 NoConn ~ 5200 2150
@@ -131,25 +92,6 @@ $EndComp
 NoConn ~ 5400 4600
 NoConn ~ 5300 4600
 NoConn ~ 5900 2150
-$Comp
-L CONN_01X02 P1
-U 1 1 59356917
-P 1400 7450
-F 0 "P1" H 1400 7600 50  0000 C CNN
-F 1 "Power IN 3S 11.1" V 1500 7450 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1400 7450 50  0001 C CNN
-F 3 "" H 1400 7450 50  0000 C CNN
-	1    1400 7450
-	-1   0    0    1   
-$EndComp
-Text Label 3150 6850 0    39   ~ 0
-VIN
-Text Label 3150 6950 0    39   ~ 0
-GND
-Text Label 3150 7050 0    39   ~ 0
-GND
-Text Label 3150 7150 0    39   ~ 0
-+5V
 $Comp
 L CONN_01X01 P6
 U 1 1 59358754
@@ -172,19 +114,6 @@ F 3 "" H 10000 5800 50  0000 C CNN
 	1    10000 5800
 	0    -1   1    0   
 $EndComp
-$Comp
-L Relay_1xON REL1
-U 1 1 59358F52
-P 4350 7050
-F 0 "REL1" H 4350 7150 50  0000 C CNN
-F 1 "HF49FD" H 4350 6950 50  0000 C CNN
-F 2 "Cortex:Relay_HF49FD" H 4350 7050 50  0001 C CNN
-F 3 "" H 4350 7050 50  0000 C CNN
-	1    4350 7050
-	-1   0    0    1   
-$EndComp
-Text Label 4850 7050 0    39   ~ 0
-R7.4V
 $Comp
 L CONN_01X04 P5
 U 1 1 5935A38C
@@ -245,28 +174,6 @@ Text Label 9400 5600 0    39   ~ 0
 TX5
 Text Label 9500 5600 0    39   ~ 0
 RX5
-$Comp
-L R R5
-U 1 1 5935DF4C
-P 6500 6900
-F 0 "R5" V 6580 6900 50  0000 C CNN
-F 1 "1K" V 6500 6900 50  0000 C CNN
-F 2 "Discret:R4" V 6430 6900 50  0001 C CNN
-F 3 "" H 6500 6900 50  0000 C CNN
-	1    6500 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L D_Schottky D2
-U 1 1 5935E078
-P 4750 6550
-F 0 "D2" H 4750 6650 50  0000 C CNN
-F 1 "D_Schottky" H 4750 6450 50  0000 C CNN
-F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4750 6550 50  0001 C CNN
-F 3 "" H 4750 6550 50  0000 C CNN
-	1    4750 6550
-	0    1    1    0   
-$EndComp
 NoConn ~ 4100 2150
 NoConn ~ 4300 2150
 NoConn ~ 5300 2150
@@ -277,7 +184,7 @@ U 1 1 59363610
 P 2900 2000
 F 0 "R2" V 2980 2000 50  0000 C CNN
 F 1 "10K" V 2900 2000 50  0000 C CNN
-F 2 "Discret:R4" V 2830 2000 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 2000 50  0001 C CNN
 F 3 "" H 2900 2000 50  0000 C CNN
 	1    2900 2000
 	1    0    0    -1  
@@ -287,38 +194,14 @@ L R R1
 U 1 1 59363689
 P 2900 1400
 F 0 "R1" V 2980 1400 50  0000 C CNN
-F 1 "82K" V 2900 1400 50  0000 C CNN
-F 2 "Discret:R4" V 2830 1400 50  0001 C CNN
+F 1 "150K" V 2900 1400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2830 1400 50  0001 C CNN
 F 3 "" H 2900 1400 50  0000 C CNN
 	1    2900 1400
 	1    0    0    -1  
 $EndComp
-$Comp
-L LED-RESCUE-CortexBoard D1
-U 1 1 59365315
-P 5200 6450
-F 0 "D1" H 5200 6550 50  0000 C CNN
-F 1 "LED" H 5200 6350 50  0000 C CNN
-F 2 "LEDs:LED_D3.0mm" H 5200 6450 50  0001 C CNN
-F 3 "" H 5200 6450 50  0000 C CNN
-	1    5200 6450
-	0    1    1    0   
-$EndComp
-$Comp
-L R R3
-U 1 1 593653DF
-P 5200 7150
-F 0 "R3" V 5280 7150 50  0000 C CNN
-F 1 "4,7K" V 5200 7150 50  0000 C CNN
-F 2 "Discret:R4" V 5130 7150 50  0001 C CNN
-F 3 "" H 5200 7150 50  0000 C CNN
-	1    5200 7150
-	1    0    0    -1  
-$EndComp
 NoConn ~ 5100 4600
 NoConn ~ 5200 4600
-NoConn ~ 5500 4600
-NoConn ~ 5600 4600
 NoConn ~ 5700 4600
 NoConn ~ 5900 4600
 NoConn ~ 6000 4600
@@ -342,30 +225,7 @@ Text Label 4950 5700 0    39   ~ 0
 TX
 Text Label 4950 5800 0    39   ~ 0
 RX
-$Comp
-L Q_NPN_CBE Q1
-U 1 1 593C8FBB
-P 6300 7300
-F 0 "Q1" H 6500 7350 50  0000 L CNN
-F 1 "BC337(o.ä.)" H 6500 7250 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-92_Inline_Wide" H 6500 7400 50  0001 C CNN
-F 3 "" H 6300 7300 50  0001 C CNN
-	1    6300 7300
-	-1   0    0    -1  
-$EndComp
 NoConn ~ 4600 4600
-NoConn ~ 3150 6750
-$Comp
-L D24VD5F P3
-U 1 1 593C62E9
-P 3350 7000
-F 0 "P3" H 3550 7225 50  0000 C CNN
-F 1 "D24V50F5" H 3525 6750 50  0000 C CNN
-F 2 "Cortex:Pololu_D24V50F5" H 3350 7000 50  0001 C CNN
-F 3 "" H 3350 7000 50  0000 C CNN
-	1    3350 7000
-	1    0    0    -1  
-$EndComp
 NoConn ~ 4300 4600
 NoConn ~ 4400 4600
 NoConn ~ 4000 2150
@@ -380,43 +240,6 @@ F 3 "" H 10100 5150 50  0001 C CNN
 	1    10100 5150
 	0    -1   -1   0   
 $EndComp
-$Comp
-L CONN_01X02 J3
-U 1 1 593E54C8
-P 1100 3500
-F 0 "J3" H 1100 3650 50  0000 C CNN
-F 1 "Odroid Power" V 1200 3500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1100 3500 50  0001 C CNN
-F 3 "" H 1100 3500 50  0001 C CNN
-	1    1100 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L CONN_01X04 J4
-U 1 1 593E6850
-P 950 6500
-F 0 "J4" H 950 6750 50  0000 C CNN
-F 1 "Power Switch & LED" V 1050 6500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 950 6500 50  0001 C CNN
-F 3 "" H 950 6500 50  0001 C CNN
-	1    950  6500
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R4
-U 1 1 593E6FFB
-P 1150 5900
-F 0 "R4" V 1230 5900 50  0000 C CNN
-F 1 "470" V 1150 5900 50  0000 C CNN
-F 2 "Discret:R4" V 1080 5900 50  0001 C CNN
-F 3 "" H 1150 5900 50  0001 C CNN
-	1    1150 5900
-	-1   0    0    1   
-$EndComp
-Text Label 1150 6350 0    39   ~ 0
-LEDAnode
-Text Label 1150 6450 0    39   ~ 0
-LEDKathode
 NoConn ~ 4200 4600
 $Comp
 L CP C1
@@ -429,10 +252,6 @@ F 3 "" H 2700 4000 50  0001 C CNN
 	1    2700 4000
 	-1   0    0    1   
 $EndComp
-Text Label 1150 6650 0    39   ~ 0
-SWin_11.1V
-Text Label 1150 6550 0    39   ~ 0
-SWout_11.1V
 Text Label 3150 5050 0    39   ~ 0
 SCL
 Text Label 3150 5150 0    39   ~ 0
@@ -453,17 +272,10 @@ F 3 "" H 2950 5150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 NoConn ~ 5500 2150
-Connection ~ 2350 7500
-Wire Wire Line
-	1650 7400 1650 6850
-Wire Wire Line
-	1600 7400 1650 7400
 Connection ~ 2350 850 
 Wire Wire Line
 	2350 850  2350 3850
 Connection ~ 2350 6150
-Connection ~ 1850 7500
-Connection ~ 1650 6850
 Wire Wire Line
 	29500 -13950 23450 -13950
 Wire Wire Line
@@ -472,27 +284,26 @@ Connection ~ 3900 6150
 Wire Wire Line
 	3900 4600 3900 6150
 Wire Wire Line
-	3150 6950 2850 6950
-Wire Wire Line
-	2850 6950 2850 7500
-Connection ~ 2850 7500
-Wire Wire Line
-	3150 7050 2850 7050
-Connection ~ 2850 7050
-Wire Wire Line
-	2000 7150 3150 7150
-Wire Wire Line
 	8500 3100 10350 3100
 Wire Wire Line
-	10350 3100 10350 6150
+	10350 6150 10350 3100
 Connection ~ 10350 6150
 Wire Wire Line
-	3850 6450 3850 7050
-Connection ~ 2850 6850
+	750  550  1800 550 
 Wire Wire Line
-	1550 550  10050 550 
+	1800 550  6650 550 
 Wire Wire Line
-	7500 5500 9950 5500
+	6650 550  9300 550 
+Wire Wire Line
+	9300 550  10050 550 
+Wire Wire Line
+	7500 5500 8100 5500
+Wire Wire Line
+	8100 5500 8700 5500
+Wire Wire Line
+	8700 5500 9300 5500
+Wire Wire Line
+	9300 5500 9950 5500
 Wire Wire Line
 	7400 5600 7250 5600
 Wire Wire Line
@@ -538,8 +349,6 @@ Wire Wire Line
 Wire Wire Line
 	9500 5600 9500 1950
 Wire Wire Line
-	6500 7050 6500 7300
-Wire Wire Line
 	3900 850  3900 2150
 Connection ~ 3900 850 
 Wire Wire Line
@@ -553,15 +362,12 @@ Wire Wire Line
 Wire Wire Line
 	8300 4900 8300 5600
 Wire Wire Line
-	6200 6750 6200 7100
-Wire Wire Line
-	2900 550  2900 1250
-Connection ~ 2900 550 
-Wire Wire Line
 	2900 2150 2900 6150
 Connection ~ 2900 6150
 Wire Wire Line
-	2900 1550 2900 1850
+	2900 1550 2900 1700
+Wire Wire Line
+	2900 1700 2900 1850
 Wire Wire Line
 	2900 1700 4200 1700
 Wire Wire Line
@@ -592,15 +398,6 @@ Wire Wire Line
 Wire Wire Line
 	6200 1950 9500 1950
 Connection ~ 9300 5500
-Connection ~ 5200 7500
-Wire Wire Line
-	6500 1650 6500 6750
-Wire Wire Line
-	4850 7050 4850 6250
-Wire Wire Line
-	1550 6250 1550 550 
-Wire Wire Line
-	2000 850  2000 7150
 Wire Wire Line
 	9950 5500 9950 5600
 Wire Wire Line
@@ -620,28 +417,6 @@ Wire Wire Line
 Wire Wire Line
 	4100 4600 4100 5700
 Wire Wire Line
-	2850 6850 2850 6450
-Wire Wire Line
-	4650 6350 4650 6650
-Wire Wire Line
-	1550 6250 5200 6250
-Wire Wire Line
-	2850 6450 3850 6450
-Connection ~ 2000 6350
-Connection ~ 4650 6350
-Wire Wire Line
-	4750 6350 4750 6400
-Wire Wire Line
-	2000 6350 4750 6350
-Wire Wire Line
-	4750 6700 4750 6750
-Connection ~ 4750 6750
-Connection ~ 4850 6250
-Wire Wire Line
-	1600 7500 6200 7500
-Wire Wire Line
-	4650 6750 6200 6750
-Wire Wire Line
 	4900 1300 4900 2150
 Wire Wire Line
 	4800 2150 4800 1400
@@ -652,41 +427,15 @@ Wire Wire Line
 Wire Wire Line
 	3350 5150 3150 5150
 Wire Wire Line
-	10050 3400 10050 5600
+	10050 3400 10050 5350
 Wire Wire Line
-	10150 3500 10150 5600
+	10050 5350 10050 5600
+Wire Wire Line
+	10150 3500 10150 5350
+Wire Wire Line
+	10150 5350 10150 5600
 Connection ~ 10050 5350
 Connection ~ 10150 5350
-Wire Wire Line
-	1300 3550 1300 6450
-Wire Wire Line
-	1300 3450 1300 850 
-Connection ~ 2000 850 
-Wire Wire Line
-	1900 6850 3150 6850
-Wire Wire Line
-	1900 6850 1900 6550
-Wire Wire Line
-	1900 6550 1150 6550
-Wire Wire Line
-	1150 6650 1800 6650
-Wire Wire Line
-	1800 6650 1800 6850
-Wire Wire Line
-	1800 6850 1650 6850
-Wire Wire Line
-	1300 6450 1150 6450
-Connection ~ 1300 6150
-Wire Wire Line
-	1150 6350 1150 6050
-Wire Wire Line
-	1150 5750 1150 4800
-Wire Wire Line
-	1150 4800 5800 4800
-Wire Wire Line
-	5800 4800 5800 4600
-Wire Wire Line
-	2350 4150 2350 7500
 Wire Wire Line
 	2700 850  2700 3850
 Wire Wire Line
@@ -696,10 +445,42 @@ Wire Wire Line
 	3150 5350 3150 6150
 Connection ~ 3150 6150
 Wire Wire Line
-	9300 550  9300 5600
+	9300 550  9300 5500
+Wire Wire Line
+	9300 5500 9300 5600
 Connection ~ 9300 550 
 Wire Wire Line
-	10350 6150 1300 6150
+	700  6150 900  6150
+Wire Wire Line
+	900  6150 1800 6150
+Wire Wire Line
+	1800 6150 2350 6150
+Wire Wire Line
+	2350 6150 2700 6150
+Wire Wire Line
+	2700 6150 2900 6150
+Wire Wire Line
+	2900 6150 3150 6150
+Wire Wire Line
+	3150 6150 3900 6150
+Wire Wire Line
+	3900 6150 4950 6150
+Wire Wire Line
+	4950 6150 5650 6150
+Wire Wire Line
+	5650 6150 6450 6150
+Wire Wire Line
+	6450 6150 7250 6150
+Wire Wire Line
+	7250 6150 7850 6150
+Wire Wire Line
+	7850 6150 8450 6150
+Wire Wire Line
+	8450 6150 9050 6150
+Wire Wire Line
+	9050 6150 9750 6150
+Wire Wire Line
+	9750 6150 10350 6150
 Connection ~ 6650 550 
 Wire Wire Line
 	3150 5050 3250 5050
@@ -718,16 +499,22 @@ RST
 Wire Wire Line
 	3150 5250 3450 5250
 Wire Wire Line
-	3450 5250 3450 850 
+	3450 850  3450 5250
 Connection ~ 3450 850 
 Wire Wire Line
-	1300 850  10050 850 
+	800  850  2350 850 
+Wire Wire Line
+	2350 850  2700 850 
+Wire Wire Line
+	2700 850  3450 850 
+Wire Wire Line
+	3450 850  3800 850 
+Wire Wire Line
+	3800 850  3900 850 
+Wire Wire Line
+	3900 850  10050 850 
 Connection ~ 2700 850 
 NoConn ~ 5400 2150
-Wire Wire Line
-	5600 2150 5600 1650
-Wire Wire Line
-	5600 1650 6500 1650
 NoConn ~ 5100 2150
 Wire Wire Line
 	4100 5700 4950 5700
@@ -781,7 +568,6 @@ F 3 "" H 6650 5450 50  0001 C CNN
 	1    6650 5450
 	-1   0    0    1   
 $EndComp
-Connection ~ 6600 6150
 $Comp
 L CONN_01X04 J6
 U 1 1 598E5953
@@ -816,14 +602,106 @@ Wire Wire Line
 	5800 2050 5800 2150
 Wire Wire Line
 	5700 1950 5700 2150
-Wire Wire Line
-	5200 7300 5200 7500
-Wire Wire Line
-	5200 6650 5200 7000
 NoConn ~ 6450 3250
 Wire Wire Line
 	7900 3100 7650 3100
 NoConn ~ 4600 2150
 NoConn ~ 4700 2150
-NoConn ~ 1700 7750
+Wire Wire Line
+	2350 4150 2350 6150
+$Comp
+L CONN_01X05 J3
+U 1 1 59AAF739
+P 1300 5600
+F 0 "J3" H 1300 5900 50  0000 C CNN
+F 1 "CONN_01X05" V 1400 5600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 1300 5600 50  0001 C CNN
+F 3 "" H 1300 5600 50  0001 C CNN
+	1    1300 5600
+	1    0    0    -1  
+$EndComp
+Text Label 1100 5400 0    39   ~ 0
++14V
+Text Label 1100 5500 0    39   ~ 0
++10V
+Text Label 1100 5600 0    39   ~ 0
++5V
+Text Label 1100 5700 0    39   ~ 0
+Relay
+Text Label 1100 5800 0    39   ~ 0
+GND
+NoConn ~ 5800 4600
+Wire Wire Line
+	500  1550 500  4800
+Wire Wire Line
+	500  4800 500  5700
+Wire Wire Line
+	500  5700 1100 5700
+Connection ~ 900  6150
+Wire Wire Line
+	1100 5500 750  5500
+Wire Wire Line
+	750  5500 750  550 
+Wire Wire Line
+	800  850  800  5600
+Wire Wire Line
+	800  5600 1100 5600
+Wire Wire Line
+	2900 1250 2900 1100
+Wire Wire Line
+	2900 1100 650  1100
+Wire Wire Line
+	650  1100 650  5400
+Wire Wire Line
+	650  5400 1100 5400
+$Comp
+L R R3
+U 1 1 59AB6668
+P 1800 2900
+F 0 "R3" V 1880 2900 50  0000 C CNN
+F 1 "3.3K" V 1800 2900 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1730 2900 50  0001 C CNN
+F 3 "" H 1800 2900 50  0001 C CNN
+	1    1800 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 59AB6719
+P 1800 2250
+F 0 "D1" H 1800 2350 50  0000 C CNN
+F 1 "LED" H 1800 2150 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 1800 2250 50  0001 C CNN
+F 3 "" H 1800 2250 50  0001 C CNN
+	1    1800 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 2100 1800 550 
+Connection ~ 1800 550 
+Wire Wire Line
+	1800 2400 1800 2750
+Wire Wire Line
+	1800 3050 1800 6150
+Connection ~ 1800 6150
+Connection ~ 500  4800
+NoConn ~ 5600 2150
+Wire Wire Line
+	5500 4800 5500 4600
+Connection ~ 5500 4800
+Wire Wire Line
+	500  4800 5500 4800
+Wire Wire Line
+	5500 4800 5600 4800
+NoConn ~ 5600 4600
+Text Notes 1850 2400 0    39   ~ 0
+4mA\n
+Text Notes 4000 1650 0    39   ~ 0
+Voltage divider to be \nbelow 1.2V at 14V \n(max ADC reference voltage)
+Text Notes 6650 3200 0    39   ~ 0
+Connect PIN 49 via wire to P6, \nsince PIN 49 is not broken out
+Wire Wire Line
+	1100 5800 900  5800
+Wire Wire Line
+	900  5800 900  6150
 $EndSCHEMATC
