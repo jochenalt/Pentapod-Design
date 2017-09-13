@@ -1,0 +1,140 @@
+------ installation of Eclipse C++ to work with Teensy ---
+follow https://trippylighting.com/teensy-arduino-ect/arduino-eclipse-plugin/installation-of-the-arduino-eclipse-ide-teensyduino-win-7/
+
+- Download and install  Arduino IDE 1.8.2 (1.8.3 does not work with teensyduino)
+- Download and install Teensyduino 1.36
+- download and install Sloeber from http://www.baeyens.it/eclipse/
+- in Windows/Preferences/Arduino set  path c:/Programme/Arduino/hardware with ./teensy in it 
+- store the latest i2c_t3 v9.1 library in teensy\avr\libraries\i2c_t3
+
+!!! Important: in C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy3 set  SERIAL1_RX_BUFFER_SIZE = 192 since some commands are longer than the default 64
+
+------ installation of MINGW & MSYS
+download mingw-w64-install.exe 
+install with:   Version=7.1.0 Architecture=i686, Threads Posix, Exception dwarf
+download MSYS by installing mingw (https://sourceforge.net/projects/mingw/files/latest/download) and select to download MSYS only.
+set windows system variable MINGW64_HOME to C:\Program Files (x86)\mingw-w64\i686-7.1.0-posix-dwarf-rt_v5-rev0\mingw32
+
+------ installation of Eclipse C++ on Windows
+download and install Java Runtime Environment 
+download and install "Eclipse IDE for C++ Developers" for Windows 64bit
+in Windows/Preferences/C/C++/Environment set
+MINGW_HOME=C:\Program Files (x86)\mingw-w64\i686-7.1.0-posix-dwarf-rt_v5-rev0\mingw32
+MSYS_HOME=C:\MinGW\msys\1.0\
+PATH=%PATH%;%MSYS_HOME%/bin;%MINGW_HOME%/bin
+----- installation of POCO
+todo
+
+------ installation of Atmel Studio
+download and install Atmel Studio 7 web installer from http://studio.download.atmel.com/7.0.1417/as-installer-7.0.1417-web.exe
+
+
+----- setting up a Ubuntu 16.04 VM  on Windows 10
+- In BIOS Settings: Enable virtualizations
+- download ubuntu 16.04 64 bit (AMD64) image)Image from http://releases.ubuntu.com/16.04/
+- download virtual box from  https://www.virtualbox.org/
+- In settings, set path for virtual boxes
+- install GuestAdditions to have bidirectional copy/paste
+- setup Ubuntu VM according to https://jtreminio.com/2012/07/setting-up-a-debian-vm-step-by-step/
+- VirtualBox: Modify/Serial interfaces/ Portnumber COM2 / PortModus Host-Interface / Port Path COM2  (RPLidar)
+- VirtualBox: Modify/Serial interfaces/ Portnumber COM1 / PortModus Host-Interface / Port Path COM1  (Cortex)
+
+  Now Windows Serial port COM2 is available in Ubuntu as /dev/ttyS0
+  configure Port fowarding in VirtualBox: Network/NAT/Port Forward/
+     Rule 1: "roswww" <> 3085 <> 8085
+     Rule 2: "pentapod_server" 3000 <> 8000
+
+---- install gitkraken
+>sudo apt-get update
+>sudo apt-get install git
+>wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+>sudo dpkg -i gitkraken-amd64.deb
+
+--- install ROS
+- Install ROS kinetic according to http://wiki.ros.org/ROS/Installation
+>sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+>sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+>sudo apt-get update
+>sudo apt-get install ros-kinetic-ros-base
+# just in virtualbox, not on odroid
+>sudo apt-get install ros-kinetic-desktop-full
+>sudo apt-get install ros-kinetic-navigation
+>sudo apt-get install ros-kinetic-hector-slam
+
+>sudo rosdep init
+>rosdep update
+>echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+>source ~/.bashrc
+
+--- install Eclipse/C++ to be used with ROS
+>sudo apt-get install eclipse eclipse-cdt g++
+- Map RP Lidar to Com2  (Windows Devicemanager)
+  (thanks to https://techtooltip.wordpress.com/2008/09/12/using-host-serial-port-from-guest-in-virtual-box/)
+- setting up eclipse with ubuntu in Virtual Box according to (http://wiki.ros.org/IDEs)
+  # generate Eclipse Project files in <package>/build
+>catkin_make --force-cmake -G"Eclipse CDT4 - Unix Makefiles"
+>awk -f $(rospack find mk)/eclipse.awk build/.project > build/.project_with_env && mv build/.project_with_env build/.project
+>cd src;cmake ../src -DCMAKE_BUILD_TYPE=Debug
+- complete eclipse index
+  add all includes which are shown by 'gcc -xc++ -E -v -' to the project to resolve missing include symbols in eclipse
+  # import project in eclipse with "import into workspace"
+
+  # To debug in eclipse, select executable. In environment, defined the two variables
+  ROS_ROOT and ROS_MASTER_URI according to the value returned by 
+  >echo $ROS_ROOT
+  >echo $ROS_MASTER_URI 
+
+--- create catkin workspace
+>mkdir catkin_ws
+>cd catkin_ws
+>catkin_init_workspace
+>mkdir src
+
+--- installation of ROS/RPlidar
+>cd ~/catkin_ws/src
+>git clone https://github.com/robopeak/rplidar_ros
+
+
+--- link pentapod source code
+# checkout repository with gitkraken to ~/Pentapod-code
+>cd ~/catkin_ws/src
+>ln -s ~/Pentapod-Code/ros/pentapod_library .
+>ln -s ~/Pentapod-Code/ros/pentapod_server .
+>ln -s ~/Pentapod-Code/ros/pentapod_engine .
+
+---include workspace into environment
+>echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+>source ~/.bashrc
+
+--- build everything
+>cd ~/catkin_ws
+>catkin_make
+
+--- ROS release build -O3 without debugging
+catkin_make -DCMAKE_BUILD_TYPE=Release
+roslaunch rplidar_ros view_slam.launch
+roslaunch rplidar_ros view_rplidar.launch
+
+
+##### running ROS stuff ###
+# download Slam Bag file 
+>cd ~/catkin_ws
+>wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/tu-darmstadt-ros-pkg/Team_Hector_MappingBox_Dagstuhl_Neubau.bag
+>wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/tu-darmstadt-ros-pkg/Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag
+
+# running the pentapod engine
+roslaunch pentapod_server pentapod_bot.launch
+# starting hector slam tutorial (without pentapod) 
+roslaunch hector_slam_launch tutorial.launch 
+# reading and playing laser sensor data
+rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
+# saving the current map 
+rosrun map_server map_saver -f mymap
+# loading and exposing a map
+rosrun map_server map_server mymap.yaml
+# saving a geotiff picture
+rostopic pub syscommand std_msgs/String "savegeotiff"
+# record laser data and transformation
+rosbag record -O mylaserdata /base_scan /tf
+# setting global paramers
+rosparam set use_sim_time false

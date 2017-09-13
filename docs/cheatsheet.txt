@@ -44,12 +44,19 @@ download and install Atmel Studio 7 web installer from http://studio.download.at
      Rule 1: "roswww" <> 3085 <> 8085
      Rule 2: "pentapod" <> 3000 <> 8000
 
---- install ROS
-- Install ROS lunar according to http://wiki.ros.org/ROS/Installation
+---- install gitkraken
 >sudo apt-get update
+>wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+>sudo dpkg -i gitkraken-amd64.deb
+
+--- install ROS
+- Install ROS lunar/kinetic according to http://wiki.ros.org/ROS/Installation
 >sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 >sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
->sudo apt-get install ros-lunar-desktop-full
+>sudo apt-get update
+>sudo apt-get install ros-(lunar/kinetic)-ros-base
+>sudo apt-get install ros-(lunar/kinetic)-desktop
+>sudo apt-get install ros-(lunar/kinetic)-navigation
 >sudo rosdep init
 >rosdep update
 >echo "source /opt/ros/lunar/setup.bash" >> ~/.bashrc
@@ -81,6 +88,47 @@ download and install Atmel Studio 7 web installer from http://studio.download.at
 >git checkout slam
 >catkin_make
 
+--- installation of Ceres (used by hector_navigation)
+--- (according to http://wiki.ros.org/industrial_extrinsic_cal)
+sudo apt-get install libatlas-base-dev libeigen3-dev python-gflags
+cd 
+wget https://github.com/gflags/gflags/archive/v2.1.2.zip
+unzip v2.1.2.zip && rm v2.1.2.zip
+cd gflags-2.1.2 && mkdir build && cd build
+cmake .. -DBUILD_SHARED_LIBS=ON
+make
+sudo make install
+--- Install glog
+cd
+wget https://github.com/google/glog/archive/v0.3.4.zip
+unzip v0.3.4.zip && rm v0.3.4.zip
+cd glog-0.3.4/
+./configure --with-gflags=/usr/local/
+make
+sudo make install
+--- Install Ceres
+cd
+wget https://github.com/ceres-solver/ceres-solver/archive/1.11.0.zip
+unzip 1.11.0.zip && rm 1.11.0.zip
+cd ceres-solver-1.11.0
+mkdir build && cd build
+cmake ..
+make
+sudo make install
+--- check if ceres-solver it is running
+build/bin/simple_bundle_adjuster ../ceres-solver-1.11.0/data/problem-16-22106-pre.txt 
+
+---- installation of ROS/hector navigation 
+---- (according to https://answers.ros.org/question/112576/how-can-i-run-hector-navigation-for-exploration)
+>cd ~/catkin_ws/src
+---- hector navigation requires geodesy
+>git clone https://github.com/rst-tu-dortmund/costmap_converter.git 
+>git clone https://github.com/ros-geographic-info/geographic_info
+>git clone https://github.com/ros-geographic-info/unique_identifier
+>git clone https://github.com/tu-darmstadt-ros-pkg/hector_navigation
+>git checkout slam
+>catkin_make
+
 --- installation of ROS/RPlidar
 >cd ~/catkin_ws/src
 >git clone https://github.com/robopeak/rplidar_ros
@@ -95,7 +143,18 @@ download and install Atmel Studio 7 web installer from http://studio.download.at
 
 >git clone https://github.com/ros-planning/navigation -b lunar
 >git clone https://github.com/ros-planning/navigation_msgs # required by navigation
+
+-- teb_local_planner
+-install g2o according to http://sayantanfoto.blogspot.de/2015/06/installing-g2o-on-ubuntu.html
+>cd ~/catkin_ws/src
+> sudo apt-get install libamd2.4.1 libbtf1.2.1 libcamd2.4.1 libccolamd2.9.1 libcholmod3.0.6 libcsparse3.1.4 libcxsparse3.1.4 libklu1.3.3 libldl2.2.1 libspqr2.0.2 libsuitesparse-dev libumfpack5.7.1
+>git clone https://github.com/rst-tu-dortmund/teb_local_planner.git
+>git checkout kinetic_devel
+
+--- patch hector_navigation/hector_gps_calibration/include/hector_gps_calibration/normalize_angle.h 
+--- replace ceres:floor by std:floor
 >catkin_make
+
 
 --- ROS release build -O3 without debugging
 catkin_make -DCMAKE_BUILD_TYPE=Release
@@ -109,3 +168,22 @@ roslaunch rplidar_ros view_rplidar.launch
 >mkdir ~catkin_workspace
 >cd catkin_workspace
 >catkin_create_pkg pentapod_engine std_msgs geometry_msgs roscpp
+
+
+
+##### running ROS stuff ###
+
+# running the pentapod engine
+rosrun pentapod_server pentapod.launch
+# starting hector slam tutorial (without pentapod) 
+roslaunch hector_slam_launch tutorial.launch 
+# reading and playing laser sensor data
+rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
+# saving the current map 
+rosrun map_server map_saver -f mymap
+# loading and exposing a map
+rosrun map_server map_server mymap.yaml
+# saving a geotiff picture
+rostopic pub syscommand std_msgs/String "savegeotiff"
+# record laser data and transformation
+rosbag record -O mylaserdata /base_scan /tf
