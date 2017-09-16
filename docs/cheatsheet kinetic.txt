@@ -57,7 +57,7 @@ download and install Atmel Studio 7 web installer from http://studio.download.at
 >sudo apt-get update
 >sudo apt-get install ros-kinetic-ros-base
 # just in virtualbox, not on odroid
->sudo apt-get install ros-kinetic-desktop-full
+>sudo apt-get install ros-kinetic-desktop-full ros-kinetic-navigation ros-kinetic-hector-slam
 >sudo apt-get install ros-kinetic-navigation
 >sudo apt-get install ros-kinetic-hector-slam
 
@@ -131,7 +131,7 @@ rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
 # saving the current map 
 rosrun map_server map_saver -f mymap
 # loading and exposing a map
-rosrun map_server map_server mymap.yaml
+rosrun map_server map_server ~/catkin_ws/src/pentapod_server/maps/mymap.yaml
 # saving a geotiff picture
 rostopic pub syscommand std_msgs/String "savegeotiff"
 # record laser data and transformation
