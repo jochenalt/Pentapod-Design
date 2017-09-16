@@ -125,7 +125,6 @@ F 3 "" H 5475 2975 60  0000 C CNN
 $EndComp
 NoConn ~ 5400 4600
 NoConn ~ 5300 4600
-NoConn ~ 5900 2150
 Text Label 2000 7250 0    39   ~ 0
 +5V
 $Comp
@@ -295,11 +294,11 @@ L CP C1
 U 1 1 593EB317
 P 2700 4000
 F 0 "C1" H 2725 4100 50  0000 L CNN
-F 1 "470uF" H 2725 3900 50  0000 L CNN
-F 2 "Capacitors_THT:CP_Axial_L11.0mm_D6.0mm_P18.00mm_Horizontal" H 2738 3850 50  0001 C CNN
+F 1 "4700uF" H 2725 3900 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Axial_L25.0mm_D10.0mm_P30.00mm_Horizontal" H 2738 3850 50  0001 C CNN
 F 3 "" H 2700 4000 50  0001 C CNN
 	1    2700 4000
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 Text Label 3150 5050 0    39   ~ 0
 SCL
@@ -320,7 +319,6 @@ F 3 "" H 2950 5150 50  0001 C CNN
 	1    2950 5150
 	-1   0    0    1   
 $EndComp
-NoConn ~ 5500 2150
 Text Label 3150 4950 0    39   ~ 0
 RST
 NoConn ~ 5400 2150
@@ -506,8 +504,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 3800 2350 6150
 Wire Wire Line
-	2700 850  2700 3850
-Wire Wire Line
 	2700 6150 2700 4150
 Connection ~ 2700 6150
 Wire Wire Line
@@ -535,7 +531,6 @@ Wire Wire Line
 Wire Wire Line
 	3450 5250 3450 850 
 Connection ~ 3450 850 
-Connection ~ 2700 850 
 Wire Wire Line
 	5600 2150 5600 1650
 Wire Wire Line
@@ -714,8 +709,6 @@ Connection ~ 9650 5450
 Wire Wire Line
 	9550 5500 9950 5500
 Connection ~ 9550 5500
-Wire Wire Line
-	6000 1700 6000 2150
 Wire Wire Line
 	1900 7550 1900 7150
 Wire Wire Line
@@ -956,4 +949,67 @@ Wire Wire Line
 	500  6950 2000 6950
 Text Label 500  7050 0    39   ~ 0
 Switch2/Vin
+$Comp
+L R R3
+U 1 1 59BD443A
+P 2500 1400
+F 0 "R3" V 2580 1400 50  0000 C CNN
+F 1 "150K" V 2500 1400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2430 1400 50  0001 C CNN
+F 3 "" H 2500 1400 50  0001 C CNN
+	1    2500 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 59BD448D
+P 2500 2000
+F 0 "R6" V 2580 2000 50  0000 C CNN
+F 1 "10K" V 2500 2000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2430 2000 50  0001 C CNN
+F 3 "" H 2500 2000 50  0001 C CNN
+	1    2500 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 650  2500 1250
+Connection ~ 2500 650 
+Wire Wire Line
+	2500 1550 2500 1850
+Wire Wire Line
+	2500 2150 2500 6150
+Connection ~ 2500 6150
+Wire Wire Line
+	2500 1750 5900 1750
+Connection ~ 2500 1750
+NoConn ~ 5500 2100
+NoConn ~ 5500 2150
+Wire Wire Line
+	4200 1750 4200 2150
+Connection ~ 4200 1750
+Wire Wire Line
+	4300 1700 4300 2150
+Connection ~ 4300 1700
+NoConn ~ 5900 2150
+NoConn ~ 6000 2150
+Wire Wire Line
+	2700 3850 2700 650 
+Connection ~ 2700 650 
+$Comp
+L CP C2
+U 1 1 59BDA7CA
+P 2000 4000
+F 0 "C2" H 2025 4100 50  0000 L CNN
+F 1 "220uF" H 2025 3900 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D10.0mm_P7.50mm" H 2038 3850 50  0001 C CNN
+F 3 "" H 2000 4000 50  0001 C CNN
+	1    2000 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4150 2000 6150
+Connection ~ 2000 6150
+Wire Wire Line
+	2000 3850 2000 850 
+Connection ~ 2000 850 
 $EndSCHEMATC
