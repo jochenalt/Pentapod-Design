@@ -150,6 +150,14 @@ rosrun map_server map_saver -f mymap
 # start a node of map server publishing that map
 rosrun map_server map_server mymap.yaml
 
+#
+# --------------------- install serial monitor minicom -------------
+>sudo apt-get install minicom
+# configure /dev/ttyS1 (logger from cortex)
+/bin/stty -F /dev/ttyS1 raw 230400 cs8 clocal -cstopb 
+# test cortex:
+echo -e "\rhelp\r" > /dev/ttyS1
+
 #-----------------------  GIT --------------
 # set password to be cached for one day
 git config --global credential.helper "cache --timeout=86400"
