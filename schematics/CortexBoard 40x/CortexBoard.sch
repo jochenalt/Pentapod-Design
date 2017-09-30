@@ -188,7 +188,6 @@ F 3 "" H 4300 6550 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 4100 2150
-NoConn ~ 4300 2150
 $Comp
 L R R2
 U 1 1 59363610
@@ -289,7 +288,7 @@ Text Label 3150 5050 0    39   ~ 0
 SCL
 Text Label 3150 5150 0    39   ~ 0
 SDA
-Text Label 3150 5450 0    39   ~ 0
+Text Label 3150 5350 0    39   ~ 0
 VIn+5V
 Text Label 3150 5250 0    39   ~ 0
 GND
@@ -305,13 +304,13 @@ Text Label 4750 5600 0    39   ~ 0
 SCL0
 Text Label 4750 5500 0    39   ~ 0
 VIn+5V
-Text Label 6350 5500 0    39   ~ 0
-3.3V_ODroid
-Text Label 6350 5600 0    39   ~ 0
-SCL-ODroid
-Text Label 6350 5700 0    39   ~ 0
-SDA-ODroid
 Text Label 6350 5800 0    39   ~ 0
+3.3V_ODroid
+Text Label 6350 5700 0    39   ~ 0
+SCL-ODroid
+Text Label 6350 5600 0    39   ~ 0
+SDA-ODroid
+Text Label 6350 5500 0    39   ~ 0
 GND
 NoConn ~ 6450 3250
 NoConn ~ 4600 2150
@@ -413,7 +412,7 @@ Wire Wire Line
 Wire Wire Line
 	3150 1200 3150 4950
 Wire Wire Line
-	3450 850  3450 5450
+	3450 850  3450 5350
 Connection ~ 3450 850 
 Wire Wire Line
 	5600 2150 5600 1650
@@ -431,8 +430,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 850  3800 5500
 Connection ~ 3800 850 
-Wire Wire Line
-	5950 5800 6350 5800
 Wire Wire Line
 	5800 2050 5800 2150
 Wire Wire Line
@@ -523,11 +520,9 @@ Wire Wire Line
 Connection ~ 7100 5700
 Connection ~ 6700 5700
 Wire Wire Line
-	4900 5200 7400 5200
+	7000 5100 7000 5800
 Wire Wire Line
-	7000 5200 7000 5800
-Wire Wire Line
-	5000 5100 6900 5100
+	5000 5100 7000 5100
 Wire Wire Line
 	6800 5800 6800 650 
 Connection ~ 6800 650 
@@ -553,8 +548,6 @@ Wire Wire Line
 	8050 5800 8050 550 
 Connection ~ 8050 550 
 Wire Wire Line
-	6900 5100 6900 5800
-Wire Wire Line
 	7300 5300 6900 5300
 Connection ~ 6900 5300
 Connection ~ 7000 5200
@@ -578,12 +571,6 @@ Wire Wire Line
 Connection ~ 10950 5450
 Connection ~ 6600 6150
 Wire Wire Line
-	5950 5500 6350 5500
-Wire Wire Line
-	5950 5600 6350 5600
-Wire Wire Line
-	5950 5700 6350 5700
-Wire Wire Line
 	3800 5500 4750 5500
 Wire Wire Line
 	10050 5200 9650 5200
@@ -601,7 +588,6 @@ Connection ~ 4650 7550
 Wire Wire Line
 	2350 6700 2350 6950
 Connection ~ 2350 7550
-NoConn ~ 4200 2150
 Wire Wire Line
 	6050 7550 6050 6700
 Connection ~ 6050 7550
@@ -899,25 +885,13 @@ F 3 "" H 700 6900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2350 6950 2450 6950
-$Comp
-L CONN_01X06 P2
-U 1 1 59C524FA
-P 2950 5200
-F 0 "P2" H 2950 5550 50  0000 C CNN
-F 1 "BNO055" V 3050 5200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 2950 5200 50  0001 C CNN
-F 3 "" H 2950 5200 50  0001 C CNN
-	1    2950 5200
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	3450 5450 3150 5450
+	3450 5350 3150 5350
 Wire Wire Line
 	3150 5250 3350 5250
 Wire Wire Line
 	3350 5250 3350 6150
 Connection ~ 3350 6150
-NoConn ~ 3150 5350
 $Comp
 L CONN_01X06 J7
 U 1 1 59C7C865
@@ -933,15 +907,12 @@ Text Label 6350 5400 0    39   ~ 0
 RX5
 Wire Wire Line
 	9650 4750 4100 4750
-Connection ~ 4100 4750
-Connection ~ 9650 4750
 Wire Wire Line
 	4100 4750 4100 4600
 Wire Wire Line
 	4000 4600 4000 4850
 Wire Wire Line
 	4000 4850 9550 4850
-Connection ~ 9550 4850
 Wire Wire Line
 	9550 4850 9550 5800
 Wire Wire Line
@@ -1072,4 +1043,51 @@ F 3 "" H 10400 6000 50  0001 C CNN
 	1    10400 6000
 	0    1    1    0   
 $EndComp
+$Comp
+L CONN_01X05 P2
+U 1 1 59CFB62A
+P 2950 5150
+F 0 "P2" H 2950 5450 50  0000 C CNN
+F 1 "BNO055" V 3050 5150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 2950 5150 50  0001 C CNN
+F 3 "" H 2950 5150 50  0001 C CNN
+	1    2950 5150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6900 5200 6900 5800
+Wire Wire Line
+	7400 5200 7000 5200
+Wire Wire Line
+	4900 5200 6900 5200
+Wire Wire Line
+	5950 5800 6300 5800
+Wire Wire Line
+	6300 5800 6300 5500
+Wire Wire Line
+	6300 5500 6350 5500
+Wire Wire Line
+	5950 5700 6200 5700
+Wire Wire Line
+	6200 5700 6200 5600
+Wire Wire Line
+	6200 5600 6350 5600
+Wire Wire Line
+	5950 5600 6150 5600
+Wire Wire Line
+	6150 5600 6150 5750
+Wire Wire Line
+	6150 5750 6250 5750
+Wire Wire Line
+	6250 5750 6250 5700
+Wire Wire Line
+	6250 5700 6350 5700
+Wire Wire Line
+	5950 5500 6100 5500
+Wire Wire Line
+	6100 5500 6100 5850
+Wire Wire Line
+	6100 5850 6350 5850
+Wire Wire Line
+	6350 5850 6350 5800
 $EndSCHEMATC
