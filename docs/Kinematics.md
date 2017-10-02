@@ -42,7 +42,7 @@ With the DH transformation matrixes at hand, computation of the leg’s pose out
 
 By multiplying the transformation matrix with the origin (as homogeneous vector), we get the absolute coordinates of the toe point (*TP*) centre point in world coordinate system (i.e. relative to the legs’s base).
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img  width=50% align="left" src="../images/image012.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img  width=50% src="../images/image012.png"/>
 
 
 That was easy. The tricky part comes now.
@@ -52,28 +52,28 @@ That was easy. The tricky part comes now.
 
 Inverse kinematics denotes the computation of all joint angles out of the toe’s position (TP). Since the leg has four joints, it is becomes clear that there is an infinite number of solutions for that, so I need to predefine one angle with an arbitrary definition. Having the objective in mind of moving the higher limbs of the leg as little as possible, I arbitrarily chose θ<sub>0</sub> and set it as angle bisector of the toe to the hip (from bird’s perspective):
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img  width=20% src="../images/image013.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image013.png"/>
 
 
 We get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image014.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=40% src="../images/image014.png"/>
 
-Later on, we will need the coordinates of end of the first limb (A) which is <img width=30% src="../images/image015.png"/>
+Later on, we will need the coordinates of end of the first limb (A) which is <img width=20% src="../images/image015.png"/>
 
 Computation of the second angle θ<sub>1</sub>  at point A requires a geometric analysis. The leg is denoted in blue, all construction lines are red.
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img align="left" src="../images/image016.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img  src="../images/image016.png"/>
 
 We consider the triangle from A, B and C. The two lines <img  src="../images/image017.png"/> and <img  ="../images/image017.png"/>are of fixed length. So, the point C is upon the circle with the centre H and the radius of the triangle’s height. Additionally, C is defined as function of θ<sub>0</sub> and θ<sub>1</sub>, so we should be able to derive θ<sub>1</sub> by intersecting the circle with C(θ<sub>0</sub> ,θ<sub>1</sub>).
 
 The only thing we need to do is to express that in terms of coordinates. First, we compute the length of a, b and c:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% align="left" src="../images/image019.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=40% src="../images/image019.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% align="left" src="../images/image020.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=40% src="../images/image020.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% align="left" src="../images/image021.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image021.png"/>
 
 Now that the triangle is defined, we can compute the height <img  width=50% src="../images/image022.png"/> by Herons formula
 
@@ -86,17 +86,17 @@ The base of the height H is defined by
 
 Now we need to define the circle *K* with radius *h* and centre *H*. This is done by <img  width=50% src="../images/image025.png"/> with S orthogonal to <img  width=50% src="../images/image026.png"/> beginning from H and T orthogonal to S and <img  width=50%  src="../images/image026.png"/> :
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img  align="left" src="../images/image027.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img  src="../images/image027.png"/>
 
 So, with the arbitrary assumption <img  src="../images/image028.png"/> and the length <img src="../images/image029.png"/> we get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img   align="left" src="../images/image029.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img  src="../images/image029.png"/>
 
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
 There are two possibilities for S, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to S and its length <img   width=50% src="../images/image031.png"/>:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img  align="left" src="../images/image032.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img  src="../images/image032.png"/>
 
 
 Having the circle defined, we need to intersect it with the possible positions of C:
