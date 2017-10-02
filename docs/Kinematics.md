@@ -25,6 +25,7 @@ According to the coordinate system above, θ<sub>2</sub> has an offset of 90°. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=50% align="left" src="../images/image005.png"/>
 
+
 which is a homogeneous matrix with two rotations (x,z) and two translations (x,z).
 Combined with the DH parameters, the following DH matrixes define the transformation from one joint to its successor:
 
