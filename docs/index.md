@@ -4,7 +4,7 @@ When seeing a video about a walking Hexapod no one screams wow, that’s unbelie
 What else, not yet sufficient to get a wow. So, I tried to give it a personality, this time it should be something shy and chicken-hearted, but how to express that, if you’re an insect with one missing leg? Hiding from anything that’s moving could be something. And this was the solution to the previous question what you can do with the price of one leg: Buy a Lidar sensor and put it on its head to identify suspicious subjects and escape in holes.
 Typical Hexapods have 3-5 DOF per leg, and most of them have only one DOF that moves the leg from the left to the right while all other DOFs move up and down. I never go the reason behind, since when looking at most of the hexapods you get the impression of a brutal & stomping gait since the entire leg including the thigh (or “femur”) is moving while *not* trying to minimize the mass that is to be accelerated. There’s just one hexapod I am aware of (“Weaver”) that spends one DOF for turning a leg such that the foot can move forward and backward without moving the femur. Unfortunately, this DOF is not used during walking but only to compensate standing on a ramp and levelling the body’s orientation.
 
-<img align="left" width="30%" src="./images/image002.png" >
+<img align="left" width="40%" src="./images/image002.png" >
 
 In order to minimize the moved mass, it seems natural to introduce a knee, what leads to a 4 DOF leg design with a turning possibility:
 The blue lines illustrate the leg consisting of the joints hip, thigh, knee and foot.
