@@ -1,4 +1,7 @@
-Kinematics is about computation of the toe’s point out of the joint angles and vice versa. First is simple, latter is tricky. The coordinate systems are illustrated as follows, such that we can derive the Denavit Hardenberg.
+# Kinematics
+
+Kinematics is about computation of the toe’s point out of the joint angles and vice versa. First is simple, latter is tricky. Then, 5 legs are arranged around the body. The according kinematics are shown in the last chapter. 
+The coordinate systems are illustrated as follows, tro properly derived the  Denavit Hardenberg transformation. 
 
 <img width="400px" src="../images/image003.png"/>
 
@@ -39,21 +42,17 @@ With the DH transformation matrixes at hand, computation of the leg’s pose out
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image011.png"/> 
 
-
 By multiplying the transformation matrix with the origin (as homogeneous vector), we get the absolute coordinates of the toe point (*TP*) centre point in world coordinate system (i.e. relative to the legs’s base).
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image012.png"/>
 
-
 That was easy. The tricky part comes now.
-
 
 ## Inverse Kinematics of a Leg
 
 Inverse kinematics denotes the computation of all joint angles out of the toe’s position (TP). Since the leg has four joints, it is becomes clear that there is an infinite number of solutions for that, so I need to predefine one angle with an arbitrary definition. Having the objective in mind of moving the higher limbs of the leg as little as possible, I arbitrarily chose θ<sub>0</sub> and set it as angle bisector of the toe to the hip (from bird’s perspective):
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=40% src="../images/image013.png"/>
-
 
 We get 
 
@@ -63,7 +62,7 @@ Later on, we will need the coordinates of end of the first limb (A) which is <im
 
 Computation of the second angle θ<sub>1</sub>  at point A requires a geometric analysis. The leg is denoted in blue, all construction lines are red.
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="../images/image016.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image016.png"/>
 
 We consider the triangle from A, B and C. The two lines <img src="../images/image017.png"/> and <img ="../images/image017.png"/>are of fixed length. So, the point C is upon the circle with the centre H and the radius of the triangle’s height. Additionally, C is defined as function of θ<sub>0</sub> and θ<sub>1</sub>, so we should be able to derive θ<sub>1</sub> by intersecting the circle with C(θ<sub>0</sub> ,θ<sub>1</sub>).
 
@@ -83,21 +82,18 @@ The base of the height H is defined by
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image024.png"/>
 
-
 Now we need to define the circle *K* with radius *h* and centre *H*. This is done by *K = H sin(alpha) + T cos(alpha)* with *S* and *T* orthogonal to <img width=4% src="../images/image026.png"/> as well as *S* and *T* being orthogonal to each other.
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image027.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image027.png"/>
 
 So, with the arbitrary assumption <img width=8% src="../images/image028.png"/> and the length <img width=8% src="../images/image029.png"/> we get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image030.png"/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image030.png"/>
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
 There are two possibilities for S, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to S and its length <img width=7% src="../images/image031.png"/>:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image032.png"/>
-
 
 Having the circle defined, we need to intersect it with the possible positions of C:
 
@@ -108,11 +104,9 @@ Hereby denotes <<img width=20% src="../images/image034.png"/> . We consider only
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image036.png"/>
 
-
 This needs to be solved by in order to get point C. Unfortunately, we have sin and cos in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=90% src="../images/image037.png"/>
-
 
 This is used to solve the equation above for alpha:
 
@@ -122,17 +116,13 @@ This is used to solve the equation above for alpha:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image040.png"/>
 
-
 Out of alpha we get C by <img width=25% src="../images/image041.png"/>, out of C we compute θ<sub>1</sub> by considering the z-coordinate of C:
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=25% src="../images/image042.png"/>
-
 
 which results in 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image043.png"/>
-
 
 The first angle is always the hardest, time for a beer.
 
@@ -143,11 +133,9 @@ The last angle θ<sub>2</sub> is computed by use of
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image045.png"/>
 
-
 So, let’s have a closer look into the transformation matrix <img width=1% src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=70% src="../images/image047.png"/>
-
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on θ<sub>2</sub>, so we get
 
@@ -157,19 +145,18 @@ Since we need to compare this to the toe point, it is not necessary to compute t
 Again, arcsin results in two solutions, so we need the other coordinates as well to check which solution is valid.
 That’s it. Surprisingly complex for a leg with only 4 degrees of freedom.
 
-
 # Body Kinematics
 
-Attaching 5 legs to a body implies to compute the leg kinematics depending on each hip. Additionally, we might want to translate and rotate the belly in certain limit. Since the chapter on leg kinematics computes the angles out of the toe in the hip coordinate system, we need to translate each leg’s toe point into the hip’s coordinate system.
+Attaching 5 legs around the body requires a transformation as well, plus we might want to translate and rotate the belly. Since the leg kinematics computes the limb angles out of the toe in the hip's coordinate system, we need to translate each leg’s toe point into the hip’s coordinate system.
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image049.png"/>
 
-The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body button. Since the belly can translate or rotate, the next coordinate system is the belly coordinate system which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis only by the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=8% src="../images/image050.png"/>, where n is the number of the leg.
+The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=8% src="../images/image050.png"/>, where n is the number of the leg.
 We define the transformation matrix *Belly* that defines the belly coordinate system out of the body coordinate system, that is a 3D rotation matrix plus a translation along the belly coordinates:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image051.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=90% src="../images/image051.png"/>
 
-Per leg we have an own transformation matrix which is a rotation in the xy-pane around z
+For each leg we have an own transformation matrix which is a rotation in the xy-pane around z
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image052.png"/>
 
