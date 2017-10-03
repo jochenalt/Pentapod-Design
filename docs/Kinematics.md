@@ -5,9 +5,9 @@ The coordinate systems are illustrated as follows, tro properly derived the  Den
 
 The transformation from *angle<sub>i</sub>* to *angle<sub>i+1</sub>* is given via 
 
-1. rotation around the x-axis by α
+1. rotation around the x-axis by *α*
 
-2. translation along the x-axis by α
+2. translation along the x-axis by *α*
 
 3. translation along the z-axis by *d*, and
 
@@ -36,7 +36,7 @@ Combined with the DH parameters, the following DH matrixes define the transforma
 
 ## Forward Kinematics of a Leg
 
-With the *DH* transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width=2% src="../images/image010.png"/> is 
+With the *DH* transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width=3% src="../images/image010.png"/> is 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image011.png"/> 
 
@@ -98,11 +98,11 @@ Having the circle defined, we need to intersect it with the possible positions o
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image033.png"/>
 
 
-Hereby denotes <<img width=20% src="../images/image034.png"/> . We consider only the equations of *x* and *y* coordinates and solve these for *d<sub>1</sub>sub>c<sub>1<sub>*.Equating gives
+Hereby denotes <img width=30% src="../images/image034.png"/> . We consider only the equations of *x* and *y* coordinates and solve these for *d<sub>1</sub>sub>c<sub>1<sub>*.Equating gives
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image036.png"/>
 
-This needs to be solved by in order to get point *C*. Unfortunately, we have sin and cos in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
+This needs to be solved by in order to get point *C*. Unfortunately, we have *sin* and *cos* in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=90% src="../images/image037.png"/>
 
@@ -114,7 +114,7 @@ This is used to solve the equation above for *α*:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image040.png"/>
 
-Out of α we get *C* by <img width=25% src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
+Out of *α* we get *C* by <img width=25% src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=25% src="../images/image042.png"/>
 
