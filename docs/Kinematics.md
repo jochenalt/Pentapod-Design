@@ -35,7 +35,7 @@ Combined with the DH parameters, the following DH matrixes define the transforma
 
 ## Forward Kinematics
 
-With the DH transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width=50% src="../images/image010.png"/> is 
+With the DH transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width=5% src="../images/image010.png"/> is 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image011.png"/> 
 
@@ -59,7 +59,7 @@ We get
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image014.png"/>
 
-Later on, we will need the coordinates of end of the first limb (A) which is <img width=20% src="../images/image015.png"/>
+Later on, we will need the coordinates of end of the first limb (A) which is <img width=15% src="../images/image015.png"/>
 
 Computation of the second angle θ<sub>1</sub>  at point A requires a geometric analysis. The leg is denoted in blue, all construction lines are red.
 
@@ -84,13 +84,13 @@ The base of the height H is defined by
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image024.png"/>
 
 
-Now we need to define the circle *K* with radius *h* and centre *H*. This is done by <img width=20% src="../images/image025.png"/> with S orthogonal to <img width=5% src="../images/image026.png"/> beginning from H and T orthogonal to S and <img width=15% src="../images/image026.png"/> :
+Now we need to define the circle *K* with radius *h* and centre *H*. This is done by <img width=20% src="../images/image025.png"/> with S orthogonal to <img width=2% src="../images/image026.png"/> beginning from H and T orthogonal to S and <img width=2% src="../images/image026.png"/> :
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image027.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=40% src="../images/image027.png"/>
 
 So, with the arbitrary assumption <img width=5% src="../images/image028.png"/> and the length <img width=5% src="../images/image029.png"/> we get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image030.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image030.png"/>
 
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
@@ -126,7 +126,7 @@ This is used to solve the equation above for alpha:
 Out of alpha we get C by <img width=25% src="../images/image041.png"/>, out of C we compute θ<sub>1</sub> by considering the z-coordinate of C:
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image042.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image042.png"/>
 
 
 which results in 
@@ -141,12 +141,12 @@ Therefore, <img width=10% src="../images/image044.png"/>
 
 The last angle θ<sub>2</sub> is computed by use of
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=8% src="../images/image045.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image045.png"/>
 
 
 So, let’s have a closer look into the transformation matrix <img width=1% src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image047.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image047.png"/>
 
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on θ<sub>2</sub>, so we get
@@ -176,11 +176,11 @@ Per leg we have an own transformation matrix which is a rotation in the xy-pane 
 
 Having a point in one coordinate system and watching it from another one is done by multiplying it with the inverse transformation matrix. So, the toe point from the hips coordinate system toe<sub>hip</sub> is computed out of the toe point from the body’s coordinate system by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=25% src="../images/image054.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image054.png"/>
 
 
 Computing-wise, the inverse matrix is done by Gauss or similar approaches with a complexity of o(nm/2), which might be bad for the performance. Luckily, the inverse of a symmetric rotation matrix is the transposed matrix, and the rest can be computed by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image056.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image056.png"/>
 
 which is much simpler.
