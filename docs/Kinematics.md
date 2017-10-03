@@ -59,7 +59,7 @@ We get
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image014.png"/>
 
-Later on, we will need the coordinates of end of the first limb (A) which is <img width=20% src="../images/image015.png"/>
+Later on, we will need the coordinates of end of the first limb (A) which is <img width=15% src="../images/image015.png"/>
 
 Computation of the second angle θ<sub>1</sub>  at point A requires a geometric analysis. The leg is denoted in blue, all construction lines are red.
 
@@ -69,42 +69,42 @@ We consider the triangle from A, B and C. The two lines <img src="../images/imag
 
 The only thing we need to do is to express that in terms of coordinates. First, we compute the length of a, b and c:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image019.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=10% src="../images/image019.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image020.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=10% src="../images/image020.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image021.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=5% src="../images/image021.png"/>
 
 Now that the triangle is defined, we can compute the height <img width=10% src="../images/image022.png"/> by Herons formula
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=70% src="../images/image023.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image023.png"/>
 
 The base of the height H is defined by 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image024.png"/>
 
 
-Now we need to define the circle *K* with radius *h* and centre *H*. This is done by <img width=20% src="../images/image025.png"/> with S orthogonal to <img width=10% src="../images/image026.png"/> beginning from H and T orthogonal to S and <img width=10% src="../images/image026.png"/> :
+Now we need to define the circle *K* with radius *h* and centre *H*. This is done by <img width=30% src="../images/image025.png"/> with S orthogonal to <img width=10% src="../images/image026.png"/> beginning from H and T orthogonal to S and <img width=15 src="../images/image026.png"/> :
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image027.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image027.png"/>
 
-So, with the arbitrary assumption <img width=60% src="../images/image028.png"/> and the length <img width=60% src="../images/image029.png"/> we get 
+So, with the arbitrary assumption <img width=10% src="../images/image028.png"/> and the length <img width=10% src="../images/image029.png"/> we get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image029.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=1% src="../images/image029.png"/>
 
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
-There are two possibilities for S, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to S and its length <<img width=10% src="../images/image031.png"/>:
+There are two possibilities for S, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to S and its length <img width=10% src="../images/image031.png"/>:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image032.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=10% src="../images/image032.png"/>
 
 
 Having the circle defined, we need to intersect it with the possible positions of C:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<<img width=70% src="../images/image033.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=70% src="../images/image033.png"/>
 
 
-Hereby denotes <<img width=20% src="../images/image034.png"/> . We consider only the equations of x and y coordinates and solve these for <img width=10% src="../images/image035.png"/> Equating gives
+Hereby denotes <<img width=20% src="../images/image034.png"/> . We consider only the equations of x and y coordinates and solve these for *d<sub>1</sub>sub>c<sub>1<sub>*.Equating gives
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image036.png"/>
 
@@ -123,34 +123,35 @@ This is used to solve the equation above for alpha:
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image040.png"/>
 
 
-Out of alpha we get C by <img width=20% src="../images/image041.png"/>, out of C we compute θ<sub>1</sub> by considering the z-coordinate of C:
+Out of alpha we get C by <img width=25% src="../images/image041.png"/>, out of C we compute θ<sub>1</sub> by considering the z-coordinate of C:
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image042.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image042.png"/>
 
 
 which results in 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image043.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=10% src="../images/image043.png"/>
 
 
 The first angle is always the hardest, time for a beer.
+
 We leave the knee-turn-angle θ<sub>2</sub> aside for a while and continue with the tibia θ<sub>3</sub>. This is done by considering the triangle ABC, and the angle at the point C represents θ<sub>3</sub>. In a fully elongated leg θ<sub>3</sub> is 0.
-Therefore,<img src="../images/image044.png"/> 
+Therefore, <img width=50% src="../images/image044.png"/> 
 
 The last angle θ<sub>2</sub> is computed by use of
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=10% src="../images/image045.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image045.png"/>
 
 
-So, let’s have a closer look into the transformation matrix <img width=10% src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
+So, let’s have a closer look into the transformation matrix <img width=5% src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=80% src="../images/image047.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image047.png"/>
 
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on θ<sub>2</sub>, so we get
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image048.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=40% src="../images/image048.png"/>
 
 
 Again, arcsin results in two solutions, so we need the other coordinates as well to check which solution is valid.
@@ -175,12 +176,11 @@ Per leg we have an own transformation matrix which is a rotation in the xy-pane 
 
 Having a point in one coordinate system and watching it from another one is done by multiplying it with the inverse transformation matrix. So, the toe point from the hips coordinate system toe<sub>hip</sub> is computed out of the toe point from the body’s coordinate system by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20% src="../images/image054.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=35% src="../images/image054.png"/>
 
 
 Computing-wise, the inverse matrix is done by Gauss or similar approaches with a complexity of o(nm/2), which might be bad for the performance. Luckily, the inverse of a symmetric rotation matrix is the transposed matrix, and the rest can be computed by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=5% src="../images/image055.png"/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=5% src="../images/image056.png"/>
 
 which is much simpler.
