@@ -1,5 +1,3 @@
-# Kinematics
-
 Kinematics is about computation of the toe’s point out of the joint angles and vice versa. First is simple, latter is tricky. Then, 5 legs are arranged around the body. The according kinematics are shown in the last chapter. 
 The coordinate systems are illustrated as follows, tro properly derived the  Denavit Hardenberg transformation. 
 
@@ -21,7 +19,7 @@ So, the Denavit Hardenberg parameters are:
 |----------  | ----------------------| ----------------- | ---------------- | -------------- | 
 | Hip        | *90°*                 | *d<sub>0</sub>*   | *0*              | θ<sub>0</sub>  |
 | Thigh      | *90°*                 | *d<sub>1</sub>*   | *0*              | θ<sub>1</sub>  |
-| Knee       | *90°+θ<sub>2</sub>*   |                   | *0*              | *0*             |                |
+| Knee       | *90°+θ<sub>2</sub>*   | *0*               | *0*              | *0*             |                |
 | Foot       | *0*                   | *d<sub>3</sub>*   | *0*              | θ<sub>3</sub>  |
 
 According to the coordinate system above, θ<sub>2</sub> has an offset of 90°. The general definition of a Denavit-Hardenberg (DH) transformation is
