@@ -80,7 +80,7 @@ The base of the height H is defined by
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image024.png"/>
 
-Now we need to define the circle *K* with radius *h* and centre *H*. This is done by *K = H sin(alpha) + T cos(alpha)* with *S* and *T* orthogonal to <img width=4% src="../images/image026.png"/> as well as *S* and *T* being orthogonal to each other.
+Now we need to define the circle *K* with radius *h* and centre *H*. This is done by *K = H sin(α) + T cos(α)* with *S* and *T* orthogonal to <img width=4% src="../images/image026.png"/> as well as *S* and *T* being orthogonal to each other.
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image027.png"/>
 
@@ -106,7 +106,7 @@ This needs to be solved by in order to get point C. Unfortunately, we have sin a
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=90% src="../images/image037.png"/>
 
-This is used to solve the equation above for alpha:
+This is used to solve the equation above for α:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image038.png"/>
 
@@ -114,7 +114,7 @@ This is used to solve the equation above for alpha:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image040.png"/>
 
-Out of alpha we get C by <img width=25% src="../images/image041.png"/>, out of C we compute θ<sub>1</sub> by considering the z-coordinate of C:
+Out of α we get C by <img width=25% src="../images/image041.png"/>, out of C we compute θ<sub>1</sub> by considering the z-coordinate of C:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=25% src="../images/image042.png"/>
 
@@ -166,6 +166,6 @@ Having a point in one coordinate system and watching it from another one is done
 
 Computing-wise, the inverse matrix is done by Gauss or similar approaches with a complexity of o(nm/2), which might be bad for the performance. Luckily, the inverse of a symmetric rotation matrix is the transposed matrix, and the rest can be computed by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image056.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=25% src="../images/image056.png"/>
 
 which is much simpler.
