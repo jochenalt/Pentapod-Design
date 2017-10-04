@@ -84,7 +84,7 @@ Now we need to define the circle *K* with radius *h* and centre *H*. This is don
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image027.png"/>
 
-So, with the arbitrary assumption <img width=8% src="../images/image028.png"/> and the length <img width=8% src="../images/image029.png"/> we get 
+So, with the arbitrary assumption <img width=6% src="../images/image028.png"/> and the length <img width=8% src="../images/image029.png"/> we get 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image030.png"/>
 
@@ -139,7 +139,7 @@ Since we need to compare this to the toe point, it is not necessary to compute t
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image048.png"/>
 
-Again, arcsin results in two solutions, so we need the other coordinates as well to check which solution is valid.
+Again, *arcsin* results in two solutions, so we need the other coordinates as well to check which solution is valid.
 That’s it. Surprisingly complex for a leg with only 4 degrees of freedom.
 
 # Body Kinematics
@@ -153,7 +153,7 @@ We define the transformation matrix *Belly* that defines the belly coordinate sy
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=85% src="../images/image051.png"/>
 
-For each leg we have an own transformation matrix which is a rotation in the *xy*-pane around the  *z*-axis:
+For each leg we have an own transformation matrix which is a rotation θ in the *xy*-pane around the  *z*-axis:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=30% src="../images/image052.png"/>
 
