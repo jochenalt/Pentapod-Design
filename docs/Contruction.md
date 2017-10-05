@@ -8,10 +8,10 @@ I startet with this construction which I liked very much, it is very lean and cr
 <img width="400px" src="../images/IMG_20170915_174835.jpg"/>
 
 Standing up was difficult, but worked finally:
-!video[twerking pentapod](../video/VID_20170701_175425.mp4)
+video[twerking pentapod](../video/VID_20170701_175425.mp4)
 
 and even twerking worked
-![](video/VID_20170423_003605.mp4)
+[test1](video/VID_20170423_003605.mp4)
 
 Unfortunately, it turned out that this design was too weak, due to limited space in the thigh the servo was not strong enough to lift and move the body once the batteries and the lidar sensor was mounted.
 It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended tro use a stronger servo in the thigh, and had to design like this:
@@ -19,12 +19,12 @@ It had a breakdown every here and then, and the body crashed on the ground since
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
 
 
-.. raw:: html
+
 
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="../video/VID_20170701_175425.mp4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
-    
+
 # Hip
 
 The hip consists of 
