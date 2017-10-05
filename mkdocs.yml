@@ -7,3 +7,4 @@ site_description: Poor Pentapod
 pages:
     - 'Home': 'index.md'
     - 'Kinematics': 'Kinematics.md'
+    - 'Construction': 'Construction.md'
