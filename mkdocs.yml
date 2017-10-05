@@ -2,7 +2,7 @@ site_name: Poor Pentapod
 repo_url: https://github.com/jochenalt/Pentapod-Design
 edit_uri: edit/master/docs
 repo_name: Poor Pentapod
-repo_authorr: 'Jochen Alt'
+repo_author: 'Jochen Alt'
 site_description: Poor Pentapod 
 pages:
     - 'Home': 'index.md'
