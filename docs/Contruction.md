@@ -19,6 +19,12 @@ It had a breakdown every here and then, and the body crashed on the ground since
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
 
 
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="../video/VID_20170701_175425.mp4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+    
 # Hip
 
 The hip consists of 
