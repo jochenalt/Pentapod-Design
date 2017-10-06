@@ -15,6 +15,10 @@ Test2
 	<source src="../videos/VID_20170701_175425.mp4" type="video/mp4"/>
 </video>
 
+<video width="320" height="240" controls>
+	<source src="https://github.com/jochenalt/Pentapod-Design/blob/master/docs/videos/VID_20170701_175425.mp4" type="video/mp4"/>
+</video>
+
 Test3
 <iframe src="../videos/VID_20170701_175425.mp4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 
