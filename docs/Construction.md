@@ -15,33 +15,39 @@ Standing up was difficult, but worked finally:
 
 walking was possible as well 
 
-<img src="../images/thin-pentapod-walks.gif"/>
+<img src="../videos/thin-pentapod-walks.gif"/>
 
 
-and even twerking (actually, this was not on purpose, this happened when I introduced the IMU to keep the body levelled, but the PID controller's parameters were completely rubbish, so it osscilated in all axis which turned out to be really hot!)
+and even twerking (actually, this was not on purpose, this happened when I introduced the IMU to keep the body levelled, but the PID controller's parameters were completely rubbish, so it osscillated in all axis which turned out to be really hot!)
 <img src="../videos/pentapod-twerks.gif"/>
 
 Unfortunately, it turned out that once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
-It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended tro use a stronger servo in the thigh, and had to design a more clumsy  leg like this:
+It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended to use a stronger servo in the thigh, and had to design a more clumsy  leg like this:
 
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
-
+(The lean and nice one is one the left, the final clumsy one on the right)
 
 # CAD
  
 The CAD design of the leg is made with Inventor looks like this
 
-<img align="left" width="200px" src="../images/cad-leg-total.png"/><img width="200px" src="../images/cad-leg-total-cut.png"/>
+<img width="700px" src="../images/cad-leg-total.png"/>
+<img width="700px" src="../images/cad-leg-total-cut.png"/>
 
 The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
 
-<img align="left" width="200px" src="../images/cad-hip-cut.png"/><img width="200px" src="../images/cad-hipjoint-cut.png"/>
+<img align="left" width="300px" src="../images/cad-hip-cut.png"/><img width="300px" src="../images/cad-hipjoint-cut.png"/>
 
 The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduced the service by 1:1.5 allowing to use a weak servo with 1.2Nm here.
 
-<img width="600px" src="../images/cad-thigh-cut.png"/>
+<img width="700px" src="../images/cad-thigh-cut.png"/>
 
 Finally the foot contains the PCB with the Atmega8 accessing the distance sensor, so there needs to be a lot of empty space.
 
-<img  width="600px" src="../images/cad-foot-cut.png"/>
+<img  width="700px" src="../images/cad-foot-cut.png"/>
 
+The body contains the Odroid, Teensy, batteries and switched power supply 
+<img  width="600px" src="../images/cad-body-cut.png"/>
+
+And finally, the pentapod's total design:
+<img  width="800px" src="../images/cad-pentapod-total.png"/>
