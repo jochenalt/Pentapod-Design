@@ -38,7 +38,7 @@ The hip is attached to the body via screws, and holds the servo that takes care 
 
 <img align="left" width="300px" src="../images/cad-hip-cut.png"/><img width="300px" src="../images/cad-hipjoint-cut.png"/>
 
-The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduced the service by 1:1.5 allowing to use a weak servo with 1.2Nm here.
+The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a weak servo with 1.2Nm here.
 
 <img width="700px" src="../images/cad-thigh-cut.png"/>
 
@@ -47,7 +47,7 @@ Finally the foot contains the PCB with the Atmega8 accessing the distance sensor
 <img  width="700px" src="../images/cad-foot-cut.png"/>
 
 The body contains the Odroid, Teensy, batteries and switched power supply 
-<img  width="600px" src="../images/cad-body-cut.png"/>
+<img  width="600px" src="../images/cad-pentapod-body-cut.png"/>
 
 And finally, the pentapod's total design:
 <img  width="800px" src="../images/cad-pentapod-total.png"/>
