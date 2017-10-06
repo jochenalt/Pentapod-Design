@@ -1,9 +1,8 @@
 Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of . While playing around with the number of legs 
 Hving 7 legs looked like thisMy first trial was a construction with 7 legs which I simulated on my laptop only. 
 
-<video width="320" height="240" controls>
-	<source src="../videos/VID_20170423_003605.mp4" type="video/mp4"/>
-</video>
+<img src="../images/Pentapod-7-legs-vs-5legs..gif"/>
+
 
 But 7 legs is really a lot, and would not be cheap either.
 When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin leg with 5 thigh gaps, and no wires crossing the joints. The servo motors should be hidden, and should not lead to ugly bulges as a consequence of the cuboid shape of a servo, which makes it difficult to have an axial movement.
@@ -21,7 +20,7 @@ walking was possible as well
 	<source src="../videos/VID_20170701_175425.mp4" type="video/mp4"/>
 </video>
 
-and even twerking 
+and even twerking (actually, this was not on purpose, this happened when I introduced the IMU to keep the body levelled, but the PID controller's parameters were completely rubbish, so it osscilated in all axis which turned out to be really hot!)
 <video width="320" height="240" controls>
 	<source src="../videos/VID_20170722_120755.mp4" type="video/mp4"/>
 </video>
@@ -36,6 +35,9 @@ It had a breakdown every here and then, and the body crashed on the ground since
 
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
 
+
+
+
 # CAD
  
 The CAD design of the leg is made with Inventor looks like this
@@ -48,9 +50,9 @@ The hip is attached to the body via screws, and holds the servo that takes care 
 
 The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduced the service by 1:1.5 allowing to use a weak servo with 1.2Nm here.
 
-<img align="left" width="200px" src="../images/cad-thigh-cut.png"/>
+<img width="500px" src="../images/cad-thigh-cut.png"/>
 
 Finally the foot contains the PCB with the Atmega8 accessing the distance sensor, so there needs to be a lot of empty space.
 
-<img align="left" width="200px" src="../images/cad-foot-cut.png"/>
+<img  width="300px" src="../images/cad-foot-cut.png"/>
 
