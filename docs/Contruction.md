@@ -15,6 +15,12 @@ Test2
 	<source src="../videos/VID_20170701_175425.mp4" type="video/mp4"/>
 </video>
 
+Test2a
+<video width="320" height="240" controls>
+	<source src="../../videos/VID_20170701_175425.mp4" type="video/mp4"/>
+</video>
+
+Test3
 <video width="320" height="240" controls>
 	<source src="https://github.com/jochenalt/Pentapod-Design/blob/master/docs/videos/VID_20170701_175425.mp4" type="video/mp4"/>
 </video>
