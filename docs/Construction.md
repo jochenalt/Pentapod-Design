@@ -1,4 +1,5 @@
-My first trial was a construction with 7 legs which I simulated on my laptop only. 
+Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of . While playing around with the number of legs 
+Hving 7 legs looked like thisMy first trial was a construction with 7 legs which I simulated on my laptop only. 
 
 <video width="320" height="240" controls>
 	<source src="../videos/VID_20170423_003605.mp4" type="video/mp4"/>
@@ -22,7 +23,7 @@ walking was possible as well
 
 and even twerking 
 <video width="320" height="240" controls>
-	<source src="../videos/VID_20170701_175425.mp4" type="video/mp4"/>
+	<source src="../videos/VID_20170722_120755.mp4" type="video/mp4"/>
 </video>
 
 <video width="320" height="240" controls>
@@ -31,22 +32,25 @@ and even twerking
 
 
 Unfortunately, it turned out that once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
-It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended tro use a stronger servo in the thigh, and had to design the leg like this:
+It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended tro use a stronger servo in the thigh, and had to design a more clumsy  leg like this:
 
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
 
+# CAD
+ 
+The CAD design of the leg is made with Inventor looks like this
 
+<img align="left" width="200px" src="../images/cad-leg-total.png"/><img width="200px" src="../images/cad-leg-total-cut.png"/>
 
-# Hip
+The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
 
-The hip consists of 
-The mechanical construction of the body is rather easy, a round thing with a hole on top and 5 planes to mount the legs
+<img align="left" width="200px" src="../images/cad-hip-cut.png"/><img width="200px" src="../images/cad-hipjoint-cut.png"/>
 
-# Hip Joint
+The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduced the service by 1:1.5 allowing to use a weak servo with 1.2Nm here.
 
-# Thigh
+<img align="left" width="200px" src="../images/cad-thigh-cut.png"/>
 
+Finally the foot contains the PCB with the Atmega8 accessing the distance sensor, so there needs to be a lot of empty space.
 
-# Knee
+<img align="left" width="200px" src="../images/cad-foot-cut.png"/>
 
-# Foot
