@@ -1,7 +1,7 @@
 Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of . While playing around with the number of legs 
 Hving 7 legs looked like thisMy first trial was a construction with 7 legs which I simulated on my laptop only. 
 
-<img src="../images/Pentapod-7-legs-vs-5legs..gif"/>
+<img src="../videos/Pentapod-7-legs-vs-5legs.gif"/>
 
 
 But 7 legs is really a lot, and would not be cheap either.
