@@ -26,7 +26,9 @@
 
 ## Sources
 
-|Category           |  Where                                             |
-|:------------------|:---------------------------------------------------|
-|CAD Model          | https://github.com/jochenalt/Pentapod-Design/tree/master/cad/Inventor |
+|Category              |  Description                                       | Source |
+|:---------------------|:---------------------------------------------------|:-------|
+|CAD Model             | body and leg design                                | [Github Pentapod CAD](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/Inventor) |
+|STL Files             | 3D printable files of body and legs parts          | [Github Pentapod STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/stl) |
+|Simplified STL Files  | Simplified STL files to be used in openGL          | [Github Pentapod Simplified STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/simplified) |
 
