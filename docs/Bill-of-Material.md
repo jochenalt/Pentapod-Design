@@ -2,7 +2,7 @@ This is the list of main components. Besides that, a lot of incidentals (screws 
 
 |Category           |  #| What                                              | From         |          |
 |:------------------|--:|:--------------------------------------------------|:-------------|----------|
-|3D Print           | 1 | 3D printer (ABS)                                   | Zortrax M200 |  [![Zortrax M200](image "https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png")](https://store.zortrax.com/M200) |
+|3D Print           | 1 | 3D printer (ABS)                                   | Zortrax M200 |  [![Zortrax M200](image "Zortrax M200" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png")](https://store.zortrax.com/M200) |
 |                   |   | Petroleum, Acetone                                 | Local Dealer |         |
 |Electronics        | 1 | ODroid C2, 1.5 GHz Quadcore board                  | [![ODroid C2](image "http://www.hardkernel.com/main/_Files/prdt/2016/201602/ODROID-C2.png" =100x)](http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145457216438)   | 
 |                   | 1 | Teensy 3.5, Arm M4 board                           | [![Teensy 3.5](image "https://www.pjrc.com/store/teensy35.jpg" =100x)](https://www.pjrc.com/store/teensy35.html ) |
