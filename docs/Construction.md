@@ -33,7 +33,7 @@ The CAD design of the leg is made with Inventor:
 
 <img width="700px" src="../images/cad-leg-total.png"/>
 
-In the open version, the wire-tunnels can be seen, allowing to 
+In the open version, the wire-tunnels can be seen, allowing to make cables unvisible.
 <img width="700px" src="../images/cad-leg-total-cut.png"/>
 
 The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
