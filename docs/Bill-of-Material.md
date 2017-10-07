@@ -1,5 +1,10 @@
 This is the list of main components. Besides that, a lot of incidentals (screws etc.) have been necessary
 
+[![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png)](https://store.zortrax.com/M200)
+
+[![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png =50x50)](https://store.zortrax.com/M200)
+
+
 |Category           |  #| What                                              | From         |          |
 |:------------------|--:|:--------------------------------------------------|:-------------|----------|
 |3D Print           | 1 | 3D printer (ABS)                                   | Zortrax M200 |  [![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png)](https://store.zortrax.com/M200) |
