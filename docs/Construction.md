@@ -1,9 +1,7 @@
-Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of legs. This is the pentapod with 7 legs, it seemed to be too crowded to me.
+Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of legs. This is the pentapod with 7 legs, it seemed to be too crowded to me, and would not be cheap either.
 <img src="../videos/Pentapod-7-legs-vs-5legs.gif"/>
 
-But 7 legs is really a lot, and would not be cheap either.
-
-When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin leg with 5 thigh gaps, and no wires crossing the joints. The servo motors should be hidden, even in the axially turning knee, where it might be difficult to place a cuboid shaped servo.
+When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin legs with thigh gaps, and no wires crossing the joints. The servo motors should be hidden, even in the axially turning knee, where it might be difficult to place a cuboid shaped servo.
 
 I startet with this construction which I liked very much, it is very lean and creepy:
 <img  src="../images/IMG_20170915_174835.jpg"/>
@@ -20,7 +18,7 @@ Walking was possible
 <img src="../videos/thin-pentapod-walks.gif"/>
 
 
-and even twerking (actually, this was not on purpose, this happened when I introduced the IMU to keep the body levelled, but the PID controller's parameters were completely rubbish, so it osscillated in all axis which turned out to be really hot!)
+and even twerking (actually, this was not on purpose, it happened when I introduced the IMU to keep the body levelled, but the PID controller's parameters were completely rubbish, so it osscillated in all axis which turned out to be really hot!)
 <img src="../videos/pentapod-twerks.gif"/>
 
 Unfortunately, it turned out that once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
@@ -34,6 +32,8 @@ It had a breakdown every here and then, and the body crashed on the ground since
 The CAD design of the leg is made with Inventor:
 
 <img width="700px" src="../images/cad-leg-total.png"/>
+
+In the open version, the wire-tunnels can be seen, allowing to 
 <img width="700px" src="../images/cad-leg-total-cut.png"/>
 
 The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
