@@ -10,10 +10,10 @@
 |                   | 5 | Distance Sensors VL6180X						     | [Adafruit VL6180X<img width="70" src="https://cdn-shop.adafruit.com/970x728/3316-00.jpg"/>](https://www.adafruit.com/product/3316  ) |
 |                   | 1 | Power supply for electronics 5V, 3A                               | [Polulu D24V50F5<img width="70" src="https://a.pololu-files.com/picture/0J5851.600x480.jpg"/>](https://www.pololu.com/product/2851 )  |
 |                   | 1 | Servo Step down Converter, 5A, approx. 10V   | [XL4016<img width="70" src="http://www.xcluma.com/image/cache/data/products/XL4015-DC-DC-Step-Down-Adjustable-Power-Supply-650x489.jpg"/>](http://www.xcluma.com/xl4015-cc-cv-dc-dc-battery-charger )  |
-|                   | 1 | IMU BNO055                                         | [Adafruit  BNO055<img width="70" src="https://cdn-shop.adafruit.com/970x728/2472-00.jpg"/>](https://www.adafruit.com/product/2472"  )  |
+|                   | 1 | IMU BNO055                                         | [Adafruit  BNO055<img width="70" src="https://cdn-shop.adafruit.com/970x728/2472-00.jpg"/>](https://www.adafruit.com/product/2472 )  |
 |Servos             |10 | Hip and Knee Servo, 1.2 Nm 						 | [HerkuleX DRS-0101<img width="70" src="http://www.francerobotique.com/223-thickbox_default/herkulex-drs-0101.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/175-herkulex-drs-0101.html )  |
-|                   | 5 | Foot Servo 2.4 Nm         							 | [Herkulex DRS-0201<img width="70" src="http://www.francerobotique.com/223-thickbox_default/herkulex-drs-0201.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/175-herkulex-drs-0201.html ) |
-|                   | 5 | Thigh Servo, 5.2Nm      							 | [Herkulex DRS-0401<img width="70" src="http://www.francerobotique.com/223-thickbox_default/herkulex-drs-0401.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/175-herkulex-drs-0401.html )  |
+|                   | 5 | Foot Servo 2.4 Nm         					     | [Herkulex DRS-0201<img width="70" src="http://www.francerobotique.com/224-thickbox_default/herkulex-drs-0201.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/176-herkulex-drs-0201.htm ) |
+|                   | 5 | Thigh Servo, 5.2Nm      							 | [Herkulex DRS-0401<img width="70" src="http://www.francerobotique.com/225-thickbox_default/herkulex-drs-0401.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/177-herkulex-drs-0401.html)  |
 |                   | 3 | Additional Servo Cables 300mm  					 | [Cable 300mm<img width="70" src="http://www.francerobotique.com/1089-thickbox_default/4-c%C3%A2bles-4p-300mm.jpg"/>](http://www.francerobotique.com/connectiques-c%C3%A2bles/236-4-c%C3%A2bles-4p-300mm.html) |
 |                   | 3 | Additional Servo Cables 200mm						 | [Cable 200mm<img width="70" src="http://www.francerobotique.com/1088-thickbox_default/8-c%C3%A2bles-4p-200mm.jpg"/>](http://www.francerobotique.com/connectiques-c%C3%A2bles/235-8-c%C3%A2bles-4p-200mm.html) |
 |Mechanical Stuff   |20 | distance sleeve M2 10mm							 | [M2 10mm<img width="70" src="https://static3.tme.eu/products_pics/5/c/d/5cd24b9e347801f2928eb36849989750/282037.jpg"/>](http://www.tme.eu/de/details/tff-m2x10_dr121/distanzelemente-aus-metall/dremec/121x10/) |
@@ -33,7 +33,7 @@
 |                      | Simplified STL files to be used in openGL           | [Github Pentapod Simplified STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/simplified) |
 |Electronics           | KiCad Schematics and PCB of Cortex and Power Supply | [Github Cortex Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/CortexBoard%2040x) |
 |                      | KiCad Schematics and PCB of Sensor Board            | [Github Sensor Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/SensorAdapter) |
-|Source Code           | Arduino C++ code running on ATMega8, developed with Atmel Studio | [Github SensorAdapter](https://github.com/jochenalt/Pentapod-Code/tree/master/Sensor) |
-|                      | Cortex Arduino C++ code running on Teensy 3.5, developed with Sloeber | [Github Cortex](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex) |
-|                      | Brain ROS/Ubuntu C++ code running on Odroid C2      | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
+|Source Code           | Sensor: Arduino C++ code running on ATMega8, developed with Atmel Studio | [Github SensorAdapter](https://github.com/jochenalt/Pentapod-Code/tree/master/Sensor) |
+|                      | Cortex: Arduino C++ code running on Teensy 3.5, developed with Sloeber | [Github Cortex](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex) |
+|                      | Brain: ROS/Ubuntu C++ code running on Odroid C2      | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
 
