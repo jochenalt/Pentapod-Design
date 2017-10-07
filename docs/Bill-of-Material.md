@@ -12,7 +12,9 @@ This is the list of main components. Besides that, a lot of incidentals (screws 
 
 [![Zortrax M200]<img width="100" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>](https://store.zortrax.com/M200)
 
-[![Zortrax M200](<img width="100" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>)](https://store.zortrax.com/M200)
+[![Zortrax M200](<img width="50" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>)](https://store.zortrax.com/M200)
+
+[Zortrax M200<img width="70" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>](https://store.zortrax.com/M200)
 
 
 |Category           |  #| What                                              | From         |          |
