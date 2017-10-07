@@ -26,9 +26,14 @@
 
 ## Sources
 
-|Category              |  Description                                       | Source |
-|:---------------------|:---------------------------------------------------|:-------|
-|CAD Model             | body and leg design                                | [Github Pentapod CAD](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/Inventor) |
-|STL Files             | 3D printable files of body and legs parts          | [Github Pentapod STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/stl) |
-|Simplified STL Files  | Simplified STL files to be used in openGL          | [Github Pentapod Simplified STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/simplified) |
+|Category              |  Description                                        | Source |
+|:---------------------|:----------------------------------------------------|:-------|
+|CAD Model             | Inventor: Body and leg design                       | [Github Pentapod CAD](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/Inventor) |
+|                      | 3D printable files of body and legs parts           | [Github Pentapod STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/stl) |
+|                      | Simplified STL files to be used in openGL           | [Github Pentapod Simplified STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/simplified) |
+|Electronics           | KiCad Schematics and PCB of Cortex and Power Supply | [Github Cortex Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/CortexBoard%2040x) |
+|                      | KiCad Schematics and PCB of Sensor Board            | [Github Sensor Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/SensorAdapter) |
+|Source Code           | Arduino C++ code running on ATMega8, developed with Atmel Studio | [Github SensorAdapter](https://github.com/jochenalt/Pentapod-Code/tree/master/Sensor) |
+|                      | Cortex Arduino C++ code running on Teensy 3.5, developed with Sloeber | [Github Cortex](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex) |
+|                      | Brain ROS/Ubuntu C++ code running on Odroid C2      | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
 
