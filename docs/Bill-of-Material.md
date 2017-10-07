@@ -1,14 +1,14 @@
 This is the list of main components. Besides that, a lot of incidentals (screws etc.) have been necessary
 
 [![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png)](https://store.zortrax.com/M200)
+[![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png =100x100)](https://store.zortrax.com/M200)
 
 [![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png width=50%)](https://store.zortrax.com/M200)
 
 [![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png width="50")](https://store.zortrax.com/M200)
 
-[![Zortrax M200](https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png =100x)](https://store.zortrax.com/M200)
 
-[![Zortrax M200]<img width="100" https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>](https://store.zortrax.com/M200)
+[![Zortrax M200]<img width="100" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>](https://store.zortrax.com/M200)
 
 [![Zortrax M200](<img width="100" src="https://store.zortrax.com/image/cache/catalog/new_carousel/M200_FI_U_02_C50_04-489x489.png"/>)](https://store.zortrax.com/M200)
 
