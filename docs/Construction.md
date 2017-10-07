@@ -3,17 +3,19 @@ Before starting the construction; I started with an openGL simulation of the gai
 
 But 7 legs is really a lot, and would not be cheap either.
 
-When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin leg with 5 thigh gaps, and no wires crossing the joints. The servo motors should be hidden, and should not lead to ugly bulges as a consequence of the cuboid shape of a servo, which makes it difficult to have an axial movement.
+When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin leg with 5 thigh gaps, and no wires crossing the joints. The servo motors should be hidden, even in the axially turning knee, where it might be difficult to place a cuboid shaped servo.
 
 I startet with this construction which I liked very much, it is very lean and creepy:
 <img  src="../images/IMG_20170915_174835.jpg"/>
 
+<!---
 Standing up was difficult, but worked finally:
 <video width="320" height="240" controls>
 	<source src="../videos/VID_20170701_175425.mp4" type="video/mp4"/>
 </video>
+-->
 
-walking was possible as well 
+Walking was possible  
 
 <img src="../videos/thin-pentapod-walks.gif"/>
 
@@ -29,7 +31,7 @@ It had a breakdown every here and then, and the body crashed on the ground since
 
 # CAD
  
-The CAD design of the leg is made with Inventor looks like this
+The CAD design of the leg is made with Inventor:
 
 <img width="700px" src="../images/cad-leg-total.png"/>
 <img width="700px" src="../images/cad-leg-total-cut.png"/>
@@ -49,5 +51,5 @@ Finally the foot contains the PCB with the Atmega8 accessing the distance sensor
 The body contains the Odroid, Teensy, batteries and the switched power supply in the bottom. The IMU is attached right below the Lidar sensor. To assemble the body, there's a big thread between the top and the bottom part.
 <img  width="600px" src="../images/cad-pentapod-body-cut.png"/>
 
-And finally, the pentapod's total design:
+And finally, the pentapod's design in total:
 <img  width="800px" src="../images/cad-pentapod-total.png"/>
