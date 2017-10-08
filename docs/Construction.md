@@ -1,9 +1,11 @@
 Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of legs. This is the pentapod with 7 legs, it seemed to be too crowded to me, and would not be cheap either.
+
 <img src="../videos/Pentapod-7-legs-vs-5legs.gif"/>
 
 When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin legs with thigh gaps, and no wires crossing the joints. The servo motors should be hidden, even in the axially turning knee, where it might be difficult to place a cuboid shaped servo.
 
 I startet with this construction which I liked very much, it is very lean and creepy:
+
 <img  src="../images/IMG_20170915_174835.jpg"/>
 
 <!---
@@ -25,11 +27,12 @@ Unfortunately, it turned out that once I put in batteries and the lidar on top, 
 It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended to use a stronger servo in the thigh, and had to design a more clumsy  leg like this:
 
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
+
 (The lean and nice one is one the left, the final clumsy one on the right)
 
 # CAD
  
-The CAD design of the leg is made with Inventor:
+The CAD design of the leg should not look like the command arrangement of brackets and servos, but like a real robot leg.
 
 <img width="700px" src="../images/cad-leg-total.png"/>
 
