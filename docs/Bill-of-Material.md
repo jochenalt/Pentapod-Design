@@ -8,8 +8,8 @@
 |Electronics        | 1 | ODroid C2, 1.5 GHz Quadcore board                  | [ODroid C2<img width="70" src="http://www.hardkernel.com/main/_Files/prdt/2016/201602/ODROID-C2.png"/>](http://www.hardkernel.com/main/products/prdt_info.php?g_code=G145457216438)   | 
 |                   | 1 | Teensy 3.5, Arm M4 board                           | [Teensy 3.5<img width="70" src="https://www.pjrc.com/store/teensy35.jpg"/>](https://www.pjrc.com/store/teensy35.html ) |
 |                   | 5 | Distance Sensors VL6180X						     | [Adafruit VL6180X<img width="70" src="https://cdn-shop.adafruit.com/970x728/3316-00.jpg"/>](https://www.adafruit.com/product/3316  ) |
-|                   | 1 | Power supply for electronics 5V, 3A                               | [Polulu D24V50F5<img width="70" src="https://a.pololu-files.com/picture/0J5851.600x480.jpg"/>](https://www.pololu.com/product/2851 )  |
-|                   | 1 | Servo Step down Converter, 5A, approx. 10V   | [XL4016<img width="70" src="http://www.xcluma.com/image/cache/data/products/XL4015-DC-DC-Step-Down-Adjustable-Power-Supply-650x489.jpg"/>](http://www.xcluma.com/xl4015-cc-cv-dc-dc-battery-charger )  |
+|                   | 1 | Step down voltage converter, 5V, 5A                | [Pololu D24V50F5<img width="70" src="https://a.pololu-files.com/picture/0J5851.600x480.jpg"/>](https://www.pololu.com/product/2851 )  |
+|                   | 1 | Step down voltage converter, 5A, adjustable        | [XL4016<img width="70" src="http://www.xcluma.com/image/cache/data/products/XL4015-DC-DC-Step-Down-Adjustable-Power-Supply-650x489.jpg"/>](http://www.xcluma.com/xl4015-5a-dc-dc-step-down-adjustable-power-supply-buck-module)  |
 |                   | 1 | IMU BNO055                                         | [Adafruit  BNO055<img width="70" src="https://cdn-shop.adafruit.com/970x728/2472-00.jpg"/>](https://www.adafruit.com/product/2472 )  |
 |Servos             |10 | Hip and Knee Servo, 1.2 Nm 						 | [HerkuleX DRS-0101<img width="70" src="http://www.francerobotique.com/223-thickbox_default/herkulex-drs-0101.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/175-herkulex-drs-0101.html )  |
 |                   | 5 | Foot Servo 2.4 Nm         					     | [Herkulex DRS-0201<img width="70" src="http://www.francerobotique.com/224-thickbox_default/herkulex-drs-0201.jpg"/>](http://www.francerobotique.com/servomoteurs-intelligents/176-herkulex-drs-0201.html) |
@@ -26,14 +26,14 @@
 
 ## Sources
 
-|Category              |  Description                                        | Source |
-|:---------------------|:----------------------------------------------------|:-------|
-|CAD Model             | Inventor: Body and leg design                       | [Github Pentapod CAD](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/Inventor) |
-|                      | 3D printable files of body and legs parts           | [Github Pentapod STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/stl) |
-|                      | Simplified STL files to be used in openGL           | [Github Pentapod Simplified STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/simplified) |
-|Electronics           | KiCad Schematics and PCB of Cortex and Power Supply | [Github Cortex Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/CortexBoard%2040x) |
-|                      | KiCad Schematics and PCB of Sensor Board            | [Github Sensor Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/SensorAdapter) |
-|Source Code           | Sensor: Arduino C++ code running on ATMega8, developed with Atmel Studio | [Github SensorAdapter](https://github.com/jochenalt/Pentapod-Code/tree/master/Sensor) |
-|                      | Cortex: Arduino C++ code running on Teensy 3.5, developed with Sloeber | [Github Cortex](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex) |
-|                      | Brain: ROS/Ubuntu C++ code running on Odroid C2      | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
+|Category              |  Description                                                        | Source |
+|:---------------------|:--------------------------------------------------------------------|:-------|
+|CAD Model             | Inventor: Body and leg design                                       | [Github Pentapod CAD](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/Inventor) |
+|                      | 3D printable files of body and legs parts                           | [Github Pentapod STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/stl) |
+|                      | Simplified STL files to be used in openGL                           | [Github Pentapod Simplified STL](https://github.com/jochenalt/Pentapod-Design/tree/master/cad/simplified) |
+|Electronics           | KiCad Schematics and PCB of Cortex and Power Supply                 | [Github Cortex Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/CortexBoard%2040x) |
+|                      | KiCad Schematics and PCB of Sensor Board                            | [Github Sensor Schematics](https://github.com/jochenalt/Pentapod-Design/tree/master/schematics/SensorAdapter) |
+|Source Code           | Sensor: Arduino C++ code running on ATMega8, IDE Atmel Studio       | [Github SensorAdapter](https://github.com/jochenalt/Pentapod-Code/tree/master/Sensor) |
+|                      | Cortex: Arduino C++ code running on Teensy 3.5, IDE Eclipse Sloeber | [Github Cortex](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex) |
+|                      | Brain: ROS/Ubuntu C++ code running on Odroid C2, IDE Eclipse        | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
 
