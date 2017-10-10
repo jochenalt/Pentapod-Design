@@ -13,13 +13,13 @@ In the end, I decided to go with a turning knee.
 The blue lines illustrate the leg consisting of the joints for hip, thigh, knee and foot.
 The turning knee (θ<sub>2</sub>) allows to move the toe to the left and the right without moving the tibia. This should allow more efficient movements since the tibia moves less compared to a classical design without a turning knee.
 
-The effect can be seen here, this one is a version without a turning knee (not reepy).
+The effect can be seen here, this one is a version without a turning knee (not creepy).
 
-<img  src="../latest/videos/uncreepywalk.gif"/>
+<img  width=50% src="../latest/videos/uncreepywalk.gif"/>
 
-This is the version with a turning knee (creepy).
+This is the version with a turning knee (creepy, screeam!!!).
 
-<img  src="../latest/videos/creepywalk.gif"/>
+<img  width=50% src="../latest/videos/creepywalk.gif"/>
 
 
 To have the capability to walk in uneven terrain, there’s the need knowing the distance of a toe to the ground. Although it might be sufficient to know if the toe touches the ground,actually this surprises the gait controller all the time. Knowing the distance results in a smoother gait control that is able to accelerate and decallerate in advance. So, I decided to go with a cheap laser distance controller built in each leg.
