@@ -62,7 +62,7 @@ Computation of the second angle *θ<sub>1</sub>*  at point *A* requires a geomet
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image016.png"/>
 
-We consider the triangle from *A*, *B* and *C*. The two lines <img src="../images/image017.png"/> and <img ="../images/image017.png"/>are of fixed length. So, the point *C* is upon the circle with the centre H and the radius of the triangle’s height. Additionally, *C* is defined as function of *θ<sub>0</sub>* and *θ<sub>1</sub>*, so we should be able to derive *θ<sub>1</sub>* by intersecting the circle with *C(θ<sub>0</sub> ,θ<sub>1</sub>)*.
+We consider the triangle from *A*, *B* and *C*. The two lines <img src="../images/image017.png"/> and <img ="../images/image018.png"/>are of fixed length. So, the point *C* is upon the circle with the centre H and the radius of the triangle’s height. Additionally, *C* is defined as function of *θ<sub>0</sub>* and *θ<sub>1</sub>*, so we should be able to derive *θ<sub>1</sub>* by intersecting the circle with *C(θ<sub>0</sub> ,θ<sub>1</sub>)*.
 
 The only thing we need to do is to express that in terms of coordinates. First, we compute the length of *a*, *b* and *c*:
 
