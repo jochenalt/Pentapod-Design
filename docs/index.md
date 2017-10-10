@@ -21,7 +21,6 @@ This is the version with a turning knee (creepy, screeam!!!).
 
 <img  width=50% src="../latest/videos/creepywalk.gif"/>
 
-
-To have the capability to walk in uneven terrain, there’s the need knowing the distance of a toe to the ground. Although it might be sufficient to know if the toe touches the ground,actually this surprises the gait controller all the time. Knowing the distance results in a smoother gait control that is able to accelerate and decallerate in advance. So, I decided to go with a cheap laser distance controller built in each leg.
+To have the capability to walk in uneven terrain, there’s the need to know  the distance of each toe to the ground. Although it might be sufficient to know if the toe touches the ground, actually this surprises the gait controller forcing it to react very abruptly all the time. Knowing the distance results in a smoother gait that is able to accelerate and decallerate in advance before touching the ground. So, I decided to go with a cheap laser distance controller built in each leg.
 
 
