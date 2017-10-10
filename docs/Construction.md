@@ -32,11 +32,11 @@ It had a breakdown every here and then, and the body crashed on the ground since
 
 # CAD
  
-The CAD design of the leg should not look like the command arrangement of brackets and servos, but like a real robot leg.
+The CAD design of the leg should not look like the commen arrangement of brackets, screws, wires and servos, but like a real robot leg.
 
 <img width="700px" src="../images/cad-leg-total.png"/>
 
-In the open version, the wire-tunnels can be seen, allowing to make cables unvisible.
+In the open version, the tunnels for the wires can be seen.
 <img width="700px" src="../images/cad-leg-total-cut.png"/>
 
 The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
