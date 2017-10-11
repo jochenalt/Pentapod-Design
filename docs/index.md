@@ -17,7 +17,7 @@ The effect can be seen here, this one is a version without a turning knee (not c
 
 <img  width=50% src="../latest/videos/uncreepywalk.gif"/>
 
-This is the version with a turning knee (creepy, screeam!!!).
+This is the version with a turning knee (creepy, screeeeeeam!!!).
 
 <img  width=50% src="../latest/videos/creepywalk.gif"/>
 
