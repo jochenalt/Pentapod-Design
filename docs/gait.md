@@ -20,4 +20,4 @@ The leg movement is modelled by a cubic bezier curve with the first support poin
 
 If the ground is not plain, the distance sensors in the leg detect that. When the zenith of the movement is reached, the actual distance is constantly compared to the expected distance. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
 
-<img width="30%" src="../images/leg-movement-terrain.png"/>
+<img width="50%" src="../images/leg-movement-terrain.png"/>
