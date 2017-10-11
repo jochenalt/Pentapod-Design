@@ -10,15 +10,16 @@ The engine is connected to the *cortex* that directly controls all sensors and s
 [(click to enlarge)<img width="30%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
 
 The PCB in Kicad and in real life is this
-<img width="30%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
 
-<img align="left" src="../images/pentapod-power-supply.png" >
 <img src="../images/power-supply-pcb.png" >
 
-**Cortex(Teensy)**
-The cortex board does not need a lot, since most of the stuff is done by the Teensy alone. I sepnt two ADC pins of the teensy to measure the voltage of the battery and the voltage converter, added a relay to switch on the power for the servos, and that's it mainly, all the rest is just sockets for the IMU, the connection to the ODroid, the batteries, 5 sockets to serve the thigh servos, 5 for all other servos per leg, and a connector to the panel containing the on/off button.
+<img src="../images/pentapod-power-supply.png" >
 
-<img aligh="left" src="../images/pentapod-cortex.png" >
+**Cortex(Teensy)**
+The cortex board does not need much,  most of the stuff is done by the Teensy alone. I spent two ADC pins of the teensy to measure the voltage of the battery and the voltage converter, added a relay to switch on the power for the servos, and that's it mainly, all the rest is just sockets for the IMU, the connection to the ODroid, the batteries, 5 sockets to serve the thigh servos, 5 for all other servos per leg, and a connector to the panel containing the on/off button.
+
+<img src="../images/pentapod-cortex.png" >
+
 <img src="../images/cortex-pcb.png" >
 
 
@@ -27,6 +28,8 @@ The cortex board does not need a lot, since most of the stuff is done by the Tee
 [(click to enlarge)<img width="30%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
 
 The sensor board behaves like a HerkuleX servo in order to attach it to the Herkulex bus. It is a small AVR controller surrounded by minimal components only. The only luxury component is an osscillator, which allows the ATMega to use 115200 baud in a stable manner.
+
+<img src="../images/sensor-pcb.png" >
 
 <img src="../images/sensorboard.png" >
 
