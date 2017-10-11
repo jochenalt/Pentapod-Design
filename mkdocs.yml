@@ -6,7 +6,9 @@ repo_author: 'Jochen Alt'
 site_description: Poor Pentapod 
 pages:
     - 'Home': 'index.md'
+    - 'Gait': 'gait.md'
     - 'Overview': 'overview.md'
     - 'Kinematics': 'Kinematics.md'
     - 'Construction': 'Construction.md'
+    - 'Electronics': 'electronics.md'
     - 'Bill Of Material': 'Bill-of-Material.md'
