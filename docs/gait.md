@@ -7,7 +7,7 @@ The order of the gait sequence to achieve this is
 | leg 1        | leg 3         | leg 5        | leg 2          | leg 4          |
 
 
-<img src="../videos/gaittimeshift.png"/>
+<img src="../videos/gaittimeshift.gif"/>
 
 The leg movement is modelled by a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touch the ground again.
 
