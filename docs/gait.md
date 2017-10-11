@@ -10,13 +10,14 @@ The order of the gait sequence to achieve this is
 (It does not matter which leg is your number one)
 
 The animation shows a red triangle that indicates the area where the bot is standing on. The sequence above leads to a slowly turning triangle.
+
 <img src="../videos/gaittimeshift.gif"/>
 
 
 The leg movement is modelled by a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touch the ground again.
 
-<img width="50%" src="../images/leg-movement.png"/>
+<img width="30%" src="../images/leg-movement.png"/>
 
 If the ground is not plain, the distance sensors in the leg detect that. When the zenith of the movement is reached, the actual distance is constantly compared to the expected distance. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
 
-<img width="50%" src="../images/leg-movement-terrain.png"/>
+<img width="30%" src="../images/leg-movement-terrain.png"/>
