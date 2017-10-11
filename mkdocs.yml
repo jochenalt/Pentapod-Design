@@ -7,8 +7,8 @@ site_description: Poor Pentapod
 pages:
     - 'Home': 'index.md'
     - 'Gait': 'gait.md'
-    - 'Overview': 'overview.md'
-    - 'Kinematics': 'Kinematics.md'
+    - 'Technical Overview': 'overview.md'
+    - 'Boring Math': 'Kinematics.md'
     - 'Construction': 'Construction.md'
     - 'Electronics': 'electronics.md'
     - 'Bill Of Material': 'Bill-of-Material.md'

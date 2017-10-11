@@ -1,30 +1,23 @@
-Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of legs. This is the pentapod with 7 legs, it seemed to be too crowded to me, and would not be cheap either.
+Before starting the construction; I started with an openGL simulation of the gait, to play around with the number of legs. This is the pentapod with 7 legs. 
 
 <img src="../videos/Pentapod-7-legs-vs-5legs.gif"/>
 
-When I came up with the idea of not adding but removing a leg, I had in mind a design with very thin legs with thigh gaps, and no wires crossing the joints. The servo motors should be hidden, even in the axially turning knee, where it might be difficult to place a cuboid shaped servo.
+You're right, too crowded, a body full of legs. 
+Thinking of the design I had in mind something  thin  with thigh gaps and no technical wires crossing the joints. The servo motors should be hidden, even in the axially turning knee.
 
 I startet with this construction which I liked very much, it is very lean and creepy:
 
 <img  src="../images/IMG_20170915_174835.jpg"/>
 
-<!---
-Standing up was difficult, but worked finally:
-<video width="320" height="240" controls>
-	<source src="../videos/VID_20170701_175425.mp4" type="video/mp4"/>
-</video>
--->
-
 Walking was possible  
 
 <img src="../videos/thin-pentapod-walks.gif"/>
 
-
-and even twerking (actually, this was not on purpose, it happened when I introduced the IMU to keep the body levelled, but the PID controller's parameters were completely rubbish, so it osscillated in all axis which turned out to be really hot!)
+and even twerking (although, this happened by accident when I connected the IMU to keep the body levelled, but did not calibrated the  PID controller's parameters, so it osscillated in all axis which turned out to be really hot!)
 <img src="../videos/pentapod-twerks.gif"/>
 
-Unfortunately, it turned out that once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
-It had a breakdown every here and then, and the body crashed on the ground since the servos activated the emergency shutdown. So, I intended to use a stronger servo in the thigh, and had to design a more clumsy  leg like this:
+Unfortunately, once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
+It had a breakdown every here and then, and the body crashed on the ground since the servos activated the overload shutdown by themselves. So, I bought stronger servos in the thigh, and had to design a more clumsy  leg like this:
 
 <img width="200px" src="../images/IMG_20171003_160225.jpg"/>
 
@@ -35,9 +28,6 @@ It had a breakdown every here and then, and the body crashed on the ground since
 The CAD design of the leg should not look like the commen arrangement of brackets, screws, wires and servos, but like a real robot leg.
 
 <img width="700px" src="../images/cad-leg-total.png"/>
-
-In the open version, the tunnels for the wires can be seen.
-<img width="700px" src="../images/cad-leg-total-cut.png"/>
 
 The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
 
