@@ -31,8 +31,8 @@ Combined with the DH parameters, the following DH matrixes define the transforma
 
 <img width=250 src="../images/image006.png"/>  
 <img width=250 src="../images/image007.png"/>  
-<img width=230 src="../images/image008.png"/>  
-<img width=230 src="../images/image008.png"/>  
+<img width=210 src="../images/image008.png"/>  
+<img width=210 src="../images/image008.png"/>  
 
 ## Forward Kinematics of a Leg
 
@@ -42,7 +42,7 @@ With the *DH* transformation matrixes at hand, computation of the leg’s pose o
 
 By multiplying the transformation matrix with the origin (as homogeneous vector), we get the absolute coordinates of the toe point (*TP*) centre point in world coordinate system (i.e. relative to the legs’s base).
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="100" src="../images/image012.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="90" src="../images/image012.png"/>
 
 That was easy. The tricky part comes now.
 
@@ -56,7 +56,7 @@ We get
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width="200" src="../images/image014.png"/>
 
-Later on, we will need the coordinates of end of the first limb (*A*) which is <img width=120 src="../images/image015.png"/>
+Later on, we will need the coordinates of end of the first limb (*A*) which is <img width=110 src="../images/image015.png"/>
 
 Computation of the second angle *θ<sub>1</sub>*  at point *A* requires a geometric analysis. The leg is denoted in blue, all construction lines are red.
 
@@ -70,32 +70,32 @@ The only thing we need to do is to express that in terms of coordinates. First, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image020.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=70 src="../images/image021.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=60 src="../images/image021.png"/>
 
 Now that the triangle is defined, we can compute the height <img width=10 src="../images/image022.png"/> by Herons formula
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=400 src="../images/image023.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=350 src="../images/image023.png"/>
 
 The base of the height *H* is defined by 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=200 src="../images/image024.png"/>
 
-Now we need to define the circle *K* with radius *h* and centre *H*. This is done by *K = H sin(α) + T cos(α)* with *S* and *T* orthogonal to <img width=10 src="../images/image026.png"/> as well as *S* and *T* being orthogonal to each other.
+Now we need to define the circle *K* with radius *h* and centre *H*. This is done by *K = H sin(α) + T cos(α)* with *S* and *T* orthogonal to <img width=25 src="../images/image026.png"/> as well as *S* and *T* being orthogonal to each other.
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=200 src="../images/image027.png"/>
 
-So, with the arbitrary assumption <img width=20 src="../images/image028.png"/> and the length <img width=20 src="../images/image029.png"/> we get 
+So, with the arbitrary assumption <img width=50 src="../images/image028.png"/> and the length <img width=50 src="../images/image029.png"/> we get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image030.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=350 src="../images/image030.png"/>
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
-There are two possibilities for *S*, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to *S* and its length <img width=20 src="../images/image031.png"/>:
+There are two possibilities for *S*, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to *S* and its length <img width=40 src="../images/image031.png"/>:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image032.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=120 src="../images/image032.png"/>
 
 Having the circle defined, we need to intersect it with the possible positions of *C*:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image033.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=350 src="../images/image033.png"/>
 
 
 Hereby denotes <img width=180 src="../images/image034.png"/> . We consider only the equations of *x* and *y* coordinates and solve these for *d<sub>1</sub>c<sub>1<sub>*. Equating gives
@@ -104,7 +104,7 @@ Hereby denotes <img width=180 src="../images/image034.png"/> . We consider only 
 
 This needs to be solved by in order to get point *C*. Unfortunately, we have *sin* and *cos* in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=700 src="../images/image037.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image037.png"/>
 
 This is used to solve the equation above for *α*:
 
@@ -116,11 +116,11 @@ This is used to solve the equation above for *α*:
 
 Out of *α* we get *C* by <img width=200 src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=200 src="../images/image042.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=180 src="../images/image042.png"/>
 
 which results in 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=120 src="../images/image043.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image043.png"/>
 
 The first angle is always the hardest, time for a beer.
 
@@ -137,7 +137,7 @@ So, let’s have a closer look into the transformation matrix <img width=6 src="
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on *θ<sub>2</sub>*, so we get
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=250 src="../images/image048.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=220 src="../images/image048.png"/>
 
 Again, *arcsin* results in two solutions, so we need the other coordinates as well to check which solution is valid.
 That’s it. Surprisingly complex for a leg with only 4 degrees of freedom.
@@ -151,7 +151,7 @@ Attaching 5 legs around the body requires a transformation as well, plus we migh
 The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=8% src="../images/image050.png"/>, where *n* is the number of the leg.
 We define the transformation matrix *Belly* that defines the belly coordinate system out of the body coordinate system, that is a 3D rotation matrix plus a translation along the belly coordinates:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=700 src="../images/image051.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=600 src="../images/image051.png"/>
 
 For each leg we have an own transformation matrix which is a rotation θ in the *xy*-pane around the  *z*-axis:
 
@@ -165,6 +165,6 @@ Having a point in one coordinate system and watching it from another one is done
 
 Computing-wise, the inverse matrix is done by Gauss or similar approaches with a complexity of *o(nm/2)*, which might be bad for the performance. Luckily, the inverse of a symmetric rotation matrix is the transposed matrix, and the rest can be computed by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=200 src="../images/image056.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=160 src="../images/image056.png"/>
 
 which is much simpler.
