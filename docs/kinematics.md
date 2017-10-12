@@ -98,7 +98,7 @@ Having the circle defined, we need to intersect it with the possible positions o
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image033.png"/>
 
 
-Hereby denotes <img width=90 src="../images/image034.png"/> . We consider only the equations of *x* and *y* coordinates and solve these for *d<sub>1</sub>sub>c<sub>1<sub>*.Equating gives
+Hereby denotes <img width=90 src="../images/image034.png"/> . We consider only the equations of *x* and *y* coordinates and solve these for *d<sub>1</sub>c<sub>1<sub>*.Equating gives
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=600 src="../images/image036.png"/>
 
@@ -108,36 +108,36 @@ This needs to be solved by in order to get point *C*. Unfortunately, we have *si
 
 This is used to solve the equation above for *α*:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image038.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image038.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image039.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image039.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=300src="../images/image040.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image040.png"/>
 
-Out of *α* we get *C* by <img width=60 src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
+Out of *α* we get *C* by <img width=150 src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60 src="../images/image042.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=150 src="../images/image042.png"/>
 
 which results in 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20 src="../images/image043.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image043.png"/>
 
 The first angle is always the hardest, time for a beer.
 
 We leave the knee-turn-angle *θ<sub>2</sub>* aside for a while and continue with the tibia *θ<sub>3</sub>*. This is done by considering the triangle *ABC*, and the angle at the point *C* represents *θ<sub>3</sub>*. In a fully elongated leg *θ<sub>3</sub>* is 0.
-Therefore, <img width=60 src="../images/image044.png"/> 
+Therefore, <img width=200 src="../images/image044.png"/> 
 
 The last angle *θ<sub>2</sub>* is computed by use of
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=20 src="../images/image045.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image045.png"/>
 
 So, let’s have a closer look into the transformation matrix <img width=6 src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image047.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=400 src="../images/image047.png"/>
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on *θ<sub>2</sub>*, so we get
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=110 src="../images/image048.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=200 src="../images/image048.png"/>
 
 Again, *arcsin* results in two solutions, so we need the other coordinates as well to check which solution is valid.
 That’s it. Surprisingly complex for a leg with only 4 degrees of freedom.
@@ -151,20 +151,20 @@ Attaching 5 legs around the body requires a transformation as well, plus we migh
 The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=8% src="../images/image050.png"/>, where *n* is the number of the leg.
 We define the transformation matrix *Belly* that defines the belly coordinate system out of the body coordinate system, that is a 3D rotation matrix plus a translation along the belly coordinates:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=700 src="../images/image051.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image051.png"/>
 
 For each leg we have an own transformation matrix which is a rotation θ in the *xy*-pane around the  *z*-axis:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image052.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=250 src="../images/image052.png"/>
 
 
 Having a point in one coordinate system and watching it from another one is done by multiplying it with the inverse transformation matrix. So, the toe point from the hips coordinate system *toe<sub>hip</sub>* is computed out of the toe point from the body’s coordinate system by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image054.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=200 src="../images/image054.png"/>
 
 
 Computing-wise, the inverse matrix is done by Gauss or similar approaches with a complexity of *o(nm/2)*, which might be bad for the performance. Luckily, the inverse of a symmetric rotation matrix is the transposed matrix, and the rest can be computed by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=70 src="../images/image056.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=130 src="../images/image056.png"/>
 
 which is much simpler.
