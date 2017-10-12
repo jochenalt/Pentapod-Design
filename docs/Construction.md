@@ -7,7 +7,7 @@ Thinking of the design I had in mind something  thin  with thigh gaps and no tec
 
 I startet with this construction which I liked very much, it is very lean and creepy:
 
-<img  src="../images/IMG_20170915_174835.jpg"/>
+<img  src="../images/thin-design.jpg"/>
 
 Walking was possible  
 
@@ -19,7 +19,7 @@ and even twerking (although, this happened by accident when I connected the IMU 
 Unfortunately, once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
 It had a breakdown every here and then, and the body crashed on the ground since the servos activated the overload shutdown by themselves. So, I bought stronger servos in the thigh, and had to design a more clumsy  leg like this:
 
-<img width="200px" src="../images/IMG_20171003_160225.jpg"/>
+<img width="200px" src="../images/thinleg-vs-fatleg.jpg"/>
 
 (The lean and nice one is one the left, the final clumsy one on the right)
 
@@ -36,6 +36,9 @@ The hip is attached to the body via screws, and holds the servo that takes care 
 The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a weak servo with 1.2Nm here.
 
 <img width="700px" src="../images/cad-thigh-cut.png"/>
+
+<img align="center" src="../images/thigh-knee-gearbox.jpg"/>
+
 
 Finally the foot contains the PCB with the Atmega8 accessing the distance sensor, so there needs to be a lot of empty space.
 

@@ -4,7 +4,6 @@ This picture shows all components used. On the left, the pentapods *brain* runni
 
 The engine is connected to the *cortex* that directly controls all sensors and servos. It is a Teensy 3.5 board that provides a sufficient number of UARTs and I<sup>2</sup>C interfaces. It does not do any major computations besides running a loop at 33Hz that sends commands to the servos, receives commands from the *brain*, collects sensor data from the IMU, and does some health checking on voltage and servo state.
 
-
 **Power supply** Since the thigh servo needs 14V while the smaller servos need 10V, I used a Lipo 4S battery for the thigh servos (14.7V) and added a switched voltage converter (XL4016) to get stable 10V.  The Odroid and the Teensy requires 5V, that is given by another voltage converter. 
 
 [<img align="center" width="50%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
@@ -31,7 +30,7 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 
 **Sensor Board** The sensor board behaves like a HerkuleX servo in order to attach it to the Herkulex bus. It is a small AVR controller surrounded by minimal components only. The only luxury component is an osscillator, which allows the ATMega to use 115200 baud in a stable manner.
 
-[<img align="center" width="30%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
+[<img align="center" width="50%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
 
 (click to enlarge)
 
@@ -39,6 +38,11 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 [<img align="center" width="50%" src="../images/sensor-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/sensor-pcb.png)
 
 <img align="center" src="../images/sensorboard.png" >
+
+**Still-Life**
+
+This is my desk
+<img src="../videos/still-life.jpg"/>
 
 
 **Startup Procedure** In order to have a clean startup procedure, I used a relay that switches the servo's power. By that, I could ensure that ODroid and Teensy came up properly, before switching on the servos. The full startup procedure is like this:
