@@ -7,7 +7,8 @@ The engine is connected to the *cortex* that directly controls all sensors and s
 
 **Power supply** Since the thigh servo needs 14V while the smaller servos need 10V, I used a Lipo 4S battery for the thigh servos (14.7V) and added a switched voltage converter (XL4016) to get stable 10V.  The Odroid and the Teensy requires 5V, that is given by another voltage converter. 
 
-[(click to enlarge)<img width="30%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
+[<img width="30%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
+(click to enlarge)
 
 The PCB in Kicad and in real life is this
 
@@ -25,11 +26,11 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 
 **Sensor Board** The sensor board behaves like a HerkuleX servo in order to attach it to the Herkulex bus. It is a small AVR controller surrounded by minimal components only. The only luxury component is an osscillator, which allows the ATMega to use 115200 baud in a stable manner.
 
-[(click to enlarge)<img width="30%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
+[<img width="30%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
+(click to enlarge)
 
 
-
-<img align="left" src="../images/sensor-pcb.png" >
+<img width="75%" src="../images/sensor-pcb.png" >
 
 <img src="../images/sensorboard.png" >
 
