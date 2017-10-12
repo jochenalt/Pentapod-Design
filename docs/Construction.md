@@ -14,6 +14,7 @@ Walking was possible
 <img src="../videos/thin-pentapod-walks.gif"/>
 
 and even twerking (although, this happened by accident when I connected the IMU to keep the body levelled, but did not calibrated the  PID controller's parameters, so it osscillated in all axis which turned out to be really hot!)
+
 <img src="../videos/pentapod-twerks.gif"/>
 
 Unfortunately, once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
@@ -37,7 +38,7 @@ The thigh has to carry the whole weight, so it requires the strongest and bigges
 
 <img width="700px" src="../images/cad-thigh-cut.png"/>
 
-<img align="center" src="../images/thigh-knee-gearbox.jpg"/>
+<img idth="700px" align="center" src="../images/thigh-knee-gearbox.jpg"/>
 
 
 Finally the foot contains the PCB with the Atmega8 accessing the distance sensor, so there needs to be a lot of empty space.

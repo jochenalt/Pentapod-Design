@@ -8,13 +8,9 @@ The engine is connected to the *cortex* that directly controls all sensors and s
 
 [<img align="center" width="50%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
 
-(click to enlarge)
-
 The PCB in Kicad and in real life is this
 
 [<img align="center" width="50%" src="../images/power-supply-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/power-supply-pcb.png) 
-
-(click to enlarge)
 
 <img align="center" src="../images/pentapod-power-supply.png" >
 
@@ -23,8 +19,6 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 
 [<img align="center" width="50%" src="../images/cortex-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/cortex-pcb.png) 
 
-(click to enlarge)
-
 <img align="center" src="../images/pentapod-cortex.png" >
 
 
@@ -32,7 +26,6 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 
 [<img align="center" width="50%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
 
-(click to enlarge)
 
 
 [<img align="center" width="50%" src="../images/sensor-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/sensor-pcb.png)
@@ -42,7 +35,7 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 **Still-Life**
 
 This is my desk
-<img src="../videos/still-life.jpg"/>
+<img src="../images/still-life.jpg"/>
 
 
 **Startup Procedure** In order to have a clean startup procedure, I used a relay that switches the servo's power. By that, I could ensure that ODroid and Teensy came up properly, before switching on the servos. The full startup procedure is like this:
