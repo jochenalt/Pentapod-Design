@@ -1,7 +1,7 @@
 Unfortunately, there's no example by nature about a gait with 5 legs. Since you need three legs to stand, two legs can lift. The gait is the outcome of 5 legs carrying out the same movement but with an individual time shift per leg. The time shift is a static sequence ensuring that the two legs in the air are always opposite to each other. 
 
 The order of the legs that start their sequence is 1,3,5,2,4:
-<img src="../images/gait-timeshift-graph.png"/>
+<img width="50%" src="../images/gait-timeshift-graph.png"/>
 
 
 The animation shows a red triangle that indicates the area where the bot is standing on. The sequence above leads to a slowly turning triangle.
