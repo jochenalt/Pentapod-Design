@@ -13,7 +13,9 @@ The engine is connected to the *cortex* that directly controls all sensors and s
 
 The PCB in Kicad and in real life is this
 
-[<img width="75%" src="../images/ower-supply-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/ower-supply-pcb.png) 
+[<img width="75%" src="../images/power-supply-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/power-supply-pcb.png) 
+
+(click to enlarge)
 
 <img src="../images/pentapod-power-supply.png" >
 
@@ -21,6 +23,8 @@ The PCB in Kicad and in real life is this
 The cortex board does not need much,  most of the stuff is done by the Teensy alone. I spent two ADC pins of the teensy to measure the voltage of the battery and the voltage converter, added a relay to switch on the power for the servos, and that's it mainly, all the rest is just sockets for the IMU, the connection to the ODroid, the batteries, 5 sockets to serve the thigh servos, 5 for all other servos per leg, and a connector to the panel containing the on/off button.
 
 [<img width="50%" src="../images/cortex-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/cortex-pcb.png) 
+
+(click to enlarge)
 
 <img src="../images/pentapod-cortex.png" >
 
