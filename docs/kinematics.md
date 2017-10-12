@@ -31,8 +31,8 @@ Combined with the DH parameters, the following DH matrixes define the transforma
 
 <img width=250 src="../images/image006.png"/>  
 <img width=250 src="../images/image007.png"/>  
-<img width=210 src="../images/image008.png"/>  
-<img width=210 src="../images/image008.png"/>  
+<img width=200 src="../images/image008.png"/>  
+<img width=200 src="../images/image008.png"/>  
 
 ## Forward Kinematics of a Leg
 
@@ -54,7 +54,7 @@ Inverse kinematics denotes the computation of all joint angles out of the toe’
 
 We get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" src="../images/image014.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="160" src="../images/image014.png"/>
 
 Later on, we will need the coordinates of end of the first limb (*A*) which is <img width=110 src="../images/image015.png"/>
 
@@ -89,9 +89,9 @@ So, with the arbitrary assumption <img width=50 src="../images/image028.png"/> a
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=350 src="../images/image030.png"/>
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
-There are two possibilities for *S*, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to *S* and its length <img width=40 src="../images/image031.png"/>:
+There are two possibilities for *S*, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to *S* and its length <img width=70 src="../images/image031.png"/>:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=120 src="../images/image032.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image032.png"/>
 
 Having the circle defined, we need to intersect it with the possible positions of *C*:
 
@@ -116,7 +116,7 @@ This is used to solve the equation above for *α*:
 
 Out of *α* we get *C* by <img width=200 src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=180 src="../images/image042.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=150 src="../images/image042.png"/>
 
 which results in 
 
@@ -133,7 +133,7 @@ The last angle *θ<sub>2</sub>* is computed by use of
 
 So, let’s have a closer look into the transformation matrix <img width=6 src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image047.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=400 src="../images/image047.png"/>
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on *θ<sub>2</sub>*, so we get
 
@@ -155,7 +155,7 @@ We define the transformation matrix *Belly* that defines the belly coordinate sy
 
 For each leg we have an own transformation matrix which is a rotation θ in the *xy*-pane around the  *z*-axis:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=250 src="../images/image052.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=220 src="../images/image052.png"/>
 
 
 Having a point in one coordinate system and watching it from another one is done by multiplying it with the inverse transformation matrix. So, the toe point from the hips coordinate system *toe<sub>hip</sub>* is computed out of the toe point from the body’s coordinate system by 
@@ -165,6 +165,6 @@ Having a point in one coordinate system and watching it from another one is done
 
 Computing-wise, the inverse matrix is done by Gauss or similar approaches with a complexity of *o(nm/2)*, which might be bad for the performance. Luckily, the inverse of a symmetric rotation matrix is the transposed matrix, and the rest can be computed by 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=160 src="../images/image056.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=180 src="../images/image056.png"/>
 
 which is much simpler.
