@@ -24,25 +24,25 @@ So, the Denavit Hardenberg parameters are:
 
 According to the coordinate system above, θ<sub>2</sub> has an offset of 90°. The general definition of a Denavit-Hardenberg (DH) transformation is
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=50% src="../images/image005.png"/>  
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image005.png"/>  
 
 which is a homogeneous matrix with two rotations (*x*,*z*) and two translations (*x*,*z*).
 Combined with the DH parameters, the following DH matrixes define the transformation from one joint to its successor:
 
-<img width=40% src="../images/image006.png"/>  
-<img width=40% src="../images/image007.png"/>  
-<img width=30% src="../images/image008.png"/>  
-<img width=30% src="../images/image008.png"/>  
+<img width=300 src="../images/image006.png"/>  
+<img width=300 src="../images/image007.png"/>  
+<img width=300 src="../images/image008.png"/>  
+<img width=300 src="../images/image008.png"/>  
 
 ## Forward Kinematics of a Leg
 
-With the *DH* transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width="10" src="../images/image010.png"/> is 
+With the *DH* transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width="20" src="../images/image010.png"/> is 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="50" src="../images/image011.png"/> 
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" src="../images/image011.png"/> 
 
 By multiplying the transformation matrix with the origin (as homogeneous vector), we get the absolute coordinates of the toe point (*TP*) centre point in world coordinate system (i.e. relative to the legs’s base).
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="50" src="../images/image012.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="300" src="../images/image012.png"/>
 
 That was easy. The tricky part comes now.
 
@@ -50,27 +50,27 @@ That was easy. The tricky part comes now.
 
 Inverse kinematics denotes the computation of all joint angles out of the toe’s position (*TP*). Since the leg has four joints, it is becomes clear that there is an infinite number of solutions for that, so I need to predefine one angle with an arbitrary definition. Having the objective in mind of moving the higher limbs of the leg as little as possible, I arbitrarily chose *θ<sub>0</sub>* and set it as angle bisector of the toe to the hip (from bird’s perspective):
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="50" src="../images/image013.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="100" src="../images/image013.png"/>
 
 We get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="50" src="../images/image014.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="100" src="../images/image014.png"/>
 
-Later on, we will need the coordinates of end of the first limb (*A*) which is <img width=15% src="../images/image015.png"/>
+Later on, we will need the coordinates of end of the first limb (*A*) which is <img width=100 src="../images/image015.png"/>
 
 Computation of the second angle *θ<sub>1</sub>*  at point *A* requires a geometric analysis. The leg is denoted in blue, all construction lines are red.
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=60% src="../images/image016.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image016.png"/>
 
 We consider the triangle from *A*, *B* and *C*. The two lines <img src="../images/image017.png"/> and <img ="../images/image018.png"/>are of fixed length. So, the point *C* is upon the circle with the centre H and the radius of the triangle’s height. Additionally, *C* is defined as function of *θ<sub>0</sub>* and *θ<sub>1</sub>*, so we should be able to derive *θ<sub>1</sub>* by intersecting the circle with *C(θ<sub>0</sub> ,θ<sub>1</sub>)*.
 
 The only thing we need to do is to express that in terms of coordinates. First, we compute the length of *a*, *b* and *c*:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image019.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image019.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=15% src="../images/image020.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image020.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=10% src="../images/image021.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 src="../images/image021.png"/>
 
 Now that the triangle is defined, we can compute the height <img width=10% src="../images/image022.png"/> by Herons formula
 

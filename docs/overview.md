@@ -35,7 +35,7 @@ The cortex board does not need much,  most of the stuff is done by the Teensy al
 **Still-Life**
 
 This is my desk
-<img ewidth="300px" src="../images/still-life.jpg"/>
+<img width="300px" src="../images/still-life.jpg"/>
 
 
 **Startup Procedure** In order to have a clean startup procedure, I used a relay that switches the servo's power. By that, I could ensure that ODroid and Teensy came up properly, before switching on the servos. The full startup procedure is like this:
