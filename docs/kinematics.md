@@ -24,7 +24,7 @@ So, the Denavit Hardenberg parameters are:
 
 According to the coordinate system above, θ<sub>2</sub> has an offset of 90°. The general definition of a Denavit-Hardenberg (DH) transformation is
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=350 src="../images/image005.png"/>  
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=330 src="../images/image005.png"/>  
 
 which is a homogeneous matrix with two rotations (*x*,*z*) and two translations (*x*,*z*).
 Combined with the DH parameters, the following DH matrixes define the transformation from one joint to its successor:
@@ -54,7 +54,7 @@ Inverse kinematics denotes the computation of all joint angles out of the toe’
 
 We get 
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width="160" src="../images/image014.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width="180" src="../images/image014.png"/>
 
 Later on, we will need the coordinates of end of the first limb (*A*) which is <img width=110 src="../images/image015.png"/>
 
@@ -89,7 +89,7 @@ So, with the arbitrary assumption <img width=50 src="../images/image028.png"/> a
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=350 src="../images/image030.png"/>
 
 (This equation could be simplified, but this way programming is easier by computing the y coordinate and deriving the x coordinate)
-There are two possibilities for *S*, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to *S* and its length <img width=70 src="../images/image031.png"/>:
+There are two possibilities for *S*, representing two configuration with knee up and knee down. We always take the healthy one where the knee is above the toe point. Finally, T is defined by its orthogonality to *S* and its length <img width=50 src="../images/image031.png"/>:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=100 src="../images/image032.png"/>
 
@@ -100,7 +100,7 @@ Having the circle defined, we need to intersect it with the possible positions o
 
 Hereby denotes <img width=180 src="../images/image034.png"/> . We consider only the equations of *x* and *y* coordinates and solve these for *d<sub>1</sub>c<sub>1<sub>*. Equating gives
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 src="../images/image036.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=530 src="../images/image036.png"/>
 
 This needs to be solved by in order to get point *C*. Unfortunately, we have *sin* and *cos* in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
 
@@ -133,7 +133,7 @@ The last angle *θ<sub>2</sub>* is computed by use of
 
 So, let’s have a closer look into the transformation matrix <img width=6 src="../images/image046.png"/> and check if there are some useful equations considering that we already have all other angles. Annoying multiplication results in
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=400 src="../images/image047.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=420 src="../images/image047.png"/>
 
 Since we need to compare this to the toe point, it is not necessary to compute the full matrix, the right column is sufficient. We are lucky, the third line has only one expression that depends on *θ<sub>2</sub>*, so we get
 
