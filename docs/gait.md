@@ -10,19 +10,19 @@ Still, it might be a need to have one spare leg to do something. In that case a 
 
 <img width=400 src="../images/wave-gait-with-spare-leg.png"/>
 
-But that is not sufficient, we stuffer from the asymmetric location of the hips, when we are using 4 legs only. We need to move the body perpendicaularly above the supporting area. To avoid being on the edge of this area, it is necessary to let the body swing in a manner that moves the centre of gravity away from that edge:
+But that is not sufficient, we stuffer from the asymmetric location of the hips, when we are using 4 legs only. We need to translate the body to be located above the supporting area. To avoid being on the edge of this area, it is necessary to let the body swing in a manner that moves the centre of gravity away from that edge:
 
 <img width=400 src="../videos/wave-gait-with-one-spare-leg.gif"/>
 
 
 The leg movement is modelled by a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touch the ground again.
 
-<img wwidth=200 src="../images/leg-movement.png"/>
+<img wwidth=150 src="../images/leg-movement.png"/>
 
 If the ground is not plain, the distance sensors in the leg detect that. When the zenith of the movement is reached, the actual distance is constantly compared to the expected distance. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
 
 <img width=300  src="../images/leg-movement-terrain.png"/>
 
-In real life this look like this. I you look closely, you can also see that right before touching the ground, the leg starts already moving backwards to avoid the jolt when the toe gives the body an impulse against the walking direction 
+In real life this looks like this. I you watch closely, you can also see that right before touching the ground the leg starts already moving backwards to avoid the jolt that gave the body an impulse against the walking direction 
 
 <img width=400 src="../videos/leg-movement.gif"/>
