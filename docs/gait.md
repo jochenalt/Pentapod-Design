@@ -1,13 +1,10 @@
-Unfortunately, there's no example by nature about a gait with 5 legs. Since you need three legs to stand, two legs can lift. The gait is the outcome of 5 legs carrying out the same movement but with an individual time shift per leg. The time shift is a static sequence ensuring that the two legs in the air are always opposite to each other. 
+Unfortunately, there's no example by nature about a gait with 5 legs. Since you need three legs to stand, two legs can leave the ground at the same time. This means, that we have 60% of a period with a leg in the air. A tripod gait is not possible, a wave gait is really slow, but a ripple gait in a modified version for 5 legs is reasonable. To get that, the order in that each leg begins its movement is 1,3,5,2,4:
 
-The order of the legs that start their sequence is 1,3,5,2,4:
 <img width="50%" src="../images/gait-timeshift-graph.png"/>
-
 
 The animation shows a red triangle that indicates the area where the bot is standing on. The sequence above leads to a slowly turning triangle.
 
 <img src="../videos/gaittimeshift.gif"/>
-
 
 The leg movement is modelled by a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touch the ground again.
 
