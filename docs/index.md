@@ -4,7 +4,7 @@ When seeing a video about a walking Hexapod no one screams wow, that’s unbelie
 
 But, still kind of boring. So, I tried to give it a personality, something shy and chicken-hearted, but how to express that if you’re a slightly too big insect with one missing leg? Hiding from anything that’s moving could be something. And, this would solve the issue what to to with the saved money of one leg: I could buy a Lidar sensor, put it on its head to identify suspicious subjects, then let it escape and hide in holes. That's really pathetic.
 
-Typical Hexapods have 3-5 DOF per leg, and most of them have only one DOF that moves the leg from the left to the right while all other DOFs move up and down. I never got the idea behind that design, since when looking at most of the hexapods you get the impression that the goal was to implement a brutal & stomping gait by always moving the full mass of a leg. In nature, no instect stomps. Those who make women scream have crawling movements where the foot carefully checks out the ground ahead. By doing that, the femur hardly moves. This requires a turning hip or knee. 
+Typical Hexapods have 3-5 DOF per leg, and most of them have only one DOF that moves the leg from the left to the right while all other DOFs move up and down. I never got the idea behind that design, since when looking at most of the hexapods you get the impression that the goal was to implement a brutal & stomping gait by always moving the full mass of a leg. In nature, instect do not stomp. Those who make women scream have crawling movements with feet that carefully check out the ground ahead. This requires a turning hip or knee. 
 
 <img width=50% src="./images/image002.png" >
 
