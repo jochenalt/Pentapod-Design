@@ -4,7 +4,7 @@ Unfortunately, there's no example by nature about a gait with 5 legs. Since you 
 
 The animation shows a red triangle that indicates the area where the bot is standing on. The sequence above leads to a slowly turning triangle.
 
-<img width=400 src="../videos/gaittimeshift.gif"/>
+<img width=320 src="../videos/gaittimeshift.gif"/>
 
 Still, it might be a need to have one spare leg to do something yukky. In that case a wave gait is the only alternative:
 
