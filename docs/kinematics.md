@@ -114,7 +114,7 @@ This is used to solve the equation above for *α*:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=350 style="max-width: 350px;" src="../images/image040.png"/>
 
-Out of *α* we get *C* by <img width=150 style="max-width: 150px;" src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
+Out of *α* we get *C* by <img width=100 style="max-width: 100px;" src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=150 style="max-width: 150px;" src="../images/image042.png"/>
 
