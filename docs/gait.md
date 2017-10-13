@@ -23,6 +23,6 @@ If the ground is not plain, the distance sensors in the leg detect that. When th
 
 <img width=300  src="../images/leg-movement-terrain.png"/>
 
-In real life this looks like this. I you watch closely, you can also see that right before touching the ground the leg starts moving backwards to avoid the toe's jolt that gave the body an impulse against the walking direction 
+In real life this looks like this. I you watch closely, you can also see that right before touching the ground the leg starts moving backwards to avoid a jolt giving an impulse to the body against the walking direction 
 
 <img width=320 src="../videos/leg-movement.gif"/>
