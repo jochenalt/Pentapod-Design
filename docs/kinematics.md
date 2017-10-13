@@ -112,9 +112,9 @@ This is used to solve the equation above for *α*:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=400 style="max-width: 400px;" src="../images/image039.png"/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=300 style="max-width: 300px;" src="../images/image040.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=350 style="max-width: 350px;" src="../images/image040.png"/>
 
-Out of *α* we get *C* by <img width=200 style="max-width: 200px;" src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
+Out of *α* we get *C* by <img width=150 style="max-width: 150px;" src="../images/image041.png"/>, out of *C* we compute *θ<sub>1</sub>* by considering the z-coordinate of *C*:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=150 style="max-width: 150px;" src="../images/image042.png"/>
 
@@ -146,9 +146,9 @@ That’s it. Surprisingly complex for a leg with only 4 degrees of freedom.
 
 Attaching 5 legs around the body requires a transformation as well, plus we might want to translate and rotate the belly. Since the leg kinematics computes the limb angles out of the toe in the hip's coordinate system, we need to translate each leg’s toe point into the hip’s coordinate system.
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=900 style="max-width: 900px;" src="../images/image049.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=700 style="max-width: 700px;" src="../images/image049.png"/>
 
-The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=40 style="max-width: 40px;"  src="../images/image050.png"/>, where *n* is the number of the leg.
+The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=50 style="max-width: 50px;"  src="../images/image050.png"/>, where *n* is the number of the leg.
 We define the transformation matrix *Belly* that defines the belly coordinate system out of the body coordinate system, that is a 3D rotation matrix plus a translation along the belly coordinates:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=600 style="max-width: 600px;" src="../images/image051.png"/>
