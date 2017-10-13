@@ -10,16 +10,15 @@ Still, it might be a need to have one spare leg to do something yukky. In that c
 
 <img width=320 src="../images/wave-gait-with-spare-leg.png"/>
 
-Being aware that the hips are now asymmetrically arranged, the body needs to be translated to be located above the supporting area. To avoid being on the edge of this area, it is necessary to let the body swing towards the middle of this areato get from that edge:
+Being aware that the hips are now asymmetrically arranged, the body needs to be translated to be located above the supporting area. To avoid being on the edge of this area, the body swings towards the middle of this area:
 
 <img width=320 src="../videos/wave-gait-with-one-spare-leg.gif"/>
-
 
 The leg movement is modelled by a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touching the ground again.
 
 <img width=200 src="../images/leg-movement.png"/>
 
-In real life this looks like this. When watching carefully, right before touching the ground the leg starts moving backwards. This is helpful to avoid a jolt giving an impulse to the body against the walking direction 
+In real life this looks like this. Right before touching the ground the leg starts moving backwards. This is helpful to avoid a jolt giving an impulse to the body against the walking direction. 
 
 <img width=320 src="../videos/leg-movement.gif"/>
 

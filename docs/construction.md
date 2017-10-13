@@ -3,7 +3,7 @@ Before starting the construction; I started with an openGL simulation of the gai
 <img src="../videos/Pentapod-7-legs-vs-5legs.gif"/>
 
 You're right, too crowded, a body full of legs. 
-Thinking of the design I had in mind something  thin  with thigh gaps and no technical wires crossing the joints. The servo motors should be hidden, even in the axially turning knee.
+Thinking of the design I had in mind something  thin with thigh gaps and no technical wires hanging over the joints. The servo motors should be hidden, even in the turning knee.
 
 I startet with this construction which I liked very much, it is very lean and creepy:
 
@@ -13,7 +13,7 @@ Walking was possible
 
 <img src="../videos/thin-pentapod-walks.gif"/>
 
-and even twerking (although, this happened by accident when I connected the IMU to keep the body levelled, but did not calibrated the  PID controller's parameters, so it osscillated in all axis which turned out to be really hot!)
+and even twerking (although, this happened by accident when I connected the IMU to keep the body levelled, but did not calibrated the PID controller's parameters, so it osscillated in all axis which turned out to be really hot!)
 
 <img src="../videos/pentapod-twerks.gif"/>
 
@@ -30,11 +30,11 @@ The CAD design of the leg should not look like the commen arrangement of bracket
 
 <img width="700px" src="../images/cad-leg-total.png"/>
 
-The hip is attached to the body via screws, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
+The hip is attached to the body, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
 
 <img align="left" width="300px" src="../images/cad-hip-cut.png"/><img width="300px" src="../images/cad-hipjoint-cut.png"/>
 
-The thigh has to carry the whole weight, so it requires the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a weak servo with 1.2Nm here.
+The thigh has to apply the biggest torque, it has the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a much cheaper servo here with 1.2Nm .
 
 <img width="700px" src="../images/cad-thigh-cut.png"/>
 

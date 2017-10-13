@@ -29,14 +29,14 @@ According to the coordinate system above, θ<sub>2</sub> has an offset of 90°. 
 which is a homogeneous matrix with two rotations (*x*,*z*) and two translations (*x*,*z*).
 Combined with the DH parameters, the following DH matrixes define the transformation from one joint to its successor:
 
-<img width=250 src="../images/image006.png"/>  
+<img width=250 style="max-width: 250px;" src="../images/image006.png"/>  
 <img width=250 src="../images/image007.png"/>  
 <img width=200 src="../images/image008.png"/>  
 <img width=200 src="../images/image008.png"/>  
 
 ## Forward Kinematics of a Leg
 
-With the *DH* transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width="16" src="../images/image010.png"/> is 
+With the *DH* transformation matrixes at hand, computation of the leg’s pose out of the joint angles is straight forward. The matrix representing the toe’s pose <img width="16" style="max-width: 16px;" src="../images/image010.png"/> is 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width="120" src="../images/image011.png"/> 
 
