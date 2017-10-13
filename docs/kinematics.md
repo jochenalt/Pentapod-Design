@@ -148,7 +148,7 @@ Attaching 5 legs around the body requires a transformation as well, plus we migh
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=900 style="max-width: 900px;" src="../images/image049.png"/>
 
-The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=8% src="../images/image050.png"/>, where *n* is the number of the leg.
+The pentapod’s pose is given in the body’s coordinate system, which origin is on the ground right below the body. The next coordinate system is owned by the belly which origin is the belly button. When the pentapod is in the default position, the belly coordinate system is translated in the z-axis by z-translation along the height of the belly. Finally, we have 5 hip coordinate systems which are x-translated by the distance of the belly to the hip and z-rotated by <img width=40 style="max-width: 40px;"  src="../images/image050.png"/>, where *n* is the number of the leg.
 We define the transformation matrix *Belly* that defines the belly coordinate system out of the body coordinate system, that is a 3D rotation matrix plus a translation along the belly coordinates:
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=600 style="max-width: 600px;" src="../images/image051.png"/>
