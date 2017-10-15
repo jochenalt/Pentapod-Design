@@ -15,7 +15,7 @@ The PCB in Kicad and in real life is this
 <img align="center" width="500" src="../images/pentapod-power-supply.png" >
 
 **Cortex(Teensy)**
-The cortex board does not need much, most of the stuff is done by the Teensy alone. Each leg has its own Herkulex Bus that is controlled with one dedicated UART. This allows to parallelize servo control by sending all hip angles first, then sending all thigh commands, etc. This made an update rate of 40 Hz for 20 servos possible. Since Herkulex servos work with a period of 11.2ms, I used 33.6ms period time (30 Hz) giving enough time in between to gather the IMU angles,  and communicating to the ODroid.
+The cortex board does not need much, most of the stuff is done by the Teensy alone. Each leg has its own Herkulex Bus that is controlled with one dedicated UART. This allows to parallelize servo control by sending all hip angles first, then sending all thigh commands, etc. This made an update rate of 60 Hz for 20 servos possible. Since Herkulex servos work with a period of 11.2ms, I used 33.6ms period time (30 Hz) giving enough time in between to gather the IMU angles,  and communicating to the ODroid.
 I spent two ADC pins to measure the voltage of the battery and the voltage converter and added a relay to switch on the power for the servos for the sake of a proper startup procedure (I hate bots that jerk when switched on). 
 Most of the parts are sockets: One for the IMU, one for the connection to the ODroid, the batteries, 5 sockets for the thigh servos, 5 for all other servos per leg, and a connector to the panel at the outside of the body.
 
