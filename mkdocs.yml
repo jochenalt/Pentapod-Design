@@ -10,4 +10,6 @@ pages:
     - 'Hardware': 'overview.md'
     - 'Boring Math': 'kinematics.md'
     - 'Construction': 'construction.md'
+    - 'Startup Procedure': 'startup-procedure.md'
     - 'Bill Of Material': 'bill-of-material.md'
+
