@@ -5,11 +5,11 @@ Before assembling, put all servos to a null position with Herkulex Servo Manager
 
 Put bushing in ball bearing 35x44x5
 
-<img width=200 src="../images/put-outer-bushing-into-bearing.jpg"/> 
+<img width=300 src="../images/put-outer-bushing-into-bearing.jpg"/> 
 
 Put inner bushing into outer bushing to put pressure to the connection between ball bearing and bushing
 
-<img width=200 src="../images/put-inner-bushing-into-outer-bushing.jpg"/> 
+<img width=300 src="../images/put-inner-bushing-into-outer-bushing.jpg"/> 
 
 Screw down small gearwheel and ball bearing 11x7x3 onto DRS-0101 Servo
 

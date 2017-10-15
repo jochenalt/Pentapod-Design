@@ -6,8 +6,8 @@ For that purpose, the **cortex** has a relay, that switches the servo's power. B
 * After 30s, Odroid is up as well and start to initiate the communication with the cortex 
 * Odroid asks the cortex for all servo angles and the IMU values and continuously broadcasts that to the webserver node
 * Once the webserver receives the command to start, Odroid computes the position of all legs via forward kinematics, and turns torque on.
-* ODroid is playing a startup procedure that moves each leg one by one in an upright position (This came from the time when I head the weak thigh servo, and it could stand up only when all legs help. Maybe this is not necessary anymore now) 
-* Once all legs are perpendicular on the ground, it stands up.
+* ODroid is playing a startup procedure that moves each leg one by one in an upright position (This came from the time when I head the weak thigh servo, and it could stand up only when all legs helped. Maybe this is not necessary anymore now) 
+* Once all legs are close to a perpendicular position to the ground, it stands up.
 
 <img src="../videos/standup-procedure.gif"/>
 
