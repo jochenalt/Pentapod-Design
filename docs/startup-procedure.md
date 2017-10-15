@@ -10,7 +10,7 @@ For that purpose, the **cortex** has a relay, that switches the servo's power. B
 * ODroid is playing a startup procedure that move each leg one by one in an upright position
 * Once all legs are perpendicular on the ground, it stands up.
 
-<img src="../video/standup-procedure.gif"/>
+<img src="../videos/standup-procedure.gif"/>
 
 
 
