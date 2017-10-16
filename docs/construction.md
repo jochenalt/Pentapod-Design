@@ -24,6 +24,9 @@ It had a breakdown every here and then, and the body crashed on the ground since
 
 (The lean and nice one is one the left, the final clumsy one on the right)
 
+But, when being assembled, the fat thigs did not look as bad as I expected
+<img width="200px" src="../images/fat-thighs.jpg"/>
+
 # CAD
  
 The CAD design of the leg should not look like the commen arrangement of brackets, screws, wires and servos, but like a real robot leg.
