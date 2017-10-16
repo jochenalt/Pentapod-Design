@@ -39,15 +39,3 @@ This is my desk, tidy, huh?
 <img width="300px" src="../images/still-life.jpg"/>
 
 
-**Startup Procedure** In order to have a clean startup procedure, I used a relay that switches the servo's power. By that, I could ensure that ODroid and Teensy came up properly, before switching on the servos. The full startup procedure is like this:
-
-* when switching on the battery power, Odroid and Teensy get 5V immediately. 
-* When ODroid has booted successfully after 45s, it checks the connection to the Teensy board.
-* Teensy gets the request to startup, it checks the voltage and the IMU.
-* Teensy switches on the relay that gives power to the servos, but they are not yet enabled. This gives a short current peak of 4A before settling at 1A idle current)
-* Teensy measures all angles of the servos and the IMU, and communicates that to the Odroid
-* ODroid is initiating the startup procedure by switching on the torque of the servos (results in a current of typ. 5A), putting the feet on the ground, bringing them one by one in an upright position and then lifting the body.
-
-
-
-

@@ -72,7 +72,7 @@ The only thing we need to do is to express that in terms of coordinates. First, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=60 style="max-width: 60px;" src="../images/image021.png"/>
 
-Now that the triangle is defined, we can compute the height <img width=10 style="max-width: 10px;"  src="../images/image022.png"/> by Herons formula
+Now that the triangle is defined, we can compute the height <img width=40 style="max-width: 40px;"  src="../images/image022.png"/> by Herons formula
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=350 style="max-width: 350px;" src="../images/image023.png"/>
 
