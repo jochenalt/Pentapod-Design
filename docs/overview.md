@@ -23,7 +23,6 @@ Most of the parts are sockets: One for the IMU, one for the connection to the OD
 
 <img align="center" src="../images/pentapod-cortex.png" >
 
-
 **Sensor Board** The sensor board behaves like a HerkuleX servo in order to attach it to the Herkulex bus and saving own wires. It is a small AVR controller with a luxury crystal osscillator to run the UART with 115200 baud in a stable manner.
 
 [<img align="center" width="50%" src="../images/schematics-sensor.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-sensor.png)
