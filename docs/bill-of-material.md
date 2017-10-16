@@ -25,7 +25,7 @@
 | Batteries         |4 | LiPO Battery, size 18650                            | <img width="100" src="https://www.akkuteile.de/item/images/100697/1900x1900/LG-INR18650MJ1-3500mAh-3-6-3-7V--10A.jpg"/> | [3500mAh,3C,10A ](https://www.akkuteile.de/lg-inr18650mj1-3500mah-3-75v-lithium-akku/a-100697/) |
 |                   |4 | battery clips                                       |<img width="100" src="https://images-na.ssl-images-amazon.com/images/I/61BnucgzWPL._SL1100_.jpg"/>                    | [clips](https://www.amazon.de/gp/product/B00GN3PN46/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1) |
 
-## Sources
+## Source code
 
 |Category              |  Description                                                        | Source     |
 |:---------------------|:--------------------------------------------------------------------|:-----------|
@@ -38,3 +38,12 @@
 |                      | Cortex: Arduino C++ code running on Teensy 3.5, IDE Eclipse Sloeber | [Github Cortex](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex) |
 |                      | Brain: ROS/Ubuntu C++ code running on Odroid C2, IDE Eclipse        | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
 
+
+## Tools
+|Category              |  Description                                                        | Source     |
+|:---------------------|:--------------------------------------------------------------------|:-----------|
+|Herkulex Manager      | Tool to setup a HerkuleX servo. Required to set the ID of each servo. The convention used in the code is:
+                         * Hip Servo ID   := LegNo*10+0 (LegNo Starts with 0)
+                         * Thigh Servo ID := 100+LegNo
+                         * Knee Servo ID  := LegNo*10 + 4
+                         * Foot Servo ID  := LegNo*10 + 1                                     | [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |

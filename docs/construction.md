@@ -49,7 +49,12 @@ Finally the foot contains the PCB with the Atmega8 accessing the distance sensor
 
 
 The body contains the Odroid, Teensy, batteries and the switched power supply in the bottom. The IMU is attached right below the Lidar sensor. To assemble the body, there's a big thread between the top and the bottom part.
+
 <img  width="600px" src="../images/cad-pentapod-body-cut.png"/>
+
+<img  width="600px" src="../images/inside-the-body.jpg"/>
+
+
 
 And finally, the pentapod's design in total:
 <img  width="800px" src="../images/cad-pentapod-total.png"/>

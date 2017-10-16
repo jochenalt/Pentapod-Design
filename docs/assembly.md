@@ -1,5 +1,6 @@
-Design is tight, if the 3D printer is not precise in all axis,  3D print has to be amended manually. So, each leg needs to be assembled without wiring first to check if all parts fit together.
-Before assembling, put all servos to a null position with Herkulex Servo Manager.
+It's a good idea to assemble each leg without wiring first to check if all parts fit together. If not, file until it does.
+
+Before assembling, put all servos to a null position with Herkulex Servo Manager
 
 **Preparation**
 
