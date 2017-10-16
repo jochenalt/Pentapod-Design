@@ -43,12 +43,12 @@
 
 HerkuleX Servos are identified with a predefined number, the Herkulex ID. This number has to be used to address a command issued to a servo. It is setup front with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783). Th convention used is down in the table:
 
-|Limb              |  Servo type        | Formula        |  Identifiers              |
-|:-----------------|:-------------------|:---------------|:--------------------------|
-| Hip              | DRS 0101           | legId*10 + 1   | [01,   11,  12,  13,  14 ]|
-| Thigh            | DRS 0401           | legId + 100    | [100, 101, 102, 103, 104 ]|
-| Knee             | DRS 0101           | legId*10 + 3   | [03,   13,  23,  33,  43 ]|
-| Foot             | DRS 0201           | legId*10 + 4   | [04,   14,  24,  34,  44 ]|
+|Limb              |  Servo type        | Formula        |  Leg 1 | Leg 2 | Leg 3 | leg 4 | leg 5 |
+|:-----------------|:-------------------|:---------------|:-------|:------|:------|:------|:------|
+| Hip              | DRS 0101           | legId*10 + 1   | 01     | 11    | 12    | 13    |  14   |
+| Thigh            | DRS 0401           | legId + 100    | 100    | 101   | 102   | 103   | 104   |
+| Knee             | DRS 0101           | legId*10 + 3   | 03     | 13    | 23    | 33    | 43    |
+| Foot             | DRS 0201           | legId*10 + 4   | 04     | 14    | 24    | 34    | 44    |
 
 
 ## Tools
