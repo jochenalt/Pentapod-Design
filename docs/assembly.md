@@ -1,4 +1,4 @@
-It's a good idea to assemble each leg without wiring first to check if all parts fit together. If not, file until it does.
+It's a good idea to assemble each leg without wiring uprfront to check if all parts fit together. If not, file until it does.
 
 Before assembling, put all servos to a null position with Herkulex Servo Manager
 

@@ -42,8 +42,7 @@
 ## Tools
 |Category              |  Description                                                        | Source     |
 |:---------------------|:--------------------------------------------------------------------|:-----------|
-|Herkulex Manager      | Tool to setup a HerkuleX servo. Required to set the ID of each servo. The convention used in the code is:
-                         * Hip Servo ID   := LegNo*10+0 (LegNo Starts with 0)
-                         * Thigh Servo ID := 100+LegNo
-                         * Knee Servo ID  := LegNo*10 + 4
-                         * Foot Servo ID  := LegNo*10 + 1                                     | [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |
+|Herkulex Manager      | Tool to setup a HerkuleX servo. Required to set the ID of each servo. The convention used in the code is: |  [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |
+|                      | * Hip Servo ID   := LegNo*10+0 (LegNo Starts with 0)                |            |
+|                      | * Thigh Servo ID := 100+LegNo                                       |            |
+|                      | * Foot Servo ID  := LegNo*10 + 1                                    |            |
