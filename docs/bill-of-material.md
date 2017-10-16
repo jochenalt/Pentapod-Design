@@ -39,10 +39,19 @@
 |                      | Brain: ROS/Ubuntu C++ code running on Odroid C2, IDE Eclipse        | [Github ROS Nodes](https://github.com/jochenalt/Pentapod-Code/tree/master/ros/src) |
 
 
+## Herkulex IDs
+
+HerkuleX Servos are identified with a predefined number, the Herkulex ID. This number has to be used to address a command issued to a servo. It is setup front with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783). Th convention used is down in the table:
+
+|Limb              |  Servo type        | Formula        |  Identifiers              |
+|:-----------------|:-------------------|:---------------|:--------------------------|
+| Hip              | DRS 0101           | legId*10 + 1   | [01,   11,  12,  13,  14 ]|
+| Thigh            | DRS 0401           | legId + 100    | [100, 101, 102, 103, 104 ]|
+| Knee             | DRS 0101           | legId*10 + 3   | [03,   13,  23,  33,  43 ]|
+| Foot             | DRS 0201           | legId*10 + 4   | [04,   14,  24,  34,  44 ]|
+
+
 ## Tools
 |Category              |  Description                                                        | Source     |
 |:---------------------|:--------------------------------------------------------------------|:-----------|
-|Herkulex Manager      | Tool to setup a HerkuleX servo. Required to set the ID of each servo. The convention used in the code is: |  [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |
-|                      | * Hip Servo ID   := LegNo*10+0 (LegNo Starts with 0)                |            |
-|                      | * Thigh Servo ID := 100+LegNo                                       |            |
-|                      | * Foot Servo ID  := LegNo*10 + 1                                    |            |
+|Herkulex Manager      | Tool to setup a HerkuleX servo.                                     |  [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |

@@ -1,6 +1,6 @@
 It's a good idea to assemble each leg without wiring uprfront to check if all parts fit together. If not, file until it does.
 
-Before assembling, put all servos to a null position with Herkulex Servo Manager
+Before assembling, put all servos to a null position with [Herkulex Servo Manager] (http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#tools)
 
 **Preparation**
 
