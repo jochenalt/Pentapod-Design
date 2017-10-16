@@ -41,7 +41,7 @@
 
 ## Herkulex IDs
 
-HerkuleX Servos are identified with a predefined number, the Herkulex ID. This number has to be used to address a command issued to a servo. It is setup front with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783). Th convention used is down in the table:
+HerkuleX Servos are identified with a predefined number, the Herkulex ID. This number is used to address a servo when issuing a command. It is setup front with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783). Th convention used is down in the table:
 
 |Limb              |  Servo type        | Formula        |  Leg 1 | Leg 2 | Leg 3 | leg 4 | leg 5 |
 |:-----------------|:-------------------|:---------------|:-------|:------|:------|:------|:------|
