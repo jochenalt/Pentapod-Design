@@ -56,5 +56,5 @@ HerkuleX Servos are identified with a predefined number, the Herkulex ID. This n
 |:---------------------|:--------------------------------------------------------------------|:-----------|
 |Herkulex Manager      | Tool to setup a HerkuleX servo.                                     |  [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |
 |IDE for Teensy        | Eclipse derivate to develop and deploy in C++ on Teensy             |  [Eclipse Sloeber](http://eclipse.baeyens.it) |
-|ROS Kinetic           | ROS Version used. Although the newer lunar is out for a while, so many tools required are not yet available on Lunar that I went with the elder version |  [ROS Kinetic](http://wiki.ros.org/kinetic) |
+|ROS Kinetic           | ROS Version I used. Although the newer lunar is out for a while, many tools required are not yet available on Lunar that I went with the elder version |  [ROS Kinetic](http://wiki.ros.org/kinetic) |
 
