@@ -129,7 +129,6 @@ sudo apt-get install linux-lowlatency
 --- make everything in release and with two parallel tasks only (main memory limit)
 >catkin_make -DCMAKE_BUILD_TYPE=Release --make-args -j2
 
-
 --- set ROS logging to debug level
 >sudo echo "log4j.logger.ros.pentapod_engine=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
 >sudo echo "log4j.logger.ros.pentapod_library=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
@@ -157,6 +156,7 @@ rosrun map_server map_server mymap.yaml
 /bin/stty -F /dev/ttyS1 raw 230400 cs8 clocal -cstopb 
 # test cortex:
 echo -e "\rhelp\r" > /dev/ttyS1
+echo -e "\rget all\r" > /dev/ttyS1
 echo -e "\rget all\r" > /dev/ttyS1
 
 #-----------------------  GIT --------------
