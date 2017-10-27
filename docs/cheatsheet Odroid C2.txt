@@ -68,6 +68,11 @@ echo "# alias for cpu frequency and temperature" >> >> ~/.bashrc
 echo "alias cpu='cpufreq-info -c 0 -f -m;cpufreq-info -c 1 -f -m;cpufreq-info -c 2 -f -m;cpufreq-info -c 3 -f -m; cpufreq-info -c 4 -f -m;cpufreq-info -c 5 -f -m;cpufreq-info -c 6 -f -m;cpufreq-info -c 7 -f -m;'" >> ~/.bashrc
 echo "alias temperatur='echo $((`cpufreq-info -f` /1000))'Mhz' $((`cat /sys/devices/virtual/thermal/thermal_zone0/temp` /1000))'°''" >> ~/.bashrc
 
+------------------ prepare git ----------------------
+# set standard user name
+git config --global user.name "jochen.alt@gmx.net"
+# cache the credentials for one day
+git config --global credential.helper "cache --timeout=86400"
 
 ------------------ Serial Interfaces -----------------
 # plugin Serial Interfaces, make devices writeable when they are plugged in. Necessary for Cortex and for Lidar sensor
