@@ -3,7 +3,6 @@ In principle, the pentapod components follow this picture. On top level, the fre
 
 The underlying navigation modules approaches these holes. It considers a global navigation plan as well as temporary obstacles identified by the Lidar. The executed navigation produces a trajectory of poses (position and orientation), that is sent to the gait controller. The gait controller computes the points of each toe per leg over time. Out of these toe points, the kinematics computes the angles of the joints, which are sent to the motors by the motor controller. In this step, the IMU is used to keep the lidar levelled, the distance sensors in the feet improve the gait by adapting the gait to the terrain.
 
-
 <img src="../images/component-overview.png" >
 
 This picture shows a more technical view of the components used. On the left, the pentapods *brain* running on an Odroid C2 is seen. It takes care of the SLAM algorithm, the trajectory planning, the character, the kinematics and the gait. It is implemented on base of ROS kinetic on Ubuntu 14.04 in C++ on an 1.5GHz Quadcore board. The interface is exposed by a small webserver (mongoose) publishing REST services encapsulating ROS functionality and all operations making the pentapod move. This webserver runs in a ROS node orchestrating all other ROS nodes, i.e. controls one node for the SLAM algorithm, one for the engine computing the gait and the kinematics, and one for gathering data from the lidar sensor.
