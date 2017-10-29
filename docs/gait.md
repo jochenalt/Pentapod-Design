@@ -1,4 +1,4 @@
-Unfortunately, there's no real creature I am aware of that walks with five legs. You need three legs to stand, so two legs can leave the ground at the same time. This means, that we have 60% of a period with a leg in the air. A tripod gait is not possible, a wave gait is really slow, but a ripple gait in a modified version for 5 legs is reasonable. To get that, the order in that each leg begins its movement is 1,3,5,2,4:
+Unfortunately, there's no real creature I am aware of that walks with five legs. You need three legs to stand, so two legs can leave the ground at the same time. This means that one leg is 60% of its time in the air above the ground. A tripod gait is not possible, a wave gait is really slow, but a ripple gait in a modified version for 5 legs is reasonable. To get that, the order in that each leg begins its movement is 1,3,5,2,4:
 
 <img width=400 src="../images/ripple-gait.png"/>
 
@@ -14,7 +14,7 @@ Being aware that the hips are now asymmetrically arranged, the body needs to be 
 
 <img width=320 src="../videos/wave-gait-with-one-spare-leg.gif"/>
 
-The leg movement is modelled by a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touching the ground again.
+The leg movement is modelled with a cubic bezier curve with the first support point in the middle of the gait and the second one right above the touch point. This gives a bent curve accelerating when leaving the ground, and braking before touching the ground again.
 
 <img width=200 src="../images/leg-movement.png"/>
 
