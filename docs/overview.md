@@ -1,4 +1,4 @@
-<img align="left" width="400" src="../images/logical-component-overview.png" >
+<img align="left" width="360" src="../images/logical-component-overview.png" >
 In principle, the pentapod components follow this picture. On top level, the free will is executed, i.e. the pentapod selects targets to approach. For that purpose, there needs to be a map with walls and identified obstacles. This map is permanently produced by the SLAM algorithm on base of the Lidar sensor. The free-will component now checks the map for tight holes wher the pentapod just can get in. The darkest one is chosen. 
 
 The underlying navigation modules approaches these holes. It considers a global navigation plan as well as temporary obstacles identified by the Lidar. The executed navigation produces a trajectory of poses, that is sent to the gait controller to compute the points of the toes of each leg per time. Out of these toe points, the kinematics computes the angles of the joints, which are sent to the motors by the motor controller. In this step, the IMU's value and the distance sensors in the feet are used to improve the gait.
