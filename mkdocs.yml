@@ -7,7 +7,7 @@ site_description: Poor Pentapod
 pages:
     - 'Home': 'index.md'
     - 'Gait': 'gait.md'
-    - 'Hardware': 'overview.md'
+    - 'Architecture': 'overview.md'
     - 'Boring Math': 'kinematics.md'
     - 'Construction': 'construction.md'
     - 'Assembly': 'assembly.md'
