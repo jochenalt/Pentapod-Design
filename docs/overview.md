@@ -1,5 +1,4 @@
-<img src="../images/logical-component-overview.png" >
-
+<img align="left" width="200" src="../images/logical-component-overview.png" >
 In principle, the pentapod components follow the picture above. On top level, the free will is executed, i.e. the pentapod selects targets to approach. For that purpose, the map that is build up by the SLAM algorithm is used to identify thight holes appropriate for hiding. These targets are sent to the navigation module, that considers the global navigation plan as well as temporary obstacles identified by the Lidar. The executed navigation produces a trajectory of poses, that is sent to the gait controller to compute the points of the toes of each leg per time. Out of these toe points, the kinematics computes the angles of the joints, which are sent to the motors by the motor controller. In this step, the IMU's value and the distance sensors in the feet are used to improve the gait.
 
 <img src="../images/component-overview.png" >
