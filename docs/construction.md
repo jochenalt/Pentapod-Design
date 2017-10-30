@@ -17,8 +17,8 @@ and even twerking (although, this happened by accident when I connected the IMU 
 
 <img src="../videos/pentapod-twerks.gif"/>
 
-Unfortunately, once I put in batteries and the lidar on top, it gained 500 gramms of weight and the servo in the thigh was not strong enough to lift and move the body anymore.
-It had a breakdown every here and then, and the body crashed on the ground since the servos activated the overload shutdown by themselves. So, I bought stronger servos in the thigh, and had to design a more clumsy  leg like this:
+Unfortunately, once I put in batteries and the lidar on top, it gained 500 gramms of weight. As a consequence the thigh was not strong enough to lift the body anymore.
+It had a breakdown every here and then, and the body crashed on the ground since the servos activated the overload shutdown. So, I bought stronger servos in the thigh, and had to design a more clumsy leg like this:
 
 <img align="left" width="200px" src="../images/thinleg-vs-fatleg.jpg"/>
 <img width="200px" src="../images/fat-thighs.jpg"/>
