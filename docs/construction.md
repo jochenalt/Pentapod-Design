@@ -53,8 +53,12 @@ The body contains the Odroid, Teensy, batteries and the switched power supply in
 
 <img  width="600px" src="../images/cad-pentapod-body-cut.png"/>
 
-<img  width="600px" src="../images/inside-the-body.jpg"/>
+The lidar is sitting on top of a small hat that contains the IMU, the Lidar's Uart2USb Adapter. This hat is placed on the holder for the odroid:
 
+<img  width="500px" src="../images/cad-odroid-lidar-holder.png"/>
+
+
+<img  width="600px" src="../images/inside-the-body.jpg"/>
 
 
 And finally, the pentapod's design in total:
