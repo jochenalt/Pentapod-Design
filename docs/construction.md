@@ -66,10 +66,10 @@ I used two types of silicone dampener. First is hidden on the bottom of the body
 <img  width="100px" align="left" src="../images/cad-body-dampener.png"/>
 <img  width="100px" src="../images/body-silicone-dampener.jpg"/>
 
-The dampener on the foot is made with a more complex shape that consists of 4 pieces
+The dampener on the foot is made with a more complex shape, since it needs a hole to let the distance sensor look through. The 3D printed shape consists of 4 pieces where the inner pieces remain in the dampener allowing to secure the dampener in its position at the end of the foot.
 <img  width="100px" align="left" src="../images/cad-foot-dampener.png"/>
 <img  width="100px" src="../images/foot-dampener-shape.jpg"/>
 
-In reality this is a rather dirty and greasy thing to spend time:
+In reality this is a rather greasy thing to spend time with:
 <img  width="300px" src="../images/silicone-dampener-making-off.jpg"/>
 
