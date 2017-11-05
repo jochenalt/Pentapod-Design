@@ -1,6 +1,6 @@
-It's a good idea to assemble each leg without wiring uprfront to check if all parts fit together. If not, file until it does.
+It's a good idea to assemble each leg without wiring upfront to check if all parts fit together. If not, file until it does.
 
-Before assembling, put all servos to a null position and assign their identifier to it accoring to the convention as stated in the [Herkulex ID convention](http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#herkulex-ids) with the [Herkulex Servo Manager](http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#tools)
+Before assembling, put all servos to a null position and assign their identifier to it according to the convention as stated in the [Herkulex ID convention](http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#herkulex-ids) with the [Herkulex Servo Manager](http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#tools)
 
 **Preparation**
 
@@ -8,7 +8,7 @@ Put bushing in ball bearing 35x44x5
 
 <img width=300 src="../images/put-outer-bushing-into-bearing.jpg"/> 
 
-Put inner bushing into outer bushing to put pressure to the connection between ball bearing and bushing
+Put inner bushing into outer bushing to apply pressure to the connection between ball bearing and bushing
 
 <img width=300 src="../images/put-inner-bushing-into-outer-bushing.jpg"/> 
 
@@ -18,7 +18,7 @@ Screw down small gearwheel and ball bearing 11x7x3 onto DRS-0101 Servo
 
 ** Assembly**
 
-Start with Foot, put sensor PCB and distance sensor at the dedicated positions
+Start with the foot, put the sensor PCB and distance sensor at the dedicated positions
 
 <img width=300 src="../images/wire-servo-and-sensor-in-foot.jpg"/> 
 
@@ -26,15 +26,15 @@ Put the disk that holds the silicone dampener in the foot
 
 <img width=300 src="../images/put-dampener-disk-in-foot.jpg"/> 
 
-Insert  the distance sleeve that keeps both halves together 
+Insert the hexagonal bolt that keeps both halves together 
 
 <img width=300 src="../images/insert-distance-sleeve-into-foot.jpg"/> 
 
-Turn the foot, watch  the hole that carries the bearing later on. Very likely, the wires can be seen
+Turn the foot and have a look at the hole that carries the bearing later on. Very likely, the wires can be seen where the bearing is supposed to be later on.
 
 <img width=300 src="../images/see-wires-in-bearing-hole-in-foot.jpg"/> 
 
-Carefully put the wires aside, pushing them to the left and right of the bearing hole and put the 11x7x3 ball bearing in the hole
+Carefully put the wires aside, pushing them to the left and to the right of the bearing hole and put the 11x7x3 ball bearing in the hole
 
 <img width=300 src="../images/put-wires-away-from-bearing-in-foot.jpg"/> 
 
@@ -42,13 +42,17 @@ Screw down whole foot
 
 <img width=300 src="../images/foot-done.jpg"/> 
 
+Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small slit of the bevel gear is located as on the picture. This slit is for the wire
 
-* down the DRS-0201 servo with the disk side  into one half
-* put 200mm cable into servo, lay wires to the hole in the fixed half, and put the second half on top of it. Carefully put the wires out of the bearing hole
-* Put bearing into bearing hole
-* screw down foot
+<img width=300 src="../images/assembly-knee-bearing.jpg"/> 
 
-* Continue with knee half that takes the gearwheel. Put wire from foot into wire tunnel, put into DRS-101 servo.
+Put the servo DRS-0101 that is intended for the knee (take care of the correct Herkulex ID) Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small slit of the bevel gear is located as on the picture. This slit is for the servo wire:
+
+<img width=300 src="../images/assembly-put-servo-in-knee.jpg"/> 
+
+
+assembly-knee-bearing.jpg
+Continue with knee half that takes the gearwheel. Put wire from foot into wire tunnel, put into DRS-101 servo.
 * connect 300mm wire to serve. Put it into cable cannel
 * screw down 3 distance sleeve into that knee-half
 * put bushing into rabbet such that the wire tunnel in the big gearwheel is on the bottom side of the knee/foot
