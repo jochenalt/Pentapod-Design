@@ -46,13 +46,17 @@ Now put the bushing with the bearing and the big bevel gear into one half of the
 
 <img width=300 src="../images/assembly-knee-bearing.jpg"/> 
 
-Put the servo DRS-0101 we prepared upfront into its location. Draw the wire through the hole in the bearing.
+Put the servo DRS-0101 we prepared upfront into its location. Take a 300mm servo wire, put it into the servos socket and draw the wrire carefully through the hole in the bearing and the slit of the bevel gear.
 
 <img width=500 src="../images/assembly-put-servo-in-knee.jpg"/> 
 
 Turn the knee and screw the foot to the knee
 
 <img width=500 src="../images/assembly-screw-foot-to knee.jpg"/> 
+
+Turn the knee , put the three hexagonal bolts in the knee and assembly the over half of the knee. Screw it down.
+
+<img width=500 src="../images/assembly-put-other-knee-half.jpg"/>
 
 
 
