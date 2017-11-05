@@ -5,10 +5,18 @@
 # Ubuntu images are stored in http://odroid.com/dokuwiki/doku.php?id=en:xu3_release_linux_ubuntu
 # my version was ubuntu64-16.04-minimal-odroid-c2-20160815.img.xz
 # Ubuntu 16.04 is http://odroid.in/ubuntu_16.04lts/
+-----------------------------
+------ setup odroid xu4 ------
+-----------------------------
+# Ubuntu images are stored in http://odroid.com/dokuwiki/doku.php?id=en:xu3_release_linux_ubuntu
+# Mine is https://odroid.in/ubuntu_16.04lts/ubuntu-16.04-mate-odroid-xu4-20170731.img.xz
+
+
 # download WinDiskImager from http://com.odroid.com/sigong/blog/blog_list.php?bid=144
 # write Ubuntu Image to SD card 
 # plug in ethernet cable
 # switch on, log in via odroid/odroid
+# download WinDiskImager from http://com.odroid.com/sigong/blog/blog_list.php?bid=144
 
 # fetch odroid-utility
 >su
