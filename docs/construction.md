@@ -68,7 +68,7 @@ And finally, the pentapod's design in total:
 
 I used two types of silicone dampener. First is hidden on the bottom of the body, it's purpose is solely to prevent damages when something bad happens and the servos switch off unexpectedly. In that case, the body with a weight of 1 kilogramm would crash on the ground which might damage the lidar. The dampener is made with silicone rubber for stuff for making molds with 3D printed model:
 
-<img  width="200px" align="left" src="../images/cad-body-dampener.png"/>
+<img  width="160px" align="left" src="../images/cad-body-dampener.png"/>
 <img  width="180px" src="../images/body-silicone-dampener.jpg"/>
 
 The dampener on the foot is made with a more complex shape, since it needs a hole to let the distance sensor look through. The 3D printed shape consists of 4 pieces where the inner pieces remain in the dampener allowing to secure the dampener in its position at the end of the foot.
