@@ -42,16 +42,20 @@ Screw down whole foot
 
 <img width=300 src="../images/foot-done.jpg"/> 
 
-Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small slit of the bevel gear is located as on the picture. This slit is for the wire
+Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small slit of the bevel gear is located as on the picture (this slit is for the wire)
 
 <img width=300 src="../images/assembly-knee-bearing.jpg"/> 
 
-Put the servo DRS-0101 that is intended for the knee (take care of the correct Herkulex ID) Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small slit of the bevel gear is located as on the picture. This slit is for the servo wire:
+Put the servo DRS-0101 we prepared upfront into its location. Draw the wire through the hole in the bearing.
 
-<img width=300 src="../images/assembly-put-servo-in-knee.jpg"/> 
+<img width=500 src="../images/assembly-put-servo-in-knee.jpg"/> 
+
+Turn the knee and screw the foot to the knee
+
+<img width=500 src="../images/assembly-screw-foot-to knee.jpg"/> 
 
 
-assembly-knee-bearing.jpg
+
 Continue with knee half that takes the gearwheel. Put wire from foot into wire tunnel, put into DRS-101 servo.
 * connect 300mm wire to serve. Put it into cable cannel
 * screw down 3 distance sleeve into that knee-half
