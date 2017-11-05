@@ -42,11 +42,11 @@ Screw down whole foot
 
 <img width=300 src="../images/foot-done.jpg"/> 
 
-Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small slit of the bevel gear is located as on the picture (this slit is for the wire)
+Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small rabbet of the bevel gear is located as on the picture (this rabbet is for the wire)
 
 <img width=300 src="../images/assembly-knee-bearing.jpg"/> 
 
-Put the servo DRS-0101 we prepared upfront into its location. Take a 300mm servo wire, put it into the servos socket and draw the wrire carefully through the hole in the bearing and the slit of the bevel gear.
+Put the servo DRS-0101 we prepared upfront into its location. Take a 300mm servo wire, put it into the servos socket and draw the wrire carefully through the hole in the bearing and the rabbet of the bevel gear.
 
 <img width=500 src="../images/assembly-put-servo-in-knee.jpg"/> 
 
@@ -55,14 +55,10 @@ Turn the knee and screw the foot to the knee
 <img width=500 src="../images/assembly-screw-foot-to knee.jpg"/> 
 
 Turn the knee , put the three hexagonal bolts in the knee and assembly the over half of the knee. Screw it down.
-
 <img width=500 src="../images/assembly-put-other-knee-half.jpg"/>
 
 
 
-Continue with knee half that takes the gearwheel. Put wire from foot into wire tunnel, put into DRS-101 servo.
-* connect 300mm wire to serve. Put it into cable cannel
-* screw down 3 distance sleeve into that knee-half
 * put bushing into rabbet such that the wire tunnel in the big gearwheel is on the bottom side of the knee/foot
 * screw down the other half of the knee
 
