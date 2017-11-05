@@ -59,3 +59,12 @@ The body contains the Odroid, Teensy, batteries and the switched power supply in
 
 And finally, the pentapod's design in total:
 <img  width="800px" src="../images/cad-pentapod-total.png"/>
+
+# Silicone Dampener
+
+I used two types of silicone dampener. First is hidden on the bottom of the body, it's purpose is solely to prevent damages when something bad happens and the servos switch off unexpectedly. In that case, the body with a weight of 1 kilogramm would crash on the ground which might damage the lidar. The dampener is made with silicone rubber for stuff for making molds with 3D printed model:
+<img  width="100px" src="../images/cad-body-dampener.png"/>
+
+In reality it looks rather dirty:
+<img  width="100px" src="../images/body-silicone-dampener.jpg.png"/>
+
