@@ -33,10 +33,15 @@ The CAD design of the leg should not look like the commen arrangement of bracket
 
 The hip is attached to the body, and holds the servo that takes care of the forward and backward movements of the leg. It is connected to the hip joint, that connects the hip to the thigh.
 
-<img align="left" width="300px" src="../images/cad-hip-cut.png"/><img width="300px" src="../images/cad-hipjoint-cut.png"/>
+<img width="300px" src="../images/cad-hip-cut.png"/>
 
 The wire is going through a tunnel in the servo, goes around the bearing and leaves the hip through the hole of the housing 
+
 <img width="300px" src="../images/cad-hip-wire-tunnel.png"/>
+
+The hip joint has a hole for the wires and two short axis's for the bearings opposite to an deepening for the servo disks. The hip joint is assembled in two halfes that are screwd with two hexagonal bolts.
+
+<img width="300px" align="left" src="../images/cad-hipjoint-cut.png"/><img width="300px" src="../images/cad-hipjoint-half.png"/>
 
 The thigh has to apply a significant torque, it has the strongest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a much cheaper servo here with 1.2Nm .
 
