@@ -35,7 +35,10 @@ The hip is attached to the body, and holds the servo that takes care of the forw
 
 <img align="left" width="300px" src="../images/cad-hip-cut.png"/><img width="300px" src="../images/cad-hipjoint-cut.png"/>
 
-The thigh has to apply the biggest torque, it has the strongest and biggest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a much cheaper servo here with 1.2Nm .
+The wire is going through a tunnel in the servo, goes around the bearing and leaves the hip through the hole of the housing 
+<img align="left" width="300px" src="../images/cad-hip-cut.png"/><img width="300px" src="../images/cad-hip-wire-tunnel.png"/>
+
+The thigh has to apply a significant torque, it has the strongest servo with 5.2Nm. The connection between the thigh and the knee is the most interesting part, since it contains a 90° gear to turn the knee axially. Additionally, it reduces the servo by 1:1.5 allowing to use a much cheaper servo here with 1.2Nm .
 
 <img width="700px" src="../images/cad-thigh-cut.png"/>
 
