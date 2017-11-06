@@ -4,7 +4,7 @@ Before assembling, put all servos to a null position and assign their identifier
 
 **Preparation**
 
-Put bushing in ball bearing 35x44x5
+Put bushing in ball bearing 35x44x5 
 
 <img width=300 src="../images/put-outer-bushing-into-bearing.jpg"/> 
 
@@ -12,7 +12,7 @@ Put inner bushing into outer bushing to apply pressure to the connection between
 
 <img width=300 src="../images/put-inner-bushing-into-outer-bushing.jpg"/> 
 
-Screw down small gearwheel and ball bearing 11x7x3 onto DRS-0101 Servo
+Screw down small gearwheel and ball bearing 11x7x3 onto DRS-0101 Servo, that is intended for turning the knee.
 
 <img width=300 src="../images/put-small-gearwheel-on-knee-servo.jpg"/> 
 
@@ -46,7 +46,7 @@ Now put the bushing with the bearing and the big bevel gear into one half of the
 
 <img width=300 src="../images/assembly-knee-bearing.jpg"/> 
 
-Put the servo DRS-0101 we prepared upfront into its location. Take a 300mm servo wire, put it into the servos socket and draw the wrire carefully through the hole in the bearing and the rabbet of the bevel gear.
+Put the DRS-0101 servo we prepared upfront into its target position. Take a 300mm servo wire, put it into the servos socket and draw the wrire carefully through the hole in the bearing and the rabbet of the bevel gear.
 
 <img width=500 src="../images/assembly-put-servo-in-knee.jpg"/> 
 
@@ -54,7 +54,8 @@ Turn the knee and screw the foot to the knee
 
 <img width=500 src="../images/assembly-screw-foot-to knee.jpg"/> 
 
-Turn the knee , put the three hexagonal bolts in the knee and assembly the over half of the knee. Screw it down.
+Turn the knee , put the three hexagonal bolts in the knee and assembly the other half of the knee. Screw it down.
+
 <img width=500 src="../images/assembly-put-other-knee-half.jpg"/>
 
 
