@@ -1,4 +1,4 @@
-It's a good idea to assemble each leg without wiring upfront to check if all parts fit together. If not, file until it does.
+It's a good idea to assemble each leg without wiring upfront to check if all parts fit together. If not, file until they do.
 
 Before assembling, put all servos to a null position and assign their identifier to it according to the convention as stated in the [Herkulex ID convention](http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#herkulex-ids) with the [Herkulex Servo Manager](http://poor-pentapod.readthedocs.io/en/latest/bill-of-material/#tools)
 

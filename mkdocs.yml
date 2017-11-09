@@ -12,5 +12,6 @@ pages:
     - 'Construction': 'construction.md'
     - 'Assembly': 'assembly.md'
     - 'Startup Procedure': 'startup-procedure.md'
+    - 'Navigation': 'navigation.md'
     - 'Bill Of Material': 'bill-of-material.md'
 
