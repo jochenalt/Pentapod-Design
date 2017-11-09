@@ -58,11 +58,12 @@ Turn the knee, put the three hexagonal bolts in the knee and assembly the other 
 
 <img width=500 src="../images/assembly-put-other-knee-half.jpg"/>
 
-
-Now put the servo to the thigh and take care that the wires are going around the servo in the designated rabbet
+Now put the DRS-0401 servo in the thigh and take care that the wires from the knee are going around the servo in the designated rabbet. 
 
 <img width=500 align="left" src="../images/assembly-addservo-to-thigh.jpg"/>
 
+The wires of the DRS-0401 need to be separate and are not part of the HerkuleX bus, since they are powered with a higher voltage of 13.7V.
+ 
 <img width=500 src="../images/assembly-thigh-wires.jpg"/>
 
 Put the hip servo in the bottom half of the hip
