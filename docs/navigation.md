@@ -7,13 +7,13 @@ Being a chicken-hearted creature, the pentapod searches for a hole to hide. Tech
 
 <img width="400"  src="../images/navigation-find-dark-holes-candidates.png"/>  
 
-The map consists of walls and a collision area (= ROS costmap), where the bot would crash into a wall already. The collision area has descrete values representing the distance to the closest wall. 
+The map consists of walls and a collision area (= ROS costmap), where the bot would crash into a wall. The collision area has descrete values representing the distance to the closest wall. 
 
 Lets consider the magnified situation in a corner: First of all, the pivot grid cell has to be free on the SLAM map. Then we count the number of surrounding grid cells with a distance of two cells. The number of grid cells that are either close to a wall or in collision to a wall needs to be at least half of the total number of surrounding cells. For the pivot cell, we have 12 out of 21 cells which are close or colliding. So, this point is a good dark hole candidate.
 
 <img width="400"  src="../images/navigation-find-dark-holes.png"/>  
 
-Now we find out if the hole is not only dark but scary. For that purpose, we define the scaryness *s* by the integrated reciprocal distance to the wall over 360°.  
+Now we find out if the hole is not only dark but also scary. For that purpose, we define the scaryness *s* by the integrated reciprocal distance to the wall over 360°.  
 
 <img width="200"  src="../images/scaryness-formula.png"/>  
 

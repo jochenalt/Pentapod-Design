@@ -54,10 +54,27 @@ Turn the knee and screw the foot to the knee
 
 <img width=500 src="../images/assembly-screw-foot-to knee.jpg"/> 
 
-Turn the knee , put the three hexagonal bolts in the knee and assembly the other half of the knee. Screw it down.
+Turn the knee, put the three hexagonal bolts in the knee and assembly the other half of the knee. Screw it down.
 
 <img width=500 src="../images/assembly-put-other-knee-half.jpg"/>
 
+
+Now put the servo to the thigh and take care that the wires are going around the servo in the designated rabbet
+
+<img width=500 align="left" src="../images/assembly-addservo-to-thigh.jpg"/>
+
+<img width=500 src="../images/assembly-thigh-wires.jpg"/>
+
+Put the hip servo in the bottom half of the hip
+
+<img width=500 src="../images/assembly-putservo-to-hip.jpg"/>
+
+Add the first half of the hip joint 
+<img width=500 src="../images/assembly-add-hip.jpg"/>
+
+and put the wires like this
+
+<img width=500 src="../images/assembly-prepare-hip-wire.jpg"/>
 
 
 * put bushing into rabbet such that the wire tunnel in the big gearwheel is on the bottom side of the knee/foot
