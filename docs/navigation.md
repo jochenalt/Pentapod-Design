@@ -18,5 +18,5 @@ Now we find out if the hole is not only dark but scary. For that purpose, we def
 The more scary, the closer are all walls. The highest scaryness value is achieved within a circular hole with no entry.
 
 To implement that in an efficient manner, we
-- identify grid candidates by looking for free grids on the slam map that have more than half collision points in a distance of max. two grids.
-- compute the scaryness of these candidates by sending out *n* (e.g. 8) rays and sums up their reciprocal distance to a wall. Divide by n. If the ray hits no wall, assume an infinite number.
+- identify grid candidates by looking for free grid cells on the slam map which number of collision points in a max. two grid cells is higher than half of all cells within that distance. By that definition, we identify all corners. Now, we 
+- compute the scaryness of these candidates by sending out *n* (e.g. 8) rays and sums up their reciprocal distance to a wall. If the ray hits no wall, assume an infinite number. Divide by n and we get the scaryness.
