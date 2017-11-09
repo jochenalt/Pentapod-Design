@@ -13,10 +13,10 @@ The map consists of walls and a collision area, where the bot would crash into a
 
 Now we find out if the hole is not only dark but scary. For that purpose, we define the scaryness *s* by the integrated reciprocal distance to the wall over 360°.  
 
-<img width="250"  src="../images/scaryness-formula.png"/>  
+<img width="200"  src="../images/scaryness-formula.png"/>  
 
 The more scary, the closer are all walls. The highest scaryness value is achieved within a circular hole with no entry.
 
 To implement that in an efficient manner, we
-- identify grid candidates by looking for free grid cells on the slam map which number of collision points in a max. two grid cells is higher than half of all cells within that distance. By that definition, we identify all corners. Now, we 
-- compute the scaryness of these candidates by sending out *n* (e.g. 8) rays and sums up their reciprocal distance to a wall. If the ray hits no wall, assume an infinite number. Divide by n and we get the scaryness.
+* identify grid candidates by looking for free grid cells on the slam map which number of collision points in a max. two grid cells is higher than half of all cells within that distance. By that definition, we identify all corners. Now, we 
+* compute the scaryness of these candidates by sending out *n* (e.g. 8) rays and sum up their reciprocal distance to a wall. If the ray hits no wall, assume an infinite number. Divide by n and we get the scaryness.
