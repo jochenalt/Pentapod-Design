@@ -78,7 +78,7 @@ Screw down the hip joint to the rest of the leg and put the wires as shown in th
 
 <img width=500 src="../images/assembly-prepare-hip-wire.jpg"/>
 
-Put the other half on the hip and carefully move the wires aside. The halves fit very well, if the wires are correctly located, but some experience is required to put them in the rabbets. If the hip halves have a gap, the wires are not placed correctly. Do not act with force, you would just damage the wires.
+Put the other half on the hip and carefully move the wires aside. The halves fit very well, if the wires are correctly located. If not, some experience is required to place them in the rabbets. If the hip halves have a gap, the wires are not placed correctly. Do not act with force, you would just damage the wires.
 
 <img width=500 src="../images/assembly-hip-bottom-half.jpg"/>
 

@@ -11,7 +11,7 @@ The map consists of walls and a collision area (= ROS costmap), where the bot wo
 
 Lets consider the magnified situation in a corner: First of all, the pivot grid cell has to be free on the SLAM map. Then we count the number of surrounding grid cells with a distance of two cells. The number of grid cells that are either close to a wall or in collision to a wall needs to be at least half of the total number of surrounding cells. For the pivot cell, we have 12 out of 21 cells which are close or colliding. So, this point is a good dark hole candidate.
 
-<img width="400"  src="../images/navigation-find-dark-holes.png"/>  
+<img width="500"  src="../images/navigation-find-dark-holes.png"/>  
 
 Now we find out if the hole is not only dark but also scary. For that purpose, we define the scaryness *s* by the integrated reciprocal distance to the wall over 360°.  
 
@@ -21,6 +21,6 @@ The more scary, the closer are all walls. The highest scaryness value is achieve
 
 To implement that in an efficient manner, we
 
-* identify grid candidates by looking for free grid cells on the slam map which number of collision points in a max. two grid cells is higher than half of all cells within that distance. By that definition, we identify all corners. Now, we 
+* identify grid cell candidates by looking for free grid cells on the slam map which are surrounded by at least 50% of close or colliding cells. By that definition, we identify all corners. Now, we 
 * compute the scaryness of these candidates by sending out *n* (e.g. 8) rays and sum up their reciprocal distance to a wall. If the ray hits no wall, assume an infinite number. Divide by n and we get the scaryness.
 * check if we can navigate to the remaining dark scary hole
