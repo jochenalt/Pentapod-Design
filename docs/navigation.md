@@ -1,5 +1,6 @@
 Navigation is happening on the basis of the [ROS navigation stack](http://wiki.ros.org/navigation). So, we have a [SLAM map](http://wiki.ros.org/hector_slam) indicating free and occupied grids and a costmap[costmap](http://wiki.ros.org/costmap_2d) indicating if the pentapod can stand on a grid with a healthy distance to any wall while considerung dimensions of bot. This costmap is originally intended to be used for navigation, but helps in finding a navigation target as well.
 
+
 # Finding dark scary holes
 
 Being a chicken-hearted creature, the pentapod searches for holes to hide. A hole is a free spot on the map with a safe distance to walls, but is still as close as possible to all walls. This means, a good place to hide has the shape of an U where the bot can navigate to, but is surrounded by walls besides a small entry. 
