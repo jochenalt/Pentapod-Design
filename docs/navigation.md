@@ -23,4 +23,4 @@ To implement that in an efficient manner, we
 
 * identify grid cell candidates by looking for free grid cells on the slam map which are surrounded by at least 50% of close or colliding cells. By that definition, we identify all corners. Now, we 
 * compute the scaryness of these candidates by sending out *n* (e.g. 8) rays and sum up their reciprocal distance to a wall. If the ray hits no wall, assume an infinite number. Divide by n and we get the scaryness.
-* check if we can navigate to the remaining dark scary hole
+* check if we can navigate to the remaining dark scary hole. If yes, the candidate is a target.

@@ -62,7 +62,7 @@ Now put the DRS-0401 servo in the thigh and take care that the wires from the kn
 
 <img width=500  src="../images/assembly-addservo-to-thigh.jpg"/>
 
-The wires of the DRS-0401 need to be separate and are not part of the HerkuleX bus, since they are powered with a higher voltage of 13.7V.
+The wires of the DRS-0401 need to be separate and are not part of the HerkuleX bus, since they are powered with a higher voltage of 14.7V.
 
 <img width=500 src="../images/assembly-thigh-wires.jpg"/>
 
@@ -74,15 +74,15 @@ Now put the DRS-0101 servo into the top half of the hip and screw down the servo
 
 <img width=500 src="../images/assembly-putservo-to-hip.jpg"/>
 
-Screw down the hip joint to the rest of the leg and put the wires as shown in the picture
+Screw down the hip joint to the rest of the leg and lay the wires as shown in the picture
 
 <img width=500 src="../images/assembly-prepare-hip-wire.jpg"/>
 
-Put the other half on the hip and carefully move the wires aside. The halves fit very well, if the wires are correctly located. If not, some experience is required to place them in the rabbets. If the hip halves have a gap, the wires are not placed correctly. Do not act with force, you would just damage the wires.
+Put the other half on the hip and carefully move the wires aside. The halves fit well, iff the wires are correctly located. If not, some experience is required to place them in the rabbets. If the hip halves have a gap, the wires are not placed correctly. Do not act with force, you will only damage the wires.
 
 <img width=500 src="../images/assembly-hip-bottom-half.jpg"/>
 
-Now screw down the other half of the hip joint. The wires bundles are at different sides of the hip joint to avoid entangling.
+Now screw down the other half of the hip joint. The wire bundles come out at different sides of the hip joint to avoid being entangled while moving.
 
 <img width=500 src="../images/assembly-close-hip.jpg"/>
 
