@@ -34,7 +34,7 @@ Most of the parts are sockets: One for the IMU, one for the connection to the OD
 
 [<img align="center" width="50%" src="../images/sensor-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/sensor-pcb.png)
 
-<img align="center" src="../images/sensorboard.png" >
+<img align="center" width="75%" src="../images/sensorboard.png" >
 
 **Still-Life**
 

@@ -3,7 +3,7 @@ Navigation is happening on the basis of the [ROS navigation stack](http://wiki.r
 
 # Finding dark scary holes
 
-Being a chicken-hearted creature, the pentapod searches for a hole to hide. Technically, this is a free spot on the SLAM map with a safe distance to walls, but  still as close as possible to all walls. This means, a good place to hide has the shape of an U where the bot can navigate to, but is surrounded by walls besides a small entry. 
+Being a chicken-hearted creature, the pentapod searches for a hole to hide. Technically, this is a free spot on the SLAM map with a safe distance to walls, but  still as close as possible to all walls. This means, a good place to hide has the shape of an U where the bot can navigate to, but is surrounded by walls besides a small entry. The picture below shows the best corner that is surrounded by walls within 300°.
 
 <img width="400"  src="../images/navigation-find-dark-holes-candidates.png"/>  
 

@@ -66,7 +66,7 @@ The wires of the DRS-0401 need to be separate and are not part of the HerkuleX b
 
 <img width=500 src="../images/assembly-thigh-wires.jpg"/>
 
-Put the hip servo in the bottom half of the hip and take care that each wire bundle is coming out in different sides
+Add the other half of the thigh enclosure and take care that each wire bundle is coming out on different sides
 
 <img width=500 src="../images/assembly-put-top-half-on-thigh.jpg"/>
 
@@ -74,11 +74,11 @@ Now put the DRS-0101 servo into the top half of the hip and screw down the servo
 
 <img width=500 src="../images/assembly-putservo-to-hip.jpg"/>
 
-Screw down the hip joint to the rest of the leg and lay the wires as shown in the picture
+Screw down the hip joint to the thigh's servo disk and lay the wires as shown in the picture. The hip's DRS-0101 is part of the HerkuleX bus of the knee and the foot, so we need to connect the knee's wire to the hips outgoing socket.
 
 <img width=500 src="../images/assembly-prepare-hip-wire.jpg"/>
 
-Put the other half on the hip and carefully move the wires aside. The halves fit well, iff the wires are correctly located. If not, some experience is required to place them in the rabbets. If the hip halves have a gap, the wires are not placed correctly. Do not act with force, you will only damage the wires.
+Put the other half on the hip and carefully move the wires aside the bearing hole. The halves fit well, iff the wires are correctly located. If not, some experience is required to place them in the rabbets. If the hip halves have a gap, the wires are not placed correctly. Do not act with force, you will only damage the wires.
 
 <img width=500 src="../images/assembly-hip-bottom-half.jpg"/>
 
@@ -86,3 +86,8 @@ Now screw down the other half of the hip joint. The wire bundles come out at dif
 
 <img width=500 src="../images/assembly-close-hip.jpg"/>
 
+When all legs are attached to the bottom half of the body, it looks like this
+
+<img width=500 src="../images/assembly-attach-legs-tobody.jpg"/>
+
+In the body the power supply board can be seen, which is not secured but lies on the ground.
