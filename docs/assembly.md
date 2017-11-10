@@ -20,31 +20,31 @@ Screw down small gearwheel and ball bearing 11x7x3 onto DRS-0101 Servo, that is 
 
 Start with the foot, put the sensor PCB and distance sensor at the dedicated positions
 
-<img width=300 src="../images/wire-servo-and-sensor-in-foot.jpg"/> 
+<img width=500 src="../images/wire-servo-and-sensor-in-foot.jpg"/> 
 
 Put the disk that holds the silicone dampener in the foot
 
-<img width=300 src="../images/put-dampener-disk-in-foot.jpg"/> 
+<img width=500 src="../images/put-dampener-disk-in-foot.jpg"/> 
 
 Insert the hexagonal bolt that keeps both halves together 
 
-<img width=300 src="../images/insert-distance-sleeve-into-foot.jpg"/> 
+<img width=500 src="../images/insert-distance-sleeve-into-foot.jpg"/> 
 
 Turn the foot and have a look at the hole that carries the bearing later on. Very likely, the wires can be seen where the bearing is supposed to be later on.
 
-<img width=300 src="../images/see-wires-in-bearing-hole-in-foot.jpg"/> 
+<img width=500 src="../images/see-wires-in-bearing-hole-in-foot.jpg"/> 
 
 Carefully put the wires aside, pushing them to the left and to the right of the bearing hole and put the 11x7x3 ball bearing in the hole
 
-<img width=300 src="../images/put-wires-away-from-bearing-in-foot.jpg"/> 
+<img width=500 src="../images/put-wires-away-from-bearing-in-foot.jpg"/> 
 
 Screw down whole foot
 
-<img width=300 src="../images/foot-done.jpg"/> 
+<img width=500 src="../images/foot-done.jpg"/> 
 
 Now put the bushing with the bearing and the big bevel gear into one half of the thigh. Take care that the small rabbet of the bevel gear is located as on the picture (this rabbet is for the wire)
 
-<img width=300 src="../images/assembly-knee-bearing.jpg"/> 
+<img width=500 src="../images/assembly-knee-bearing.jpg"/> 
 
 Put the DRS-0101 servo we prepared upfront into its target position. Take a 300mm servo wire, put it into the servos socket and draw the wrire carefully through the hole in the bearing and the rabbet of the bevel gear.
 
@@ -86,8 +86,8 @@ Now screw down the other half of the hip joint. The wire bundles come out at dif
 
 <img width=500 src="../images/assembly-close-hip.jpg"/>
 
-When all legs are attached to the bottom half of the body, it looks like this
+The legs are attached to the bottom half of the body with four nuts each. 
 
 <img width=500 src="../images/assembly-attach-legs-tobody.jpg"/>
 
-In the body the power supply board can be seen, which is not secured but lies on the ground.
+In the body the power supply board can be seen, which is not secured but simply lies on the ground.
