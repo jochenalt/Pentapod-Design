@@ -88,8 +88,8 @@ git config --global credential.helper "cache --timeout=86400"
 >sudo vi /etc/udev/rules.d/ttyusb.rules  
 # create rules that set maximum permissions once a serial or i2c port is plugged in
 KERNEL=="ttyUSB[0-9]*",MODE="0777"
-KERNEL=="ttyS[0-9]*",MODE="0777"
-KERNEL=="i2c-[0-9]*",MODE="0777"
+KERNEL=="ttyS[0-9]*", MODE="0777"
+KERNEL=="i2c-[0-9]*", MODE="0777"
 KERNEL=="i2c-[0-9]*", GROUP="i2c"
 
 # install minicom
@@ -103,8 +103,6 @@ modprobe aml_i2c
 # to not load everytime, add to /etc/modules
 echo "aml_i2c" | sudo tee /etc/modules
 
-# install ODroid low latency kernel
-sudo apt-get install linux-lowlatency
 
 # I2C Library with Arduino interface: https://github.com/mhct/wire-linux
 
@@ -139,11 +137,17 @@ sudo apt-get install linux-lowlatency
 >git checkout slam
 >cd ~/catkin_workspace
 
---- make everything in release and with two parallel tasks only (main memory limit)
->catkin_make -DCMAKE_BUILD_TYPE=Release --make-args -j2
+# installation of script to delay launch file
+> cd ~catkin_workspace/src
+>git clone https://github.com/MoriKen254/timed_roslaunch
+>cd ..
+>catkin_make
+
+--- make everything in release and with three parallel tasks only (when compiling with four tasks, odroid mainly swaps)
+>catkin_make -DCMAKE_BUILD_TYPE=Release --make-args -j3
 
 --- set ROS logging to debug level
->sudo echo "log4j.logger.ros.pentapod_engine=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
+>sudo echo "log4j.logger.ros.pentapod_engine=INFO" >>  $ROS_ROOT/config/rosconsole.config
 >sudo echo "log4j.logger.ros.pentapod_library=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
 >sudo echo "log4j.logger.ros.pentapod_server=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
 
@@ -160,7 +164,7 @@ rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag  --clock
 # saving a map to a pgm file
 rosrun map_server map_saver -f mymap
 # start a node of map server publishing that map
-rosrun map_server map_server mymap.yaml
+rosrun map_server map_server ~/catkin_ws/src/pentapod_server/launch/mymap
 
 #
 # --------------------- install serial monitor minicom -------------
@@ -171,6 +175,12 @@ rosrun map_server map_server mymap.yaml
 echo -e "\rhelp\r" > /dev/ttyS1
 echo -e "\rget all\r" > /dev/ttyS1
 echo -e "\rget all\r" > /dev/ttyS1
+echo -e "\rsetup\r" > /dev/ttyS1
+
+#--------------------- RPLIDAR A2 ------------
+# start/stop motor
+>rosservice call /stop_motor
+>rosservice call /start_motor
 
 #-----------------------  GIT --------------
 # set password to be cached for one day
