@@ -86,6 +86,10 @@ Now screw down the other half of the hip joint. The wire bundles come out at dif
 
 <img width=500 src="../images/assembly-close-hip.jpg"/>
 
+Do this five times.
+
+<img  width=500 src="../images/5legs.jpg"/>
+
 The legs are attached to the bottom half of the body with four nuts each. 
 
 <img width=500 src="../images/assembly-attach-legs-tobody.jpg"/>

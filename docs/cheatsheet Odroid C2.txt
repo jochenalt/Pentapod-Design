@@ -114,7 +114,7 @@ echo "aml_i2c" | sudo tee /etc/modules
 >sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
 >sudo apt-get install ros-kinetic-ros-base
 >sudo apt-get install ros-kinetic-desktop-full 
->sudo apt-get install ros-kinetic-navigation ros-kinetic-teb-local-planner ros-kinetic-hector-slam
+>sudo apt-get install ros-kinetic-navigation ros-kinetic-teb-local-planner ros-kinetic-hector-slam ros-kinetic-eband-local-planner
 
 >sudo rosdep init
 >sudo rosdep fix-permissions
@@ -176,6 +176,14 @@ echo -e "\rhelp\r" > /dev/ttyS1
 echo -e "\rget all\r" > /dev/ttyS1
 echo -e "\rget all\r" > /dev/ttyS1
 echo -e "\rsetup\r" > /dev/ttyS1
+echo -e "\rmem nullimu\r" > /dev/ttyS1
+# null stellung
+echo -e "\rmove 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2000\r" > /dev/ttyS1
+# alle beine senkrecht nach unten
+echo -e "\rmove 0 -71 0 0 0 -71 0 0 0 -71 0 0 0 -71 0 0 0 -71 0 0 2000\r" > /dev/ttyS1
+
+echo -e "\renable\r" > /dev/ttyS1
+
 
 #--------------------- RPLIDAR A2 ------------
 # start/stop motor
