@@ -23,7 +23,9 @@
 *.zcode
 *.zproj
 *.swap
+*.lvix
 *.swp
+*.rej
 _autosave*.*
 _saved*.sch
 *.cmake
@@ -34,18 +36,12 @@ code/cortex-workspace/
 code/Cortex/Release/
 code/Cortex/.settings/
 code/workspace/
-
 OldVersions/
-
 schematics/libraries/
-
 datasheets/ServoFrameWork/
 datasheets/RPLidar A2/rplidar_sdk_v1\.5\.7/
-
 code/Common/Default/
 code/Kinematics/Default/
-*.rej
-
 code/ros/\.catkin_workspace
 code/ros/build/
 code/ros/devel/
@@ -63,9 +59,5 @@ code/ros/src/CMakeFiles/
 code/ros/src/catkin/catkin_generated/version/
 code/ros/src/devel/
 code/ros/src/gtest/
-
-
-
 docs/Pentapod Documentation-Dateien/
-*.lvix
 docs/sources/
