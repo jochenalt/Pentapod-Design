@@ -14,10 +14,6 @@ pages:
     - 'Startup Procedure': 'startup-procedure.md'
     - 'Navigation': 'navigation.md'
     - 'Bill Of Material': 'bill-of-material.md'
-
-![Screenshot](videos/logo.gif)
-![Screenshot](videos/logo.gif)
-![Screenshot](latest/videos/logo.gif)
-![Screenshot](../latest/videos/logo.gif)
+    - videos/logo.gif
 
 
