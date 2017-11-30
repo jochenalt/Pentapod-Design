@@ -41,7 +41,7 @@
 
 ## Herkulex IDs
 
-HerkuleX Servos are addressed with the so-called HerkuleX identifier. Each command has to be accompagnied by this ID. It is setup upfront with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783), otherwise all servos would have the same identifier coming from the factory settings. The convention used is down in the table:
+HerkuleX Servos are addressed with the so-called HerkuleX identifier. Each command has to be accompagnied by this ID. It is setup upfront with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783), otherwise all servos would have the same identifier coming from the factory settings. The convention used is shown in this table:
 
 |Limb              |  Servo type        | Formula          |  Leg 1 | Leg 2 | Leg 3 | leg 4 | leg 5 |
 |:-----------------|:-------------------|:-----------------|:-------|:------|:------|:------|:------|

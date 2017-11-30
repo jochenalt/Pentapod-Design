@@ -13,11 +13,12 @@ Lets consider the magnified situation in a corner: First of all, the pivot grid 
 
 <img width="500"  src="../images/navigation-find-dark-holes.png"/>  
 
-Now we find out if the hole is not only dark but also scary. For that purpose, we define the scaryness *s* by the integrated reciprocal distance to the wall over 360°.  
+Now we find out if the hole is not only dark but also scary. For that purpose, we define the scaryness *s* by the integrated reciprocal distance to the wall over 360°. *r* is the radius of the robot. 
 
 <img width="200"  src="../images/scaryness-formula.png"/>  
 
-The more scary, the closer are all walls. The highest scaryness value is achieved within a circular hole with no entry.
+This term sums up the reciprocal of the area between the foot print of the robot and the walls circle describing the robot, i.e. returns a value describing how close the walls are.
+The closer the walls, the bigger gets the scaryness *s*. The highest scaryness value of 1.0  is achieved within a circular hole that represents the foot print of the robot.
 
 To implement that in an efficient manner, we
 
