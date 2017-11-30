@@ -1,4 +1,4 @@
-<img align="left" width=20% src="../latest/videos/logo.gif"/>
+<img align="left" width="20%" src="../latest/videos/logo.gif"/>
 
 When seeing a video about a walking Hexapod no one screams wow, that’s unbelievable. There must be more. For one, you could cut off one leg. Having 5 legs only is kinda creepy, and it might be a challenge to develop a gait with one missing leg where you cannot steal something from nature. And, you can spend 1/6 of the money for something else.
 
