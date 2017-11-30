@@ -1,4 +1,5 @@
-<img  width=50% src="../latest/videos/logo.gif"/>
+<img  width=20% src="../latest/videos/logo.gif"/>
+
 When seeing a video about a walking Hexapod no one screams wow, that’s unbelievable. There must be more. For one, you could cut off one leg. Having 5 legs only is kinda creepy, and it might be a challenge to develop a gait with one missing leg where you cannot steal something from nature. And, you can spend 1/6 of the money for something else.
 
 But, still kind of boring. So, I tried to give it a personality, something shy and chicken-hearted, but how to express that if you’re a slightly too big an insect with one missing leg? Hiding from anything that’s moving could be something. And, this would solve the issue what to to with the saved money of one leg: I could buy a Lidar sensor, put it on its head to identify suspicious subjects, then let it escape and hide in holes. That's really pathetic.
