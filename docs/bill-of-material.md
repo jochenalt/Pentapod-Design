@@ -67,6 +67,5 @@ Further minor functional enhancements fetch the voltage and the temperature of t
 |Herkulex Manager      | Tool to setup a HerkuleX servo.                                     |  [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783)  |
 |IDE for Teensy        | Eclipse derivate to develop and deploy in C++ on Teensy             |  [Eclipse Sloeber](http://eclipse.baeyens.it)                                      |
 |IDE for Senor Board   | Visual Studio derivate to develop on Atmel/AVR                      |  [Atmel Studio](http://www.atmel.com/microsite/atmel-studio/)                      |
-
 |ROS Kinetic           | ROS Version I used. Although the newer *lunar* is out for a while, some tools required (e.g. hector slam) are not yet available on Lunar. So, I went with the elder version |  [ROS Kinetic](http://wiki.ros.org/kinetic) |
 
