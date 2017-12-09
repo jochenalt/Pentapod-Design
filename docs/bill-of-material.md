@@ -59,12 +59,12 @@ Since we do not have status information of a servo by that procedure, we request
 
 I enhanced this library to provide access to the servo's PID controller. Thing is, that the default PID controller has a very weak *P* factor, which makes the servo react kind of flexible to external force, but leads to a high latency when the IMU recognizes a change that needs to be compensated quickly. So, I increased the servos *P* and *I* factor a lot which made the servos stiffer (check [HerkulexServoDriver::setup](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/HerkulexServoDrive.cpp)).
 
-Further minor changes were necessary to fetch the voltage and the temperature of the servo.
+Further minor functional enhancements fetch the voltage and the temperature of the servo.
 
 ## Tools
 |Category              |  Description                                                        | Source     |
 |:---------------------|:--------------------------------------------------------------------|:-----------|
 |Herkulex Manager      | Tool to setup a HerkuleX servo.                                     |  [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783) |
 |IDE for Teensy        | Eclipse derivate to develop and deploy in C++ on Teensy             |  [Eclipse Sloeber](http://eclipse.baeyens.it) |
-|ROS Kinetic           | ROS Version I used. Although the newer lunar is out for a while, many tools required are not yet available on Lunar that I went with the elder version |  [ROS Kinetic](http://wiki.ros.org/kinetic) |
+|ROS Kinetic           | ROS Version I used. Although the newer *lunar* is out for a while, many tools required are not yet available on Lunar. So, I went with the elder version |  [ROS Kinetic](http://wiki.ros.org/kinetic) |
 
