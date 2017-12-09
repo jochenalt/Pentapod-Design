@@ -41,14 +41,23 @@
 
 ## Herkulex IDs
 
-HerkuleX Servos are addressed with the so-called HerkuleX identifier. Each command has to be accompagnied by this ID. It is setup upfront with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783), otherwise all servos would have the same identifier coming from the factory settings. The convention used is shown in this table:
+HerkuleX Servos are addressed with the so-called HerkuleX identifier. Each command has to be accompagnied by this ID. It is setup upfront with the [HerkuleX Manager](http://www.dongburobot.com/jsp/board/boardDown.jsp?bseq=6783), otherwise all servos would have the same identifier coming from the factory settings. The convention used is shown in this table. The strange numbering scheme is due to the fact that I replace the thigh servos in the middle of the project and did not want to re-programme all 20 servos.
 
 |Limb              |  Servo type        | Formula          |  Leg 1 | Leg 2 | Leg 3 | leg 4 | leg 5 |
 |:-----------------|:-------------------|:-----------------|:-------|:------|:------|:------|:------|
 | Hip              | DRS 0101           | legNo*10 -10 + 1 | 01     | 11    | 12    | 13    | 14    |
 | Thigh            | DRS 0401           | legNo + 100      | 100    | 101   | 102   | 103   | 104   |
 | Knee             | DRS 0101           | legNo*10 - 10 + 4| 03     | 13    | 23    | 33    | 43    |
-| Foot             | DRS 0201           | legNo*10 - 10 + 2| 04     | 14    | 24    | 34    | 44    |
+| Foot             | DRS 0201           | legNo*10 - 10 + 2| 02     | 12    | 22    | 32    | 42    |
+
+## Herkulex servo control
+
+Dongu provides a c++ library that allows to control Herkulex servos. Software-enginering-wise, this implementation is the worst I have ever seen from a company that provides high-quality robotics accessories. Anyhow. If you check out my modifications, do not judge me, I kept the style of the library.
+
+The most important modification I did to this library was to send commands to it without waiting for a result in order to speed up the communication. The servos are controlled by 5 serial lines, and the controlller frequency is 35Hz. Within one loop, move commands are send to the limbs of all legs  simultaneously, i.e. the first round takes care of all hips, then of all thighs, etc. (check [Controller::sendCommandToServos](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/Controller.cpp).
+The status of the servos is fetched in a separate loop of 1.6Hz, i.e. per loop one servo is asked for its status data.
+
+In addition I enhanced this library to provide access to the servo's PID controller and to return voltage and temperature. Thing is, that the default PID controller has a very weak P factor, which make the servo kind of flexible, but leads to a high latency, especially when the IMU recognizes a change that needs to be processes quickly. So, I increased the servos P and I factor a lot which made the servos stiffer (check [HerkulexServoDriver::setup](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/HerkulexServoDrive.cpp)
 
 
 ## Tools

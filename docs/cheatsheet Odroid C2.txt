@@ -150,6 +150,7 @@ echo "aml_i2c" | sudo tee /etc/modules
 >sudo echo "log4j.logger.ros.pentapod_engine=INFO" >>  $ROS_ROOT/config/rosconsole.config
 >sudo echo "log4j.logger.ros.pentapod_library=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
 >sudo echo "log4j.logger.ros.pentapod_server=DEBUG" >>  $ROS_ROOT/config/rosconsole.config
+>sudo echo "log4j.logger.ros.pentapod_server.actionlib=INFO" >>  $ROS_ROOT/config/rosconsole.config
 
 #
 # ----------------------- install pentapod ---------------------
