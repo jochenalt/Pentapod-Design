@@ -22,6 +22,6 @@ In real life this looks like this. Right before touching the ground the leg star
 
 <img width=320 src="../videos/leg-movement.gif"/>
 
-If the ground is not plain, the distance sensors in the leg detect that. After the zenith of the movement, the actual distance is constantly compared to the expected distance. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
+If the ground is not plain, the distance sensors in the leg detect that. After the zenith of the movement, the current distance to the ground is constantly compared to the expected distance according to the gait curve above. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
 
 <img width=300  src="../images/leg-movement-terrain.png"/>

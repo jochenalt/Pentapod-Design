@@ -10,7 +10,7 @@ Typical Hexapods have 3-5 DOF per leg, and most of them have only one DOF that m
 <img width=50% src="./images/image002.png" >
 
 The blue lines illustrate the leg consisting of the joints for hip, thigh, knee and foot.
-The turning knee (θ<sub>2</sub>) allows to move the toe to the left and the right without moving the tibia. This should allow more efficient movements since the tibia moves less compared to a classical design without a turning knee.
+The turning knee allows to move the toe to the left and the right without moving the tibia. This should allow more efficient movements since the tibia moves less compared to a classical design without a turning knee.
 
 The effect can be seen here, this one is a classical stomping version without a turning knee (definitely not creepy).
 

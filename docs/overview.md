@@ -7,7 +7,7 @@ The underlying navigation modules approaches these holes. It considers a global 
 
 This picture shows a more technical view of the components used. On the left, the pentapods *brain* running on an Odroid C2 is seen. It takes care of the SLAM algorithm, the trajectory planning, the character, the kinematics and the gait. It is implemented on base of ROS kinetic on Ubuntu 14.04 in C++ on an 1.5GHz Quadcore board. The interface is exposed by a small webserver (mongoose) publishing REST services encapsulating ROS functionality and all operations making the pentapod move. This webserver runs in a ROS node orchestrating all other ROS nodes, i.e. controls one node for the SLAM algorithm, one for the engine computing the gait and the kinematics, and one for gathering data from the lidar sensor.
 
-The engine is connected to the *cortex* that controls all sensors and servos. It is a Teensy 3.5 board that provides a sufficient number of UARTs and I<sup>2</sup>C interfaces. Since heavy computations are left to the ODroid, it only runs a loop at 33Hz sending commands to the servos, collects sensor data from the IMU, and does some health checking on voltage and servo state. For communication I started with an UART, but struggled a lot with significant latency on the Linux side. In the end, I went with I<sup>2</sup>C which had no latency at all.
+The engine is connected to the *cortex* that controls all sensors and servos. It is a Teensy 3.5 board that provides a sufficient number of UARTs and I<sup>2</sup>C interfaces. Since heavy computations are left to the ODroid, it only runs a loop at 35Hz sending commands to the servos, collects sensor data from the IMU, and does some health checking on voltage and servo state. For communication I started with an UART, but struggled a lot with significant latency on the Linux side. In the end, I went with I<sup>2</sup>C which had no latency at all.
 
 **Power supply** The thigh servo needs 14V while the smaller servos need 10V. So, I used a Lipo 4S battery for the thigh servos (14.7V) and added a switched voltage converter (XL4016) to get regulated 10V. The Odroid and the Teensy require 5V/3A, which is delivered by another voltage converter. 
 
@@ -20,9 +20,9 @@ The PCB in Kicad and in real life is this
 <img align="center" width="500" src="../images/pentapod-power-supply.png" >
 
 **Cortex(Teensy)**
-The cortex board does not need much, most of the stuff is done by the Teensy alone. Each leg has its own Herkulex Bus that is controlled with one dedicated UART. This allows to parallelize servo control by sending all hip angles first, then sending all thigh commands, etc. This made an update rate of 60 Hz for 20 servos possible. Since Herkulex servos work with a period of 11.2ms, I used 33.6ms period time (30 Hz) giving enough time in between to gather the IMU angles,  and communicating to the ODroid.
-I spent two ADC pins to measure the voltage of the battery and the voltage converter and added a relay to switch on the power for the servos for the sake of a proper startup procedure (I hate bots that jerk when switched on). 
-Most of the parts are sockets: One for the IMU, one for the connection to the ODroid, the batteries, 5 sockets for the thigh servos, 5 for all other servos per leg, and a connector to the panel at the outside of the body.
+The cortex board does not need much, most of the stuff is done by the Teensy alone. Each leg has its own Herkulex Bus that is controlled with one dedicated UART. This allows to parallelize servo control by sending all hip angles first, then sending all thigh commands, etc. This made an update rate of 60 Hz for 20 servos possible. Since there's some other stuff to be done like fetching the servo status, checking the IMU, I went with 35Hz. 
+I spent two ADC pins to measure the voltage of the battery and the voltage converter and added a relay to switch on the power for the servos for the sake of a proper startup procedure (a bot should not jerk when switched on). 
+Most of the components are sockets: One for the IMU, one for the connection to the ODroid, the batteries, 5 sockets for the thigh servos, 5 for all other servos per leg, and a connector to the panel at the outside of the body.
 
 [<img align="center" width="75%" src="../images/cortex-pcb.png">](http://poor-pentapod.readthedocs.io/en/latest/images/cortex-pcb.png) 
 
