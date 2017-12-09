@@ -52,13 +52,14 @@ HerkuleX Servos are addressed with the so-called HerkuleX identifier. Each comma
 
 ## Herkulex servo control
 
-Dongu provides a c++ library that allows to control Herkulex servos. Software-enginering-wise, this implementation is the worst I have ever seen from a company that provides high-quality robotics accessories. Anyhow. If you check out my modifications, do not judge me, I kept the style of the library.
+There's an [Arduino Library](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/Cortex\utilities\Herkulex] to access Herkulex Servos, writting in C++ that works on the Teensy as well.  Software-enginering-wise, this implementation could be improved, so when you checkout my enhancements, do not judge me, since I kept the style of the library.
 
-The most important modification I did to this library was to send commands to it without waiting for a result in order to speed up the communication. The servos are controlled by 5 serial lines, and the controlller frequency is 35Hz. Within one loop, move commands are send to the limbs of all legs  simultaneously, i.e. the first round takes care of all hips, then of all thighs, etc. (check [Controller::sendCommandToServos](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/Controller.cpp).
-The status of the servos is fetched in a separate loop of 1.6Hz, i.e. per loop one servo is asked for its status data.
+The most important modification I did was to send commands to the servos without waiting for a result in order to speed up the communication. The servos are controlled by 5 serial lines, and the controlller frequency is 35Hz. Within one loop, *move* commands are send to the limbs of all legs simultaneously, i.e. the first round takes care of all hips, then of all thighs, etc. (check [Controller::sendCommandToServos](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/Controller.cpp). By that procedure, the 5 serial lines are leveraged the most and in parallel.
+Since we loose the returned status per servo, we request that in a separate loop of 35Hz/20 = 1.6Hz, i.e. one servo is asked for its status data per loop.
 
-In addition I enhanced this library to provide access to the servo's PID controller and to return voltage and temperature. Thing is, that the default PID controller has a very weak P factor, which make the servo kind of flexible, but leads to a high latency, especially when the IMU recognizes a change that needs to be processes quickly. So, I increased the servos P and I factor a lot which made the servos stiffer (check [HerkulexServoDriver::setup](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/HerkulexServoDrive.cpp)
+In addition I enhanced this library to provide access to the servo's PID controller. Thing is, that the default PID controller has a very weak P factor, which makes the servo react kind of flexible to external force, but leads to a high latency when the IMU recognizes a change that needs to be compensated quickly. So, I increased the servos P and I factor a lot which made the servos stiffer (check [HerkulexServoDriver::setup](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/HerkulexServoDrive.cpp)).
 
+Further minor changes were necessary to fetch  the voltage and the temperature of the servo.
 
 ## Tools
 |Category              |  Description                                                        | Source     |
