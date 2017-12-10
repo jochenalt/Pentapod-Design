@@ -12,6 +12,7 @@ pages:
     - 'Construction': 'construction.md'
     - 'Assembly': 'assembly.md'
     - 'Startup Procedure': 'startup-procedure.md'
+    - 'Servo Control': 'servocontrol.md'
     - 'Navigation': 'navigation.md'
     - 'Bill Of Material': 'bill-of-material.md'
 
