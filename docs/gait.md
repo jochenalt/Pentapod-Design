@@ -1,4 +1,4 @@
-Unfortunately, there's no real creature I am aware of that walks with five legs. You need three legs to stand, so two legs can leave the ground at the same time. This means that one leg is 60% of its time in the air above the ground. A tripod gait is not possible, a wave gait is really slow, but a ripple gait in a modified version for 5 legs is reasonable. To get that, the order in that each leg begins its movement is 1,3,5,2,4:
+Unfortunately, there's no real creature I am aware of that walks with five legs. You need three legs to stand, so two legs can leave the ground at the same time. This means that one leg is 60% of its time in the air above the ground. A tripod gait is not possible, a wave gait is really slow, but a ripple gait in a modified version for 5 legs is reasonable. The order of legs moving is 1,3,5,2,4:
 
 <img width=400 src="../images/ripple-gait.png"/>
 
@@ -22,6 +22,6 @@ In real life this looks like this. Right before touching the ground the leg star
 
 <img width=320 src="../videos/leg-movement.gif"/>
 
-If the ground is not plain, the distance sensors in the leg detect that. After the zenith of the movement, the current distance to the ground is constantly compared to the expected distance according to the gait curve above. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
+If the ground is not plain, the distance sensors in the leg detect that. After the zenith of the movement, the current distance to the ground is constantly compared to the expected distance according to the gait curve above2. The z-coordinate of the touch point is adapted accordingly leading to a compressed or stretched second half of the movement:
 
 <img width=300  src="../images/leg-movement-terrain.png"/>

@@ -9,7 +9,7 @@ This picture shows a more technical view of the components used. On the left, th
 
 The engine is connected to the *cortex* that controls all sensors and servos. It is a Teensy 3.5 board that provides a sufficient number of UARTs and I<sup>2</sup>C interfaces. Since heavy computations are left to the ODroid, it only runs a loop at 45Hz sending commands to the servos, collects sensor data from the IMU, and does some health checking on voltage and servo state. For communication I started with an UART, but struggled a lot with significant latency on the Linux side. In the end, I went with I<sup>2</sup>C which had no latency at all.
 
-**Power supply** The thigh servo needs 14V while the smaller servos need 10V. So, I used a Lipo 4S battery for the thigh servos (14.7V) and added a switched voltage converter (XL4016) to get regulated 10V. The Odroid and the Teensy require 5V/3A, which is delivered by another voltage converter. 
+**Power supply** The thigh servo needs 14V while the smaller servos need 10V. Lipo 3S servos deliver convinient (14.7V), regulated 10V are supplied by a switched voltage converter (XL4016). The Odroid and the Teensy require 5V/3A, which is delivered by another voltage converter. 
 
 [<img align="center" width="75%" src="../images/schematics-cortex.png">](http://poor-pentapod.readthedocs.io/en/latest/images/schematics-cortex.png) 
 

@@ -1,5 +1,5 @@
 Kinematics is about computation of the toe’s point out of the joint angles and vice versa. First is simple, latter is tricky. Then, 5 legs are arranged around the body. The according kinematics are shown in the last chapter. 
-The coordinate systems are illustrated as follows, tro properly derived the  Denavit Hardenberg transformation. 
+The coordinate systems are illustrated as follows, to properly derive the Denavit Hardenberg transformation. 
 
 <img width="400" src="../images/image003.png"/>
 
