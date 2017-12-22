@@ -182,9 +182,7 @@ echo -e "\rmem nullimu\r" > /dev/ttyS1
 echo -e "\rmove 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2000\r" > /dev/ttyS1
 # alle beine senkrecht nach unten
 echo -e "\rmove 0 -71 0 0 0 -71 0 0 0 -71 0 0 0 -71 0 0 0 -71 0 0 2000\r" > /dev/ttyS1
-
 echo -e "\renable\r" > /dev/ttyS1
-
 
 #--------------------- RPLIDAR A2 ------------
 # start/stop motor
