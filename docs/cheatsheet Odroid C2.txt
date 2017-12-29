@@ -137,12 +137,6 @@ echo "aml_i2c" | sudo tee /etc/modules
 >git checkout slam
 >cd ~/catkin_workspace
 
-# installation of script to delay launch file
-> cd ~catkin_workspace/src
->git clone https://github.com/MoriKen254/timed_roslaunch
->cd ..
->catkin_make
-
 --- make everything in release and with three parallel tasks only (when compiling with four tasks, odroid mainly swaps)
 >catkin_make -DCMAKE_BUILD_TYPE=Release --make-args -j3
 
