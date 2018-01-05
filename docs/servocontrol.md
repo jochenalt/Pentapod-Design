@@ -9,10 +9,12 @@ HerkuleX Servos are addressed with the so-called HerkuleX ID. Each command is ac
 | Knee             | DRS 0101           | legNo*10 - 10 + 4| 03     | 13    | 23    | 33    | 43    |
 | Foot             | DRS 0201           | legNo*10 - 10 + 2| 02     | 12    | 22    | 32    | 42    |
 
+Actually, I could have assigned the same ID to the same limbs for all legs, but this way the risk of confusing legs and having the need of recalibrating all null values and limits is gone.
+
 ## Herkulex servo control
 
 
-There's a C++ [HerkuleX Arduino Library](http://robottini.altervista.org/dongbu-herkulex-arduino-library-2) to control Herkulex Servos. This library works on the Teensy as well. I enhanced this library by a couple of additional methods to fit  the following purpose [Arduino Library](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/utilities/Herkulex).
+There's a C++ [HerkuleX Arduino Library](http://robottini.altervista.org/dongbu-herkulex-arduino-library-2) to control Herkulex Servos. This library works on the Teensy. I enhanced this library by a couple of additional methods to fit the following purpose [Arduino Library](https://github.com/jochenalt/Pentapod-Code/tree/master/Cortex/utilities/Herkulex).
 
 The first try to control the servos was quite disappointing, it took around 60ms to send move commands to all servos and to fetch the data from IMU and distance sensors. So, something dramatic had to happen. The solution was to fully leverage five serial lines of the Teensy and splitting all commands in a request and a response such that while waiting for a response another serial line can be fed with data. By that, a controller frequency up to 70Hz became feasable. Another thing is the internal controller frequency of HerkuleX servos, which is 11.2 ms. It might be a good idea that the controller frequency is a multiple of that duration. Combining both, a control frequency of 45 Hz makes sense.
 
