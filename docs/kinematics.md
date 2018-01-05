@@ -1,4 +1,5 @@
-Kinematics is about computation of the toe’s point out of the joint angles and vice versa. First is simple, latter is tricky. Then, 5 legs are arranged around the body. The according kinematics are shown in the last chapter. 
+Kinematics is about computation of the toe’s point out of the joint angles and vice versa. First is simple, latter is tricky. 
+
 The coordinate systems are illustrated as follows, to properly derive the Denavit Hardenberg transformation. 
 
 <img width="400" src="../images/image003.png"/>
@@ -62,7 +63,7 @@ Computation of the second angle *θ<sub>1</sub>*  at point *A* requires a geomet
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=400 style="max-width: 400px;"  src="../images/image016.png"/>
 
-We consider the triangle from *A*, *B* and *C*. The two lines <img width=15 style="max-width: 15px;"  src="../images/image017.png"/> and <img width=20 style="max-width: 20px;"  src="../images/image018.png"/>are of fixed length. So, the point *C* is upon the circle with the centre H and the radius of the triangle’s height. Additionally, *C* is defined as function of *θ<sub>0</sub>* and *θ<sub>1</sub>*, so we should be able to derive *θ<sub>1</sub>* by intersecting the circle with *C(θ<sub>0</sub> ,θ<sub>1</sub>)*.
+We consider the triangle from *A*, *B* and *C*. The two lines <img width=18 style="max-width: 15px;"  src="../images/image017.png"/> and <img width=20 style="max-width: 20px;"  src="../images/image018.png"/> are of fixed length. So, the point *C* is upon the circle with the centre H and the radius of the triangle’s height. Additionally, *C* is defined as function of *θ<sub>0</sub>* and *θ<sub>1</sub>*, so we should be able to derive *θ<sub>1</sub>* by intersecting the circle with *C(θ<sub>0</sub> ,θ<sub>1</sub>)*.
 
 The only thing we need to do is to express that in terms of coordinates. First, we compute the length of *a*, *b* and *c*:
 
@@ -72,7 +73,7 @@ The only thing we need to do is to express that in terms of coordinates. First, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=60 style="max-width: 60px;" src="../images/image021.png"/>
 
-Now that the triangle is defined, we can compute the height <img width=40 style="max-width: 40px;"  src="../images/image022.png"/> by Herons formula
+Now that the triangle is defined, we can compute the height <img width=50 style="max-width: 40px;" src="../images/image022.png"/> by Herons formula
 
 &nbsp;&nbsp;&nbsp;&nbsp;<img width=350 style="max-width: 350px;" src="../images/image023.png"/>
 
@@ -104,7 +105,7 @@ Hereby denotes <img width=180 style="max-width: 180px;" src="../images/image034.
 
 This needs to be solved by in order to get point *C*. Unfortunately, we have *sin* and *cos* in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=500 style="max-width: 500px;" src="../images/image037.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=550 style="max-width: 550px;" src="../images/image037.png"/>
 
 This is used to solve the equation above for *α*:
 
