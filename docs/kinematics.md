@@ -105,7 +105,7 @@ Hereby denotes <img width=180 style="max-width: 180px;" src="../images/image034.
 
 This needs to be solved by in order to get point *C*. Unfortunately, we have *sin* and *cos* in the equation, but luckily with the same parameter. Wikipedia helps with sinusoids:
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img width=550 style="max-width: 550px;" src="../images/image037.png"/>
+&nbsp;&nbsp;&nbsp;&nbsp;<img width=600 style="max-width: 600px;" src="../images/image037.png"/>
 
 This is used to solve the equation above for *α*:
 
